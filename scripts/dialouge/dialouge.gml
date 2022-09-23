@@ -1,34 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-global.dialouge = function(faction, impactMulti, improve, reduce){
-	switch (improve){
-		case "money":
-			money += 5 * impactMulti;
-			break;
-		case "happy":
-			happy += 5 * impactMulti;
-			break;
-		case "food":
-			food += 5 * impactMulti;
-			break;
-		default:
-			show_debug_message("Incorrect improve value");
-			break;
-	}
-	switch (reduce){
-		case "money":
-			money -= 5 * impactMulti;
-			break;
-		case "happy":
-			happy -= 5 * impactMulti;
-			break;
-		case "food":
-			food -= 5 * impactMulti;
-			break;
-		default:
-			show_debug_message("Incorrect reduce value");
-			break;
-	}
+global.Dialouge = function(faction, impactMulti=1, improve, reduce){
+	improve += 5 * impactMulti;
+	reduce -= 5 * impactMulti;
 	//switch (faction){
 		//case "fact1":
 			//add smth

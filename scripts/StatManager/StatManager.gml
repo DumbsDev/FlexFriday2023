@@ -4,7 +4,9 @@ var money = 100;
 var happy = 100;
 var food = 100;
 var factions = {
-	nobility: 0
-	military: 0
+	nobility: 0,
+	military: 0,
 	common: 0
 }
+
+show_debug_message(Dialouge("nobility", 1, food, money));
