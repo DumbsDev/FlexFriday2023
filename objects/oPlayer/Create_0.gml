@@ -1,4 +1,4 @@
-random_set_seed()
+random_set_seed(gameSeed)
 
 xx = x; //Set xx future pos 
 yy = y; //Set yy future pos
