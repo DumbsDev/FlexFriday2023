@@ -3,10 +3,10 @@
   "resourceVersion": "1.6",
   "name": "aDarkForestClone",
   "resources": [
-    {"id":{"name":"dialouge","path":"scripts/dialouge/dialouge.yy",},"order":17,},
     {"id":{"name":"sPlaceHolder","path":"sprites/sPlaceHolder/sPlaceHolder.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":3,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},
+    {"id":{"name":"dialougeManager","path":"objects/dialougeManager/dialougeManager.yy",},"order":4,},
     {"id":{"name":"fnt_large","path":"fonts/fnt_large/fnt_large.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"oBed","path":"objects/oBed/oBed.yy",},"order":1,},
@@ -14,7 +14,6 @@
     {"id":{"name":"achievementBANNER","path":"sprites/achievementBANNER/achievementBANNER.yy",},"order":2,},
     {"id":{"name":"sDialogue","path":"sprites/sDialogue/sDialogue.yy",},"order":0,},
     {"id":{"name":"fnt_small","path":"fonts/fnt_small/fnt_small.yy",},"order":1,},
-    {"id":{"name":"StatManager","path":"scripts/StatManager/StatManager.yy",},"order":16,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":3,},
   ],
   "Options": [
