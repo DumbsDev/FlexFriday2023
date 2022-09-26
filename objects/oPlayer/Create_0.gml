@@ -1,3 +1,5 @@
+random_set_seed()
+
 xx = x; //Set xx future pos 
 yy = y; //Set yy future pos
 la = 0.25 //Amount to lerp movement
