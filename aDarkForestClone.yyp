@@ -15,7 +15,6 @@
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":1,},
     {"id":{"name":"achievementBANNER","path":"sprites/achievementBANNER/achievementBANNER.yy",},"order":2,},
     {"id":{"name":"Random Gameplay Instances","path":"notes/Random Gameplay Instances/Random Gameplay Instances.yy",},"order":0,},
-    {"id":{"name":"sDialogue","path":"sprites/sDialogue/sDialogue.yy",},"order":0,},
     {"id":{"name":"fnt_small","path":"fonts/fnt_small/fnt_small.yy",},"order":1,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":3,},
   ],
