@@ -18,6 +18,7 @@
     {"id":{"name":"sPlaceHolderPlayer","path":"sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",},"order":1,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},
     {"id":{"name":"oSettings","path":"objects/oSettings/oSettings.yy",},"order":1,},
+    {"id":{"name":"sSplash","path":"sprites/sSplash/sSplash.yy",},"order":5,},
     {"id":{"name":"achievementBANNER","path":"sprites/achievementBANNER/achievementBANNER.yy",},"order":2,},
     {"id":{"name":"Random Gameplay Instances","path":"notes/Random Gameplay Instances/Random Gameplay Instances.yy",},"order":0,},
     {"id":{"name":"fnt_small","path":"fonts/fnt_small/fnt_small.yy",},"order":1,},
@@ -38,8 +39,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_dialogue_test","path":"rooms/rm_dialogue_test/rm_dialogue_test.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"roomId":{"name":"rm_dialogue_test","path":"rooms/rm_dialogue_test/rm_dialogue_test.yy",},},
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
   ],
   "Folders": [
