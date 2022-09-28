@@ -1,9 +1,15 @@
 #region Textbox parameters (constant)
 textbox_width = 336
 textbox_height = 128
+textbox_x = 0
+textbox_y = 0
+text_x_offset[0] = 0;
 border = 12
 line_sep = 4
 line_width = textbox_width - border*2
+txtb_spr = sBackground
+txtb_img = 0
+txtb_img_spd = 0
 #endregion
 
 //The text!

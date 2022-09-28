@@ -12,3 +12,5 @@ food = ini_read_real("savedata", "food", 0); //set the current day
 houses = ini_read_real("savedata", "houses", 0); //set the current day
 population = ini_read_real("savedata", "population", 0); //set the current day
 ini_close(); //set the save data
+k = camera_get_view_border_y(view_camera[0])
+j = camera_get_view_border_x(view_camera[0])*2
