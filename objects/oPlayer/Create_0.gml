@@ -1,3 +1,5 @@
+random_set_seed(randomize())
+gameSeed = random_get_seed()
 xx = x; //Set xx future pos 
 yy = y; //Set yy future pos
 la = 0.25 //Amount to lerp movement
@@ -10,8 +12,5 @@ food = ini_read_real("savedata", "food", 0); //set the current day
 houses = ini_read_real("savedata", "houses", 0); //set the current day
 population = ini_read_real("savedata", "population", 0); //set the current day
 ini_close(); //set the save data
-j = camera_get_view_width(view_camera[0])*2 + 328
-k = room_height + 64
-debug = 0
-fpslow = 0
-alarm[0] = 1
+k = camera_get_view_border_y(view_camera[0])
+j = camera_get_view_border_x(view_camera[0])*2

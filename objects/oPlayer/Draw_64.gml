@@ -34,33 +34,3 @@ draw_text(j,72,"Huts:" + string(ini_read_real("savedata", "houses", 0)));
 draw_text(j,96,"People:" + string(ini_read_real("savedata", "population", 0)));
 ini_close();
 #endregion
-#region Debugging
-var _DebugToggle = keyboard_check_pressed(vk_f3);
-
-if _DebugToggle {
-switch (debug) {
-	case 1:
-	debug = 0;
-	break;
-	
-	case 0:
-	debug = 1;
-	break;
-}
-}
-
-if debug = 1 {
-draw_set_color(c_black)
-draw_set_alpha(0.5)
-draw_rectangle(0,0,320,160,0)
-draw_set_color(c_white)
-draw_set_alpha(1)
-draw_set_valign(fa_top)
-draw_set_halign(fa_left)
-draw_text(0,0,string(fpslow) + " fps")
-draw_text(0,24,string(fps) + " real fps")
-draw_text(0,48,string(instance_count) + " instances")
-draw_text(0,72,"room " + string(room_get_name(room)));
-}
-
-#endregion
