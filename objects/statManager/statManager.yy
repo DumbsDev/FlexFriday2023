@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "dialougeManager",
+  "name": "statManager",
   "spriteId": null,
   "solid": false,
   "visible": false,
