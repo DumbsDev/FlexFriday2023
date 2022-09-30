@@ -1,3 +1,5 @@
+//draw pos of box
+
 depth = -9999
 #region Textbox parameters (constant)
 textbox_width = 360
@@ -13,11 +15,12 @@ txtb_img_spd = 1
 //The text!
 page = 0;
 page_number = 0;
-text[0] = "It's a table."
-text[1] = "Nothing special"
+text[0] = ">It's a table."
+text[1] = ">Nothing special"
+text[2] = ">This is extra dialogue to show speed and wrapping of dialogue"
 text_length[0] = string_length(text[0]);
 draw_char = 0;
-text_spd = 0.5
+text_spd = 1
 
 
 
