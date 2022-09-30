@@ -3,13 +3,19 @@ keyboard_check_pressed(vk_enter);
 var spd_key = keyboard_check(vk_control);
 
 if spd_key {
-text_spd = 1
+text_spd = 4
 } else {
-	text_spd = 0.2
+	text_spd = 1
 }
 
-textbox_x = (camera_get_view_x(view_camera[0]) + camera_get_view_border_x(view_camera[0])*2);
-textbox_y = camera_get_view_border_y(view_camera[0])/2+96*2;
+draw_set_halign(fa_left)
+draw_set_valign(fa_top)
+
+textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+
+show_debug_message(textbox_x)
+show_debug_message(textbox_y)
 
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
