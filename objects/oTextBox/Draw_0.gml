@@ -8,8 +8,8 @@ text_spd = 1
 	text_spd = 0.2
 }
 
-textbox_x = camera_get_view_border_x(view_camera[0]);
-textbox_y = camera_get_view_border_y(view_camera[0])+96;
+textbox_x = (camera_get_view_x(view_camera[0]) + camera_get_view_border_x(view_camera[0])*2);
+textbox_y = camera_get_view_border_y(view_camera[0])/2+96*2;
 
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);

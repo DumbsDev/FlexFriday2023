@@ -14,3 +14,5 @@ population = ini_read_real("savedata", "population", 0); //set the current day
 ini_close(); //set the save data
 k = camera_get_view_border_y(view_camera[0])
 j = camera_get_view_border_x(view_camera[0])*2
+interactx = x;
+interacty = y;
