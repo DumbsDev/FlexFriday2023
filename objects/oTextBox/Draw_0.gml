@@ -1,3 +1,4 @@
+#region keyboard and speed
 accept_key = keyboard_check_pressed(ord("Z")) or 
 keyboard_check_pressed(vk_enter);
 var spd_key = keyboard_check(vk_control);
@@ -8,14 +9,14 @@ text_spd = 4
 	text_spd = 1
 }
 
+#endregion
+#region alignment
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
 textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
 textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
-
-show_debug_message(textbox_x)
-show_debug_message(textbox_y)
+#endregion
 
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
