@@ -8,14 +8,22 @@ text_spd = 4
 } else {
 	text_spd = 1
 }
-
+draw_set_font(global.font_main)
 #endregion
 #region alignment
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+
+		if (oPlayer.y <= room_height/2) {
+	textbox_x = (oCamera.x)-(textbox_width/2)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+		} else if (oPlayer.y > room_height/2){
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
+}
 #endregion
 
 ////debug size

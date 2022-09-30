@@ -54,7 +54,7 @@ day = 0
 #endregion
 #region Interact
 if ((distance_to_object(instance_nearest(x,y,oInteractable))< 18 )&& _interact && !instance_exists(oTextBox)) {
-instance_create_depth(y,x,-99999,oTextBox)	
+instance_create_layer(y,x,"Dialogue",oTextBox)	
 show_debug_message("Interacted is true");
 }
 #endregion

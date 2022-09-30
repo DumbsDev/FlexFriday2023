@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "dialogue",
-    "path": "folders/Objects/dialogue.yy",
+    "name": "Controller",
+    "path": "folders/Objects/Controller.yy",
   },
 }
