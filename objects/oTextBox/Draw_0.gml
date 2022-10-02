@@ -4,7 +4,7 @@ keyboard_check_pressed(vk_enter);
 var spd_key = keyboard_check(vk_control);
 
 if spd_key {
-text_spd = 4
+text_spd = 2
 } else {
 	text_spd = 1
 }

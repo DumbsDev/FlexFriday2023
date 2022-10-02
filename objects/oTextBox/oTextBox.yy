@@ -30,7 +30,7 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Controller",
-    "path": "folders/Objects/Controller.yy",
+    "name": "dialogue",
+    "path": "folders/Objects/dialogue.yy",
   },
 }
