@@ -98,10 +98,18 @@ textbox_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 #endregion
 
 //draw the text
-draw_set_color(c_white)
+draw_set_color(c_shadow)
 var _drawtext = string_copy(text[page], 1, draw_char)
 draw_text_ext(
-//draw the x start of the text
+//draw the text shadow
+textbox_x+2 + text_x_offset[page] + border,
+textbox_y+2 + border,
+_drawtext,
+line_sep,
+line_width);
+draw_set_color(c_white)
+draw_text_ext(
+//draw the text
 textbox_x + text_x_offset[page] + border,
 textbox_y + border,
 _drawtext,
