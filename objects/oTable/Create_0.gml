@@ -1,1 +1,1 @@
-int = false
+text_id = "table"

@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "aDarkForestClone",
   "resources": [
+    {"id":{"name":"sGameText","path":"scripts/sGameText/sGameText.yy",},"order":1,},
     {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},"order":1,},
     {"id":{"name":"sPlaceHolder","path":"sprites/sPlaceHolder/sPlaceHolder.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":1,},
