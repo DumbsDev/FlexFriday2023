@@ -11,13 +11,15 @@ case "table":
 	
 case "door":
 	sText("It's a door.")
-	sText("My mom says tables used to be alive")
 	sText("You don't feel like unlocking it right now.")
 	break;
 
-case "bookshelf":
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+case "plantpot":
+	sText("It's a potted plant.")
+	break;
+	
+	case "plantpot2":
+	sText("doodoofart")
 	break;
 	
 	}

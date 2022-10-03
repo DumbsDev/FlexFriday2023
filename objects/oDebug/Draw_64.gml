@@ -25,7 +25,7 @@ draw_text(0,24,string(round(fps_real)) + " fastfps")
 draw_text(0,48,string(fps) + " real fps")
 draw_text(0,72,string(instance_count) + " instances")
 draw_text(0,96,"room: " + string(room_get_name(room)));
-//draw_text(0,120,"seed: " + string(gameSeed));
+draw_text(0,120,"seed: " + string(gameSeed));
 ini_open("savedata.ini")
 draw_text(0,144,"save: " + string(ini_section_exists("savedata")));
 ini_close();

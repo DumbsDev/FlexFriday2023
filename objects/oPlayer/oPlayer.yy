@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oPlayer",
   "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+    "name": "sClothedbasiccharacter",
+    "path": "sprites/sClothedbasiccharacter/sClothedbasiccharacter.yy",
   },
   "solid": false,
   "visible": true,

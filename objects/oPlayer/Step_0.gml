@@ -4,7 +4,7 @@ _down = keyboard_check(ord("S")) or keyboard_check(vk_down),
 _left = keyboard_check(ord("A")) or keyboard_check(vk_left),
 _right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 _esc = keyboard_check(vk_delete) or keyboard_check(vk_escape),
-_endDay = keyboard_check_pressed(ord("Z")),
+_endDay = keyboard_check_pressed(ord("X")),
 _reset = keyboard_check_pressed(ord("R")),
 _interact = keyboard_check_pressed(vk_enter),
 #endregion
@@ -17,9 +17,11 @@ if _down {
 }
 if _left {
 	xx -= moveSpeed
+	xsc = -1
 }
 if _right {
 	xx += moveSpeed
+	xsc = 1
 }
 
 y = lerp(y,yy,la);
