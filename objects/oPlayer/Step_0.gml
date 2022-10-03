@@ -52,12 +52,6 @@ ini_close();
 day = 0
 }
 #endregion
-#region Interact
-if ((distance_to_object(instance_nearest(x,y,oInteractable))< 18 )&& _interact && !instance_exists(oTextBox)) {
-instance_create_depth(y,x,-99999,oTextBox)	
-show_debug_message("Interacted is true");
-}
-#endregion
 
 #region movement with dialogue boxes
 if instance_exists(oTextBox) {
@@ -65,4 +59,7 @@ moveSpeed = 0;
 } else {
 moveSpeed = 2;
 }
+#endregion
+#region depth ordering
+depth = -bbox_bottom;
 #endregion

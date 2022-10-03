@@ -1,21 +1,30 @@
+#region keyboard and speed
 accept_key = keyboard_check_pressed(ord("Z")) or 
 keyboard_check_pressed(vk_enter);
 var spd_key = keyboard_check(vk_control);
 
 if spd_key {
-text_spd = 4
+text_spd = 2
 } else {
 	text_spd = 1
 }
-
+draw_set_font(global.font_main)
+#endregion
+#region alignment
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 
-show_debug_message(textbox_x)
-show_debug_message(textbox_y)
+		if (oPlayer.y <= room_height/2) {
+	textbox_x = (oCamera.x)-(textbox_width/2)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+		} else if (oPlayer.y > room_height/2){
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
+}
+#endregion
 
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
@@ -89,10 +98,18 @@ textbox_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 #endregion
 
 //draw the text
-draw_set_color(c_white)
+draw_set_color(c_shadow)
 var _drawtext = string_copy(text[page], 1, draw_char)
 draw_text_ext(
-//draw the x start of the text
+//draw the text shadow
+textbox_x+2 + text_x_offset[page] + border,
+textbox_y+2 + border,
+_drawtext,
+line_sep,
+line_width);
+draw_set_color(c_white)
+draw_text_ext(
+//draw the text
 textbox_x + text_x_offset[page] + border,
 textbox_y + border,
 _drawtext,

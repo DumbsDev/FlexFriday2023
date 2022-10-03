@@ -5,3 +5,14 @@ if oPlayer.x > 1056 {
 } else {
 	x = lerp(x,Perp3,la)
 }
+
+switch keyboard_key {
+
+	case vk_add:
+		camera_set_view_size(view_camera[0],camw,camh)
+		break;
+	
+	case vk_subtract:
+		camera_set_view_size(view_camera[0],camw/4,camh/4)
+		break;
+}
