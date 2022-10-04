@@ -21,11 +21,11 @@ case "plantpot":
 	break;
 	
 	case "plantpot2":
-	sText("doodoofart")
+	sText("It's a plant in a pot")
 	break;
 	
-	case "plantpot2":
-	sText("doodoofart")
+	case "bookshelf":
+	sText("It's a bookshelf")
 	break;
 	
 	
