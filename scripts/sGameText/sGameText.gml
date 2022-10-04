@@ -30,5 +30,17 @@ case "plantpot":
 	
 	
 #endregion
+#region lore and tutorial
+
+#endregion
+#region questions and npcs
+
+#endregion
+#region misc.
+
+#endregion
+#region other
+
+#endregion
 	}
 }
