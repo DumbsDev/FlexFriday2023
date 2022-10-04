@@ -4,6 +4,8 @@ function sGameText(_text_id){
 
 switch _text_id {
 
+#region Object Interaction
+	//Basic Household Objects
 case "table":
 	sText("It's a table.")
 	sText("It's made of oak wood.")
@@ -22,5 +24,11 @@ case "plantpot":
 	sText("doodoofart")
 	break;
 	
+	case "plantpot2":
+	sText("doodoofart")
+	break;
+	
+	
+#endregion
 	}
 }

@@ -17,6 +17,9 @@ k = camera_get_view_border_y(view_camera[0])
 j = camera_get_view_border_x(view_camera[0])*2
 interactx = x;
 interacty = y;
+
+_s = id
+text_id = ""
 #endregion
 #region appearance
 hair = 0

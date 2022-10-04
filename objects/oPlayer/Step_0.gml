@@ -6,7 +6,6 @@ _right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 _esc = keyboard_check(vk_delete) or keyboard_check(vk_escape),
 _endDay = keyboard_check_pressed(ord("X")),
 _reset = keyboard_check_pressed(ord("R")),
-_interact = keyboard_check_pressed(vk_enter),
 #endregion
 #region Movement
 if _up {
@@ -54,7 +53,17 @@ ini_close();
 day = 0
 }
 #endregion
-
+#region interact
+//if ((distance_to_object(instance_nearest(x,y,oInteractable))< 18 )&& _interact && !instance_exists(oTextBox)) {
+//	var _s = oInteractable._s
+//	var text_id = oInteractatext_id
+//	with instance_create_layer(x,y,"Dialogue",oTextBox)
+//	{
+//	sGameText(_s.text_id);
+//	}
+//	show_debug_message("Interacted is true");
+//}
+#endregion
 #region movement with dialogue boxes
 if instance_exists(oTextBox) {
 moveSpeed = 0;	
