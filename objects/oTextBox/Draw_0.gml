@@ -25,7 +25,6 @@ draw_set_valign(fa_top)
 	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
 }
 #endregion
-
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
 #region setup
@@ -100,19 +99,27 @@ _txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 #region options
 if draw_char == text_length[page] && page == page_number - 1 
 {
+	
+	//option selection
+	option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up)
+	option_pos = clamp(option_pos, 0, option_number-1);
 	//timestamp is 20:00 for revision
 	var _op_space = 15,
 	var _op_board
-	for (var _op = 0; _op < option_number; _op++){
+	for (var _op = 0; _op < option_number; _op++)
+	{
 	//the option box
-	var _o_w = string_width(option[_op]; _op++) +_op_board*2;
+	var _o_w = string_width(option[_op]) +_op_board*2;
 	draw_sprite_ext(txtb_spr,txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
 	
+	//the arrow
+	if option_pos == _op
+	{
+		draw_sprite(sBackground
+	}
+	
 	//the option text
-	draw_text(_txtb_x+16+_op_board,
-	_txtb_y-_op_space*option_number+_op_space*_op+2,
-	option[p]
-	)
+	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+2,option[_op])
 	}
 }
 #endregion options

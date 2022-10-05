@@ -31,4 +31,3 @@ shoes = 0
 accesory = 0
 xsc = 1
 #endregion appearance
-instance_create_depth(oPlayer.x-64,room_height/2,0,oTable)
