@@ -28,7 +28,7 @@ draw_set_valign(fa_top)
 
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
-
+#region setup
 //setup
 if setup == false {
 	
@@ -84,22 +84,36 @@ if accept_key
 	draw_char = text_length[page];	
 	}
 	}
-
-//draw the textbox
+#endregion
 #region draw textbox
 txtb_img += txtb_img_spd
-txtb_spr_w= sprite_get_width(txtb_spr)
-txtb_spr_h= sprite_get_height(txtb_spr)
+var _txtb_x = textbox_x + text_x_offset[page];
+var _txtb_y = textbox_y;
+txtb_spr_w = sprite_get_width(txtb_spr)
+txtb_spr_h = sprite_get_height(txtb_spr)
 
 //back of the textbox
-draw_sprite_ext(txtb_spr,txtb_img,textbox_x + text_x_offset[page],
-textbox_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
+draw_sprite_ext(txtb_spr,txtb_img,_txtb_x,
+_txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 0,c_white,1);
 #endregion
-
+#region options
+if draw_char == text_length[page] && page == page_number - 1 
+//{
+//	//timestamp is 20:00 for revision
+//	var _op_space = 15,
+//	var _op_board
+//	for (var _op = 0; _op < option_number; _op++){
+//	//the option box
+//	var _o_w = string_width(option[_op]; _op++) +_op_board*2;
+//	draw_sprite_ext(txtb_spr,txtb_img,_txt_b + 36,)
+//	}
+//}
+#endregion options
+#region draw ze text
 //draw the text
 draw_set_color(c_shadow)
-var _drawtext = string_copy(text[page], 1, draw_char)
+var _drawtext = string_copy(text[page], 0, draw_char)
 draw_text_ext(
 //draw the text shadow
 textbox_x+2 + text_x_offset[page] + border,
@@ -115,3 +129,4 @@ textbox_y + border,
 _drawtext,
 line_sep,
 line_width);
+#endregion

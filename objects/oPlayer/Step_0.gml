@@ -74,3 +74,6 @@ moveSpeed = 2;
 #region depth ordering
 depth = -bbox_bottom;
 #endregion
+#region deactivate instances outside player
+
+#endregion

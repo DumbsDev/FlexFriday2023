@@ -21,13 +21,25 @@ case "plantpot":
 	break;
 	
 	case "plantpot2":
-	sText("It's a plant in a pot")
+	sText("It's a plant in a pot.")
 	break;
 	
+	#region bookshelf
 	case "bookshelf":
-	sText("It's a bookshelf")
+	sText("It's a bookshelf.")
+	sText("Would you like to read a book?")
+		sOptions("Read a book", "bookshelf - yes")
+		sOptions("Leave", "bookshelf - no")
 	break;
 	
+	case "bookshelf - no":
+		sText("my money dont jiggle jiggle, it folds");
+	break;
+	
+		case "bookshelf - yes":
+		sText("massive w");
+	break;
+	#endregion
 	
 #endregion
 #region lore and tutorial
