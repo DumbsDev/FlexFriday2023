@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oPlayer",
   "spriteId": {
-    "name": "sClothedbasiccharacter",
-    "path": "sprites/sClothedbasiccharacter/sClothedbasiccharacter.yy",
+    "name": "sClothedbasiccharacter1",
+    "path": "sprites/sClothedbasiccharacter1/sClothedbasiccharacter1.yy",
   },
   "solid": false,
   "visible": true,
