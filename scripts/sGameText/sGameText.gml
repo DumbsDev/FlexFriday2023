@@ -33,16 +33,30 @@ case "plantpot":
 	break;
 	
 	case "bookshelf - no":
-		sText("my money dont jiggle jiggle, it folds");
+		instance_destroy();
 	break;
 	
 		case "bookshelf - yes":
-		sText("massive w");
+		sText("put book shit here");
 	break;
 	#endregion
 	
 #endregion
 #region lore and tutorial
+	case "tutorial":
+	sText("welcome to tutorial")
+	sText("this needs a lot of work lol")
+		sOptions("Yes, I will", "tut - yes")
+		sOptions("No I wont", "tut - no")
+	break;
+	
+	case "tut - yes":
+		sText("thanks dawg")
+	break;
+	
+		case "tut - no":
+		instance_destroy();
+	break;
 
 #endregion
 #region questions and npcs

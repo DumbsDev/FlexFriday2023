@@ -1,2 +1,2 @@
 xx = x
-yy=y
+yy = y
