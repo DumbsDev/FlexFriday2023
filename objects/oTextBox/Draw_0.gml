@@ -99,16 +99,22 @@ _txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 #endregion
 #region options
 if draw_char == text_length[page] && page == page_number - 1 
-//{
-//	//timestamp is 20:00 for revision
-//	var _op_space = 15,
-//	var _op_board
-//	for (var _op = 0; _op < option_number; _op++){
-//	//the option box
-//	var _o_w = string_width(option[_op]; _op++) +_op_board*2;
-//	draw_sprite_ext(txtb_spr,txtb_img,_txt_b + 36,)
-//	}
-//}
+{
+	//timestamp is 20:00 for revision
+	var _op_space = 15,
+	var _op_board
+	for (var _op = 0; _op < option_number; _op++){
+	//the option box
+	var _o_w = string_width(option[_op]; _op++) +_op_board*2;
+	draw_sprite_ext(txtb_spr,txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
+	
+	//the option text
+	draw_text(_txtb_x+16+_op_board,
+	_txtb_y-_op_space*option_number+_op_space*_op+2,
+	option[p]
+	)
+	}
+}
 #endregion options
 #region draw ze text
 //draw the text
