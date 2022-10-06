@@ -15,6 +15,9 @@ case "table":
 case "door":
 	sText("It's a door.")
 	sText("You don't feel like unlocking it right now.")
+	//sText("it smells weird almost like it's alive")
+	//sText("no it's taking over ")
+	//sText("you move away but you feel it's apart of you")
 	break;
 
 case "plantpot":
@@ -34,7 +37,8 @@ case "plantpot":
 	break;
 	
 	case "bookshelf - read":
-		sText("You don't feel like reading right now.")
+		sText("It's a bookshelf.")
+		sText("You don't really feel like reading right now.")
 	break;
 	
 	case "bookshelf - no":
@@ -47,6 +51,7 @@ case "plantpot":
 		sText("> obtaining power each dictator has supressed")
 		sText("> all free speech excerpt from their own.")
 		sText("You close the book.")
+//		sText("a weird sense of someone watching washes over you")
 		oBookshelf.text_id = "bookshelf - read"
 	break;
 	#endregion
