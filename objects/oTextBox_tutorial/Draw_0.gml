@@ -14,16 +14,8 @@ draw_set_font(global.font_main)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
-
-		if (oPlayer.y <= room_height/2) {
-	textbox_x = (oCamera.x)-(textbox_width/2)
-	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
-		} else if (oPlayer.y > room_height/2){
-	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
-}
+	textbox_x = room_width/2
+	textbox_y = room_height/2
 #endregion
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
