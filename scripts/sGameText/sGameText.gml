@@ -33,16 +33,21 @@ case "plantpot":
 		sOptions("Leave", "bookshelf - no")
 	break;
 	
+	case "bookshelf - read":
+		sText("You don't feel like reading right now.")
+	break;
+	
 	case "bookshelf - no":
 		instance_destroy();
 	break;
 		
 		case "bookshelf - yes":
 		sText("> It is a paradox that every leader has climbed to power")
-		sText("> through the ladder of free speech.Immedietly on obtaining")
-		sText("> power each dictator has supressed all free speech")
-		sText("> excerpt from their own.")
+		sText("> through the ladder of free speech. Immedietly")
+		sText("> obtaining power each dictator has supressed")
+		sText("> all free speech excerpt from their own.")
 		sText("You close the book.")
+		oBookshelf.text_id = "bookshelf - read"
 	break;
 	#endregion
 	
