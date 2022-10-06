@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oPlayer",
   "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+    "name": "sClothedbasiccharacter1",
+    "path": "sprites/sClothedbasiccharacter1/sClothedbasiccharacter1.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,10 +24,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":0.0,"y":20.0,},
-    {"x":32.0,"y":20.0,},
-    {"x":32.0,"y":32.0,},
-    {"x":0.0,"y":32.0,},
+    {"x":0.0,"y":0.0,},
+    {"x":24.0,"y":0.0,},
+    {"x":24.0,"y":24.0,},
+    {"x":0.0,"y":24.0,},
   ],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
@@ -35,6 +35,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oInteractable","path":"objects/oInteractable/oInteractable.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],

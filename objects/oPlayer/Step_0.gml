@@ -4,9 +4,8 @@ _down = keyboard_check(ord("S")) or keyboard_check(vk_down),
 _left = keyboard_check(ord("A")) or keyboard_check(vk_left),
 _right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 _esc = keyboard_check(vk_delete) or keyboard_check(vk_escape),
-_endDay = keyboard_check_pressed(ord("Z")),
+_endDay = keyboard_check_pressed(ord("X")),
 _reset = keyboard_check_pressed(ord("R")),
-_interact = keyboard_check_pressed(vk_enter),
 #endregion
 #region Movement
 if _up {
@@ -17,9 +16,11 @@ if _down {
 }
 if _left {
 	xx -= moveSpeed
+	xsc = -1
 }
 if _right {
 	xx += moveSpeed
+	xsc = 1
 }
 
 y = lerp(y,yy,la);
@@ -52,6 +53,27 @@ ini_close();
 day = 0
 }
 #endregion
-#region Interact
+#region interact
+//if ((distance_to_object(instance_nearest(x,y,oInteractable))< 18 )&& _interact && !instance_exists(oTextBox)) {
+//	var _s = oInteractable._s
+//	var text_id = oInteractatext_id
+//	with instance_create_layer(x,y,"Dialogue",oTextBox)
+//	{
+//	sGameText(_s.text_id);
+//	}
+//	show_debug_message("Interacted is true");
+//}
+#endregion
+#region movement with dialogue boxes
+if instance_exists(oTextBox) {
+moveSpeed = 0;	
+} else {
+moveSpeed = 2;
+}
+#endregion
+#region depth ordering
+depth = -bbox_bottom;
+#endregion
+#region deactivate instances outside player
 
 #endregion

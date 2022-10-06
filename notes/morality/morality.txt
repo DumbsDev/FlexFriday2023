@@ -1,0 +1,16 @@
+Morality meter
+the more morality you have the more likely you are yo get positive and helpful
+people come by and support you get.
+
+the less you have, the more people hate you and dont like you and the lower your 
+happiness and content is.
+
+Dialogue differs depending on morality and likeliness
+
+ex interacting with a mirror
+"It's you." 100+ morality
+"Despite everything /n its still you."
+"You see a reflection."
+"You look scared."
+"You do not recognize what you see /n what went wrong?" 0- morality
+"You see a monster." 100- morality
