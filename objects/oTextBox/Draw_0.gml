@@ -123,7 +123,10 @@ if draw_char == text_length[page] && page == page_number - 1
 	}
 	
 	//the option text
-	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+2,option[_op])
+	draw_set_color(c_shadow)
+	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+5,option[_op])
+	draw_set_color(c_white)
+	draw_text(_txtb_x+14+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+3,option[_op])
 	}
 }
 #endregion options

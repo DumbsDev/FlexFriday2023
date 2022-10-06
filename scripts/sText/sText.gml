@@ -1,3 +1,8 @@
+
+function sSetDefaultsForText(){
+	line_break_pos[0,page_number] = 999;
+}
+
 // @param text
 function sText(_text){
 
