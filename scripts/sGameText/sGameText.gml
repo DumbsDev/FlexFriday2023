@@ -37,7 +37,9 @@ case "plantpot":
 	break;
 	
 		case "bookshelf - yes":
-		sText("put book shit here");
+		sText("The easter egg is you have to interact with the plant 456 times.");
+		sText("Then put a wired mouse,(plugged in), in a pool of gamer girl bathwater.");
+		sText("This should unlock the second character, Tails.");
 	break;
 	#endregion
 	
