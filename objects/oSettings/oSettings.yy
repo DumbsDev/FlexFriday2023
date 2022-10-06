@@ -1,11 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-<<<<<<<< HEAD:objects/statManager/statManager.yy
-  "name": "statManager",
-========
   "name": "oSettings",
->>>>>>>> 1dcb924edda549b00b647db4ad00063af59b49a1:objects/oSettings/oSettings.yy
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -26,13 +22,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "dialogue",
-    "path": "folders/Objects/dialogue.yy",
+    "name": "Controller",
+    "path": "folders/Objects/Controller.yy",
   },
 }
