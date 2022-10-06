@@ -3,6 +3,7 @@
 function sGameText(_text_id){
 
 switch _text_id {
+	
 
 #region Object Interaction
 	//Basic Household Objects
@@ -35,11 +36,13 @@ case "plantpot":
 	case "bookshelf - no":
 		instance_destroy();
 	break;
-	
+		
 		case "bookshelf - yes":
-		sText("The easter egg is you have to interact with the plant 456 times.");
-		sText("Then put a wired mouse,(plugged in), in a pool of gamer girl bathwater.");
-		sText("This should unlock the second character, Tails.");
+		sText("> It is a paradox that every leader has climbed to power")
+		sText("> through the ladder of free speech.Immedietly on obtaining")
+		sText("> power each dictator has supressed all free speech")
+		sText("> excerpt from their own.")
+		sText("You close the book.")
 	break;
 	#endregion
 	
