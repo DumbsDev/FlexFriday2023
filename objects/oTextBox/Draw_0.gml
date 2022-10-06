@@ -109,7 +109,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	option_pos = clamp(option_pos, 0, option_number-1);
 	//timestamp is 20:00 for revision
 	var _op_space = 24,
-	_op_board = 17;
+	_op_board = 18;
 	for (var _op = 0; _op < option_number; _op++)
 	{
 	//the option box
@@ -123,7 +123,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	}
 	
 	//the option text
-	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+4,option[_op])
+	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+2,option[_op])
 	}
 }
 #endregion options
