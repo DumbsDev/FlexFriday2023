@@ -26,8 +26,9 @@ case "plantpot":
 	
 	case "plantpot2":
 	sText("It's a plant in a pot.")
+	oWindow.resources._food += 10
 	break;
-	
+
 	#region bookshelf
 	case "bookshelf":
 	sText("It's a bookshelf.")
