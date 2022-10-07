@@ -9,7 +9,7 @@ global.factions = {
 }
 #endregion
 
-
+/*
 #region change in dialogue function
 dialogueChange = function(improve, reduce, impactMulti=1){
 	switch (improve){
