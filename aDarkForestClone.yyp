@@ -82,7 +82,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"pemanent","folderPath":"folders/Objects/household objects/pemanent.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Parents","folderPath":"folders/Objects/Parents.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Stuff","folderPath":"folders/Objects/Player Stuff.yy","order":1,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy","order":3,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Objects/Paths.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":9,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sequences","folderPath":"folders/Sequences.yy","order":10,},
