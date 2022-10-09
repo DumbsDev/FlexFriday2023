@@ -6,7 +6,6 @@ _right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 _esc = keyboard_check(vk_delete) or keyboard_check(vk_escape),
 _endDay = keyboard_check_pressed(ord("X")),
 _reset = keyboard_check_pressed(ord("R"));
-print(food)
 #endregion
 #region Movement
 if _up {
