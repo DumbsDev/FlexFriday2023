@@ -4,7 +4,6 @@ _down = keyboard_check(ord("S")) or keyboard_check(vk_down),
 _left = keyboard_check(ord("A")) or keyboard_check(vk_left),
 _right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 _esc = keyboard_check(vk_delete) or keyboard_check(vk_escape),
-_endDay = keyboard_check_pressed(ord("X")),
 _reset = keyboard_check_pressed(ord("R"));
 #endregion
 #region Movement
@@ -35,15 +34,6 @@ leaving = 0;
 
 if leaving >= 2 {
 game_end();	
-}
-
-if _endDay {
-xx = oBed.x
-yy = oBed.y
-day += 1
-ini_open("savedata.ini");
-ini_write_real("savedata", "day", day);
-ini_close();
 }
 
 if _reset {
@@ -79,6 +69,7 @@ depth = -bbox_bottom;
 #endregion
 #region sleep
 if sleep = true {
+	day += 1
 ini_open("savedata.ini"); //Set the save data
 ini_write_real("savedata", "day", day); //set the current day
 ini_write_real("savedata", "water", water); //set the current day
@@ -88,5 +79,6 @@ ini_read_real("savedata", "population", population); //set the current day
 ini_write_real("savedata", "intel", intel); //set the intelligence
 ini_write_real("savedata", "joy", joy); //set the intelligence
 ini_close(); //close the ini file to prevent a memory leak
+room_restart();
 }
 #endregion
