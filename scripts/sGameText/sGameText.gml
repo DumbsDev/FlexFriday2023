@@ -51,6 +51,8 @@ case "plantpot":
 		sText("> obtaining power each dictator has supressed")
 		sText("> all free speech excerpt from their own.")
 		sText("You close the book.")
+			oPlayer.intel += 1
+		sText("You feel a bit more wise.")
 //		sText("a weird sense of someone watching washes over you")
 		oBookshelf.text_id = "bookshelf - read"
 	break;

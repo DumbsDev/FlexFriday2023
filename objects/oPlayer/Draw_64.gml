@@ -28,9 +28,11 @@ draw_rectangle_color(j,0,j-356,256,c_black,c_black,c_black,c_black,0)
 
 draw_set_alpha(1);
 ini_open("savedata.ini");
-draw_text(j,24,"Rations:" + string(ini_read_real("savedata", "food", 0)));
+draw_text(j,24,"Rations:" + string(food));
 draw_text(j,48,"Water Bottles:" + string(ini_read_real("savedata", "water", 0)));
 draw_text(j,72,"Huts:" + string(ini_read_real("savedata", "houses", 0)));
 draw_text(j,96,"People:" + string(ini_read_real("savedata", "population", 0)));
+draw_text(j,96+24,"Intelligence:" + string(intel));
+draw_text(j,96+48,"Happiness:" + string(joy));
 ini_close();
 #endregion
