@@ -32,3 +32,6 @@ shoes = 0
 accesory = 0
 xsc = 1
 #endregion appearance
+#region sleep and data stuff like that
+sleep = false
+#endregion

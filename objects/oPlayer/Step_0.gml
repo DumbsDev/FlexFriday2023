@@ -77,3 +77,16 @@ depth = -bbox_bottom;
 #region deactivate instances outside player
 
 #endregion
+#region sleep
+if sleep = true {
+ini_open("savedata.ini"); //Set the save data
+ini_write_real("savedata", "day", day); //set the current day
+ini_write_real("savedata", "water", water); //set the current day
+ini_write_real("savedata", "food", food); //set the current day
+ini_write_real("savedata", "houses", houses); //set the current day
+ini_read_real("savedata", "population", population); //set the current day
+ini_write_real("savedata", "intel", intel); //set the intelligence
+ini_write_real("savedata", "joy", joy); //set the intelligence
+ini_close(); //close the ini file to prevent a memory leak
+}
+#endregion

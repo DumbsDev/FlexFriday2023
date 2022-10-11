@@ -57,7 +57,26 @@ case "plantpot":
 		oBookshelf.text_id = "bookshelf - read"
 	break;
 	#endregion
+	#region bed
+		case "bed":
+	sText("It's your bed.")
+	sText("Would you like to end your day?")
+		sOptions("Go to bed.", "bed - yes")
+		sOptions("Not yet.", "bed - no")
+	break;
 	
+	case "bed - no":
+		instance_destroy();
+	break;
+		
+		case "bed - yes":
+		sText("You head to bed...")
+			oPlayer.sleep = true
+		sText("You feel a bit more wise.")
+//		sText("a weird sense of someone watching washes over you")
+		oBookshelf.text_id = "bookshelf - read"
+	break;
+	#endregion
 #endregion
 #region lore and tutorial
 	case "tutorial":
