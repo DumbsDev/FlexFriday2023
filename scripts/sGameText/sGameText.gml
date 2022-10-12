@@ -3,7 +3,6 @@
 function sGameText(_text_id){
 
 switch _text_id {
-	
 
 #region Object Interaction
 	//Basic Household Objects
@@ -71,10 +70,7 @@ case "plantpot":
 		
 		case "bed - yes":
 		sText("You head to bed...")
-			oPlayer.sleep = true
-		sText("You feel a bit more wise.")
-//		sText("a weird sense of someone watching washes over you")
-		oBookshelf.text_id = "bookshelf - read"
+			oPlayer.sleep = true;
 	break;
 	#endregion
 #endregion
