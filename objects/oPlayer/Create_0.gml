@@ -16,7 +16,7 @@ intel = ini_read_real("savedata", "intel", 0); //set the intelligence
 joy = ini_read_real("savedata", "joy", 0); //set the intelligence
 ini_close(); //close the ini file to prevent a memory leak
 k = camera_get_view_border_y(view_camera[0])
-j = camera_get_view_border_x(view_camera[0])*2
+j = camera_get_view_border_x(view_camera[0])
 interactx = x;
 interacty = y;
 

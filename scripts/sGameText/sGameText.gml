@@ -11,6 +11,10 @@ case "table":
 	sText("It's made of oak wood.")
 	break;
 	
+	case "cal":
+	sText("It's been " + string(oPlayer.day) + " days since your reign begun.")
+	break;
+	
 case "door":
 	sText("It's a door.")
 	sText("You don't feel like unlocking it right now.")
