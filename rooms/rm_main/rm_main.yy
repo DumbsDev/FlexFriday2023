@@ -37,6 +37,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_35180821","properties":[],"isDnd":false,"objectId":{"name":"oBookshelf","path":"objects/oBookshelf/oBookshelf.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.5,"scaleY":1.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1224.0,"y":48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_21865FE8","properties":[],"isDnd":false,"objectId":{"name":"oBed","path":"objects/oBed/oBed.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1464.0,"y":264.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22FA4B14","properties":[],"isDnd":false,"objectId":{"name":"oCalender","path":"objects/oCalender/oCalender.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":564.0,"y":72.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6FCB45D8","properties":[],"isDnd":false,"objectId":{"name":"oStatsJournal","path":"objects/oStatsJournal/oStatsJournal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1320.0,"y":204.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":12,"gridY":12,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","tilesetId":{"name":"sFlooring","path":"tilesets/sFlooring/sFlooring.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":32,"SerialiseHeight":7,"TileCompressedData":[
 -32,-2147483648,-192,3,],},"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -65,6 +66,7 @@
     {"name":"inst_35180821","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_21865FE8","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_22FA4B14","path":"rooms/rm_main/rm_main.yy",},
+    {"name":"inst_6FCB45D8","path":"rooms/rm_main/rm_main.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

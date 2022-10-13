@@ -3,4 +3,3 @@ start_scaleMax = 0.35
 
 la = 0.2
 _chooseid = 0
-x = room_width/2

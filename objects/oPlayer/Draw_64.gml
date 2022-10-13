@@ -34,5 +34,6 @@ draw_text(j,72,"Huts:" + string(ini_read_real("savedata", "houses", 0)));
 draw_text(j,96,"People:" + string(ini_read_real("savedata", "population", 0)));
 draw_text(j,96+24,"Intelligence:" + string(intel));
 draw_text(j,96+48,"Happiness:" + string(joy));
+draw_text(j,96+64,draw_test);
 ini_close();
 #endregion
