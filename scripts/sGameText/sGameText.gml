@@ -79,97 +79,13 @@ case "plantpot":
 	#endregion
 #endregion
 #region lore and tutorial
-	case "tutorial":
-	sText("welcome to tutorial")
-	sText("this needs a lot of work lol")
-		sOptions("Yes, I will", "tut - yes")
-		sOptions("No I wont", "tut - no")
-	break;
-	
-	case "tut - yes":
-		sText("thanks dawg")
-	break;
-	
-		case "tut - no":
-		instance_destroy();
-	break;
 
 #endregion
 #region questions and npcs
-case "rnpc":
-	var dialogue = ""
-	var randimprove = random(2)
-	var randreduce = random(2)
-	while randimprove == randreduce {
-		randreduce = random(2)
-	}
-	
-		switch (randimprove){
-			case 0:
-				dialogue += "Would you like to increase our food supply by "
-				break
-			case 1:
-				dialogue += "Would you like to increase our kingdom's wealth by "
-				break
-			case 2:
-				dialogue += "Would you like to increase our kingdom's happiness by "
-				break
-			default:
-				show_debug_message("Error on line 118 of sGameText")
-				break
-		}
-	
-		switch (randreduce){
-			case 0:
-				if (randimprove = 1){
-					if (random(1) == 0){
-						dialogue += "selling our crops to a neighboring kingdom?"
-					} else {
-						dialogue += "increasing taxes on crops?"
-					}
-				} else if (randimprove == 2) {
-					if (random(1) == 0){
-						dialogue += "increasing rations?"
-					} else {
-						dialogue += "hold a feast for the commonwealth?"
-					}
-				}
-				break
-			case 1:
-				if (randimprove == 0){
-					if (random(1) == 0){
-						dialogue += "purchasing food from our neighboring kingdom?"
-					} else {
-						dialogue += "reducing taxes on crops?"
-					}
-				} else if (randimprove == 2) {
-					if (random(1) == 0){
-						dialogue += "advertising for a carnival to come to the kingdom?"
-					} else {
-						dialogue += "build a theater in the town square?"
-					}
-				}
-				break
-			case 2:
-				if (randimprove == 1){
-					if (random(1) == 0){
-						dialogue += "reducing rations?"
-					} else {
-						dialogue += "demanding more food from farmers?"
-					}
-				} else if (randimprove == 0){
-					if (random(1) == 0){
-						dialogue += "invading a nearby kingdom for it's resources?"
-					} else {
-						dialogue += "stoping maintaining public works?"
-					}
-				}
-				break
-			default:
-				show_debug_message("Error on line 169 of sGameText")
-				break
-		}
-break;
+
+#region bob
+
+#endregion
 #endregion
 #region misc.
 

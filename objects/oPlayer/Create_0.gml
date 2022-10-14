@@ -19,7 +19,7 @@ k = camera_get_view_border_y(view_camera[0])
 j = camera_get_view_border_x(view_camera[0])
 
 randomize();
-dayCode = string(irandom_range(0,1000))
+dayCode = (irandom_range(0,1000))
 text_id = ""
 #endregion
 #region appearance
