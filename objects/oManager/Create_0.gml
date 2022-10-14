@@ -1,0 +1,1 @@
+dailyQuestions = 0;
