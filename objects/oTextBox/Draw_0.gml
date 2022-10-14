@@ -89,9 +89,11 @@ if accept_key
 	}
 #endregion
 #region draw textbox
+
 txtb_img += txtb_img_spd
 var _txtb_x = textbox_x + text_x_offset[page];
 var _txtb_y = textbox_y;
+
 txtb_spr_w = sprite_get_width(txtb_spr)
 txtb_spr_h = sprite_get_height(txtb_spr)
 
@@ -112,6 +114,11 @@ if draw_char == text_length[page] && page == page_number - 1
 	_op_board = 18;
 	for (var _op = 0; _op < option_number; _op++)
 	{
+		if (oPlayer.y <= room_height/2) {
+	_txtb_y = (oCamera.y)+room_height/2-room_height*0.35;
+		} else if (oPlayer.y > room_height/2){
+	_txtb_y = (((oCamera.y)+room_height/2+room_height*0.35)-(room_height/3)*3)+48;
+}
 	//the option box
 	var _o_w = string_width(option[_op]) +_op_board*2;
 	draw_sprite_ext(txtb_spr,txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
