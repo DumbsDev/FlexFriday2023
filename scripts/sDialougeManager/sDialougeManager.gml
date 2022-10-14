@@ -4,16 +4,16 @@ stats = {
 	money: 100,
 	happiness: 100
 }
-/*
+
 factions = {
 	nobility: 0,
 	military: 0,
 	common: 0
 }
-*/
+
 #endregion
 
-/*
+
 #region change in dialogue function
 dialogueChange = function(improve, reduce, impactMulti=1){
 	switch (improve){
