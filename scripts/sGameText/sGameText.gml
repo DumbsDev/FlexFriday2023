@@ -82,7 +82,66 @@ case "plantpot":
 
 #endregion
 #region questions and npcs
-
+case 1:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 2:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 3:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 4:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 5:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 6:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 7:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 8:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 9:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 10:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 11:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 12:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 13:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 14:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
+case 15:
+	sText("It's a table.")
+	sText("It's made of oak wood.")
+	break;
 #region bob
 
 #endregion
