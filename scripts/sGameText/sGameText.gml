@@ -83,44 +83,34 @@ case "plantpot":
 #endregion
 #region questions and npcs
 case 1:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("ABC")
 	break;
 case 2:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("DEF")
 	break;
 case 3:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("GHI")
 	break;
 case 4:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("JKL")
 	break;
 case 5:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("MNOP")
 	break;
 case 6:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("QRS")
 	break;
 case 7:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("TUV")
 	break;
 case 8:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("WX")
 	break;
 case 9:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("YZ")
 	break;
 case 10:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
+	sText("FILLER")
 	break;
 case 11:
 	sText("It's a table.")
