@@ -19,7 +19,6 @@
     {"id":{"name":"sPointer","path":"sprites/sPointer/sPointer.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sLightBlueJeans","path":"sprites/sLightBlueJeans/sLightBlueJeans.yy",},"order":0,},
-    {"id":{"name":"oManager","path":"objects/oManager/oManager.yy",},"order":3,},
     {"id":{"name":"oTextBox_tutorial","path":"objects/oTextBox_tutorial/oTextBox_tutorial.yy",},"order":2,},
     {"id":{"name":"sGreyJeans","path":"sprites/sGreyJeans/sGreyJeans.yy",},"order":3,},
     {"id":{"name":"morality","path":"notes/morality/morality.yy",},"order":1,},

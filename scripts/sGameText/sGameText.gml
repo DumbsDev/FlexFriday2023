@@ -82,6 +82,13 @@ case "plantpot":
 
 #endregion
 #region questions and npcs
+
+case "finalqoftheday":
+	sText("You have no more questions today.")
+	break;
+case 0:
+	sText("0th statement lol")
+	break;
 case 1:
 	sText("ABC")
 	break;
@@ -137,7 +144,6 @@ case 15:
 #endregion
 #endregion
 #region misc.
-
 #endregion
 #region other
 
