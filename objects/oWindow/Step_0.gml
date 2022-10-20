@@ -17,10 +17,6 @@ if ((distance_to_object(instance_nearest(x,y,oPlayer))< 18 )&& _interact && !ins
 	print(dailyQuestions);
 }
 
-
-
-print(querycode)
-
 if dailyQuestions  >= dailyQuestionsMax {
 	text_id = "finalqoftheday"
 }
