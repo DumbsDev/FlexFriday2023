@@ -1,6 +1,7 @@
 dailyQuestions = 0;
 querycodemax = 2
-querycode = 0;
-querycodelast = 0;
-dailyQuestionsMax = 3
+querycode = (irandom_range(1,querycodemax));
+querycodelast = 1;
+dailyQuestionsMax = 1000
+text_id = querycode
 randomize();

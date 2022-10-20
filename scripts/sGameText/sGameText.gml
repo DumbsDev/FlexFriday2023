@@ -87,7 +87,8 @@ case "finalqoftheday":
 	sText("You have no more questions today.")
 	break;
 case 0:
-	sText("0th statement lol")
+	sText("0th statement lol") //This text will be a rare test, only visible if the
+	//player gets the first statement twice in a row, as well as a coinflip.
 	break;
 case 1:
 	sText("ABC")
