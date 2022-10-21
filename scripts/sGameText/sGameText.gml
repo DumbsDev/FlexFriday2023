@@ -83,63 +83,78 @@ case "plantpot":
 #endregion
 #region questions and npcs
 
-case "finalqoftheday":
-	sText("You have no more questions today.")
+	case "finalqoftheday":
+		sText("You have no more questions today.")
 	break;
-case 0:
-	sText("0th statement lol") //This text will be a rare test, only visible if the
+	
+	case 0:
+		sText("0th statement lol") //This text will be a rare test, only visible if the
 	//player gets the first statement twice in a row, as well as a coinflip.
 	break;
-case 1:
-	sText("ABC")
+	case 1:
+		sText("Hello, thyne majesty.");
+		sText("Would you like to water more crops?\n(+5~) (-5@)")
+		sOptions("Yes", "c1 - yes")
+		sOptions("No", "c1 - no")
 	break;
-case 2:
+	case "c1 - no":
+		sText("Understood, your majesty.")	
+		sText("We will leave the well as it is.")
+	break;
+	case "c1 - yes":
+		sText("Understood, your majesty.")	
+		sText("We will inform the farmers of your decision.")
+		oPlayer.water -= 5
+		oPlayer.food += 5
+	break;
+	break;
+	case 2:
 	sText("DEF")
 	break;
-case 3:
-	sText("GHI")
-	break;
-case 4:
-	sText("JKL")
-	break;
-case 5:
-	sText("MNOP")
-	break;
-case 6:
-	sText("QRS")
-	break;
-case 7:
-	sText("TUV")
-	break;
-case 8:
-	sText("WX")
-	break;
-case 9:
-	sText("YZ")
-	break;
-case 10:
-	sText("FILLER")
-	break;
-case 11:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
-	break;
-case 12:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
-	break;
-case 13:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
-	break;
-case 14:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
-	break;
-case 15:
-	sText("It's a table.")
-	sText("It's made of oak wood.")
-	break;
+	case 3:
+		sText("GHI")
+		break;
+	case 4:
+		sText("JKL")
+		break;
+	case 5:
+		sText("MNOP")
+		break;
+	case 6:
+		sText("QRS")
+		break;
+	case 7:
+		sText("TUV")
+		break;
+	case 8:
+		sText("WX")
+		break;
+	case 9:
+		sText("YZ")
+		break;
+	case 10:
+		sText("FILLER")
+		break;
+	case 11:
+		sText("It's a table.")
+		sText("It's made of oak wood.")
+		break;
+	case 12:
+		sText("It's a table.")
+		sText("It's made of oak wood.")
+		break;
+	case 13:
+		sText("It's a table.")
+		sText("It's made of oak wood.")
+		break;
+	case 14:
+		sText("It's a table.")
+		sText("It's made of oak wood.")
+		break;
+	case 15:
+		sText("It's a table.")
+		sText("It's made of oak wood.")
+		break;
 #region bob
 
 #endregion
@@ -147,6 +162,9 @@ case 15:
 #region misc.
 #endregion
 #region other
+
+#endregion
+#region extra thing
 
 #endregion
 	}

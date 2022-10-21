@@ -11,7 +11,6 @@ if ((distance_to_object(instance_nearest(x,y,oPlayer))< 18 )&& _interact && !ins
 	if querycode = text_id {
 		querycode = (text_id+(choose(-1,1)));
 		}
-		
 	text_id = querycode;
 	dailyQuestions += 1;
 	print(dailyQuestions);

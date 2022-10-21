@@ -13,5 +13,8 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_top)
 draw_text(x-disx+(disx),y-disy+(disy/4)+24,
 //draw the saved variables as a string
-"WATER:" + string(oPlayer.water) + "\n" +
-"FOOD:" + string(oPlayer.food))
+"POPULATOIN:" + string(oPlayer.population) + "\n" +
+"HAPPINESS:" + string(oPlayer.joy) + "\n" +
+"FOOD:" + string(oPlayer.food) + "\n" +
+"WATER:" + string(oPlayer.water)
+)

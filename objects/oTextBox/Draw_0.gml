@@ -4,7 +4,7 @@ keyboard_check_pressed(vk_enter);
 var spd_key = keyboard_check(vk_control);
 
 if spd_key {
-text_spd = 2
+text_spd = 1
 } else {
 	text_spd = 1
 }
@@ -56,10 +56,10 @@ if setup == false {
 //typing the text
 if draw_char < text_length[page]
 {
-	draw_char += text_spd;
-	draw_char = clamp(draw_char,0,text_length[page]);
-	
+	//increment the index of the character that's being typed
+	draw_char++;
 }
+print(draw_char);
 //flip through pages
 if accept_key
 {
@@ -84,7 +84,7 @@ if accept_key
 	}
 	//if not done typing
 	else {
-	draw_char = text_length[page];	
+	draw_char++;
 	}
 	}
 #endregion

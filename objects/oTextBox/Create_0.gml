@@ -13,10 +13,10 @@ txtb_img_spd = 1
 //The text!
 page = 0;
 page_number = 0;
-text[0] = ""
+text[0] = "error: no sText()"
 text_length[0] = string_length(text[0]);
 draw_char = 0;
-text_spd = 0.5;
+text_spd = 1;
 //Options
 option[0] = "";
 option_link_id[0] = -1

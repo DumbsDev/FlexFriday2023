@@ -1,1 +1,1 @@
-text_id = "plantpot2"	
+text_id = "rnpc"//"plantpot2"	
