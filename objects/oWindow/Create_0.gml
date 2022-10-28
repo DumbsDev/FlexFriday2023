@@ -1,7 +1,7 @@
 if oPlayer.day = 0 {
 dailyQuestions = 0;
 querycodemax = -1
-querycode = (irandom_range(-5,querycodemax));
+querycode = -5
 dailyQuestionsMax = 4
 } else {
 dailyQuestions = 0;

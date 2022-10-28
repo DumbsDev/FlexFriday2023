@@ -79,7 +79,32 @@ case "plantpot":
 	#endregion
 #endregion
 #region lore and tutorial
-
+	case -5:
+		sText("Hey, welcome, you are the new monarch of this land!")
+		sText("I am your royal advisor!")
+		sText("People are going to come and ask questions for you,")
+		sText("sometimes you will be able to answer,\nsometimes you wont.")
+		sText("When you can respond to someone")
+		sText("something will show up when they are done talking.")
+		sText("Kind of like this!")
+		sOptions("I see!", "tut1 - Confirm")
+		sOptions("I dont understand.", "tut1 - Deny")
+		break;
+	case "tut1 - Confirm":
+		sText("Awesome, you can view all of your stats in the main room");
+		sText("(that room is to your left!)");
+		sText("you can also go to the room on your right");
+		sText("to see your colony!");
+		sText("thats all for now");
+		sText("come back to this window to get your questions!");
+	break;
+	case "tut1 - Deny":
+		sText("Well, basically you are the boss here")
+		sText("and you control a city!")
+		sText("By answering questions and managing resources.")
+		sOptions("I see!", "tut1 - Confirm");
+		sOptions("Wait, restart! Huh?", -5);
+	break;
 #endregion
 #region questions and npcs
 

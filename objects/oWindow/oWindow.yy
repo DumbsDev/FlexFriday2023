@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "dialogue",
+    "path": "folders/Objects/dialogue.yy",
   },
 }
