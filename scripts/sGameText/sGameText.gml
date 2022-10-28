@@ -1,7 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function sGameText(_text_id){
-
+/*
+@ = water
+~ = food
+* = happiness
+% = housing
+$  = gold coin
+| = population
+*/
 switch _text_id {
 
 #region Object Interaction
@@ -133,7 +140,9 @@ case "plantpot":
 		oPlayer.food += 5
 	break;
 	case 2:
-	sText("DEF")
+	sText("It rained last night,")
+	sText("meaning our water reserves are filled! (+10@)")
+	oPlayer.water += 10
 	break;
 	case 3:
 		sText("GHI")
