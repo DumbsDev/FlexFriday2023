@@ -107,7 +107,6 @@ case "plantpot":
 		oPlayer.water -= 5
 		oPlayer.food += 5
 	break;
-	break;
 	case 2:
 	sText("DEF")
 	break;
