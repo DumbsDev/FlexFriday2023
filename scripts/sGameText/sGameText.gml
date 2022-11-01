@@ -9,6 +9,8 @@ function sGameText(_text_id){
 $  = gold coin
 | = population
 */
+
+
 switch _text_id {
 
 #region Object Interaction
@@ -144,8 +146,22 @@ case "plantpot":
 	sText("meaning our water reserves are filled! (+10@)")
 	oPlayer.water += 10
 	break;
-	case 3:
-		sText("GHI")
+	case 3 && oWindow.huntingInOurTerritory == true:
+		sText("Hey, you're hunters have been hunting on our land.")
+		sText("And as a group of hunting monsters,")
+		sText("We ain't too big fans.")
+		sText("Could you condense your hunting to your land?")
+		oWindow.huntingInOurTerritory = false
+		sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
+		sOptions("You snooze, you lose.","huntingInOurTerritory - no")
+	break;
+	case "huntingInOurTerritory - yes":
+		sText("Oh really?\nThank you deeply!")
+		sText("I know its not crazy important, but still")
+		sText("We thank you.")
+	case 3 && oWindow.huntingInOurTerritory == false:
+		sText("Our hunters found a hidden place on our land");
+		sText("and its ridden with berries! (+10~)");
 		break;
 	case 4:
 		sText("JKL")

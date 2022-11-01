@@ -1,3 +1,4 @@
+#region tutorial and daily management
 if oPlayer.day = 0 {
 dailyQuestions = 0;
 querycodemax = -1
@@ -11,3 +12,7 @@ dailyQuestionsMax = 3
 }
 text_id = querycode
 randomize();
+#endregion
+#region question variables
+huntingInOurTerritory = false
+#endregion
