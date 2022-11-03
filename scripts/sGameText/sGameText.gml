@@ -146,22 +146,36 @@ case "plantpot":
 	sText("meaning our water reserves are filled! (+10@)")
 	oPlayer.water += 10
 	break;
-	case 3 && oWindow.huntingInOurTerritory == true:
+	case 3:
+	if oWindow.huntingInOurTerritory == false {
 		sText("Hey, you're hunters have been hunting on our land.")
 		sText("And as a group of hunting monsters,")
 		sText("We ain't too big fans.")
 		sText("Could you condense your hunting to your land?")
-		oWindow.huntingInOurTerritory = false
+		oWindow.huntingInOurTerritory = true
 		sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
 		sOptions("You snooze, you lose.","huntingInOurTerritory - no")
+}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
+		sText("Our hunters found a hidden place on our land");
+		sText("and its ridden with berries! (+10~)");
+}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 2) {
+		sText("We went hunting on the hunters land again.")
+		sText("We got some food...")
+		sText("But not before they killed some of our hunters.")
+		oPlayer.population -= irandom_range(1,3);
+		oPlayer.food += 5;
+	}
 	break;
 	case "huntingInOurTerritory - yes":
 		sText("Oh really?\nThank you deeply!")
 		sText("I know its not crazy important, but still")
 		sText("We thank you.")
-	case 3 && oWindow.huntingInOurTerritory == false:
-		sText("Our hunters found a hidden place on our land");
-		sText("and its ridden with berries! (+10~)");
+		oWindow.oneIsOffTheHuntersLand = 1
+		break;
+	case "huntingInOurTerritory - no":
+		sText("Really?\nYou go on our land...")
+		sText("We'll fight back!")
+		oWindow.oneIsOffTheHuntersLand = 2
 		break;
 	case 4:
 		sText("JKL")
