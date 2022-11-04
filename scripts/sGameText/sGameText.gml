@@ -1,6 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function sGameText(_text_id){
+/*
+@ = water
+~ = food
+* = happiness
+% = housing
+$  = gold coin
+| = population
+*/
+
 
 switch _text_id {
 
@@ -74,12 +83,39 @@ case "plantpot":
 		
 		case "bed - yes":
 		sText("You head to bed...")
-			oPlayer.sleep = true;
+			ini_open("savedata.ini")
+				oPlayer.sleep = true;
+			ini_close();
 	break;
 	#endregion
 #endregion
 #region lore and tutorial
-
+	case -5:
+		sText("Hey, welcome, you are the new monarch of this land!")
+		sText("I am your royal advisor!")
+		sText("People are going to come and ask questions for you,")
+		sText("sometimes you will be able to answer,\nsometimes you wont.")
+		sText("When you can respond to someone")
+		sText("something will show up when they are done talking.")
+		sText("Kind of like this!")
+		sOptions("I see!", "tut1 - Confirm")
+		sOptions("I dont understand.", "tut1 - Deny")
+		break;
+	case "tut1 - Confirm":
+		sText("Awesome, you can view all of your stats in the main room");
+		sText("(that room is to your left!)");
+		sText("you can also go to the room on your right");
+		sText("to see your colony!");
+		sText("thats all for now");
+		sText("come back to this window to get your questions!");
+	break;
+	case "tut1 - Deny":
+		sText("Well, basically you are the boss here")
+		sText("and you control a city!")
+		sText("By answering questions and managing resources.")
+		sOptions("I see!", "tut1 - Confirm");
+		sOptions("Wait, restart! Huh?", -5);
+	break;
 #endregion
 #region questions and npcs
 
@@ -107,12 +143,41 @@ case "plantpot":
 		oPlayer.water -= 5
 		oPlayer.food += 5
 	break;
-	break;
 	case 2:
-	sText("DEF")
+	sText("It rained last night,")
+	sText("meaning our water reserves are filled! (+10@)")
+	oPlayer.water += 10
 	break;
 	case 3:
-		sText("GHI")
+	if oWindow.huntingInOurTerritory == false {
+		sText("Hey, you're hunters have been hunting on our land.")
+		sText("And as a group of hunting monsters,")
+		sText("We ain't too big fans.")
+		sText("Could you condense your hunting to your land?")
+		oWindow.huntingInOurTerritory = true
+		sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
+		sOptions("You snooze, you lose.","huntingInOurTerritory - no")
+}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
+		sText("Our hunters found a hidden place on our land");
+		sText("and its ridden with berries! (+10~)");
+}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 2) {
+		sText("We went hunting on the hunters land again.")
+		sText("We got some food...")
+		sText("But not before they killed some of our hunters.")
+		oPlayer.population -= irandom_range(1,3);
+		oPlayer.food += 5;
+	}
+	break;
+	case "huntingInOurTerritory - yes":
+		sText("Oh really?\nThank you deeply!")
+		sText("I know its not crazy important, but still")
+		sText("We thank you.")
+		oWindow.oneIsOffTheHuntersLand = 1
+		break;
+	case "huntingInOurTerritory - no":
+		sText("Really?\nYou go on our land...")
+		sText("We'll fight back!")
+		oWindow.oneIsOffTheHuntersLand = 2
 		break;
 	case 4:
 		sText("JKL")
