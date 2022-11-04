@@ -83,7 +83,9 @@ case "plantpot":
 		
 		case "bed - yes":
 		sText("You head to bed...")
-			oPlayer.sleep = true;
+			ini_open("savedata.ini")
+				oPlayer.sleep = true;
+			ini_close();
 	break;
 	#endregion
 #endregion
