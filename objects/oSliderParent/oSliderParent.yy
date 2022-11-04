@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oButtonParent",
-  "spriteId": null,
+  "name": "oSliderParent",
+  "spriteId": {
+    "name": "BAR_MAN",
+    "path": "sprites/BAR_MAN/BAR_MAN.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,11 +27,12 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Settings",
+    "path": "folders/Objects/Settings.yy",
   },
 }
