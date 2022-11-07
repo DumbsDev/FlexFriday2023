@@ -15,12 +15,12 @@ population = ini_read_real("savedata", "population", 0); //set the current day
 intel = ini_read_real("savedata", "intel", 0); //set the intelligence
 joy = ini_read_real("savedata", "joy", 0); //set the intelligence
 /// Fix the stuffs to old lol
-oldWater = ini_read_real("savedata", "water", 0); //set the current day
-oldFood = ini_read_real("savedata", "food", 0); //set the current day
-oldHouses = ini_read_real("savedata", "houses", 0); //set the current day
-oldPopulation = ini_read_real("savedata", "population", 0); //set the current day
-oldIntel = ini_read_real("savedata", "intel", 0); //set the intelligence
-oldJoy = ini_read_real("savedata", "joy", 0); //set the joy
+oldWater = ini_read_real("savedata", "owater", 0); //set the current day
+oldFood = ini_read_real("savedata", "ofood", 0); //set the current day
+oldHouses = ini_read_real("savedata", "ohouses", 0); //set the current day
+oldPopulation = ini_read_real("savedata", "opopulation", 0); //set the current day
+oldIntel = ini_read_real("savedata", "ointel", 0); //set the intelligence
+oldJoy = ini_read_real("savedata", "ojoy", 0); //set the joy
 ini_close(); //close the ini file to prevent a memory leak
 k = camera_get_view_border_y(view_camera[0])
 j = camera_get_view_border_x(view_camera[0])
