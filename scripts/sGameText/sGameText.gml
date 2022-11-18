@@ -27,9 +27,6 @@ case "table":
 case "door":
 	sText("It's a door.")
 	sText("You don't feel like unlocking it right now.")
-	//sText("it smells weird almost like it's alive")
-	//sText("no it's taking over ")
-	//sText("you move away but you feel it's apart of you")
 	break;
 
 case "plantpot":

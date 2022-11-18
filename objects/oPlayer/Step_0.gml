@@ -79,6 +79,6 @@ ini_read_real("savedata", "population", population); //set the current day
 ini_write_real("savedata", "intel", intel); //set the intelligence
 ini_write_real("savedata", "joy", joy); //set the intelligence
 ini_close(); //close the ini file to prevent a memory leak
-room_restart();
+room_goto(rm_endday)
 }
 #endregion
