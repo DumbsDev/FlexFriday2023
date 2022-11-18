@@ -140,7 +140,7 @@ case "plantpot":
 	case "c1 - yes":
 		sText("Understood, your majesty.")	
 		sText("We will inform the farmers of your decision.")
-		oPlayer.water -= 5
+		oPlayer.water -= 5 * dayMulti
 		oPlayer.food += 5
 	break;
 	case 2:
@@ -164,7 +164,7 @@ case "plantpot":
 		sText("We went hunting on the hunters land again.")
 		sText("We got some food...")
 		sText("But not before they killed some of our hunters.")
-		oPlayer.population -= irandom_range(1,3);
+		oPlayer.population -= irandom_range(1,3) * dayMulti;
 		oPlayer.food += 5;
 	}
 	break;

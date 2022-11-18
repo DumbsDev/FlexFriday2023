@@ -35,6 +35,7 @@
     {"id":{"name":"sBookshelfPH","path":"sprites/sBookshelfPH/sBookshelfPH.yy",},"order":3,},
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},"order":4,},
     {"id":{"name":"oInteractable","path":"objects/oInteractable/oInteractable.yy",},"order":0,},
+    {"id":{"name":"oGameLogic","path":"objects/oGameLogic/oGameLogic.yy",},"order":2,},
     {"id":{"name":"oBookshelf","path":"objects/oBookshelf/oBookshelf.yy",},"order":4,},
     {"id":{"name":"sOptions","path":"sprites/sOptions/sOptions.yy",},"order":3,},
     {"id":{"name":"sFont","path":"sprites/sFont/sFont.yy",},"order":4,},
