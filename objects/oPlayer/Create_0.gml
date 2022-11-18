@@ -8,12 +8,12 @@ moveSpeed = 2 //player speed
 leaving = 0 // Set close game variable to 0
 ini_open("savedata.ini"); //Set the save data
 day = ini_read_real("savedata", "day", 0); //set the current day
-water = ini_read_real("savedata", "water", 0); //set the current day
-food = ini_read_real("savedata", "food", 0); //set the current day
-houses = ini_read_real("savedata", "houses", 0); //set the current day
-population = ini_read_real("savedata", "population", 0); //set the current day
+water = ini_read_real("savedata", "water", 15); //set the current day
+food = ini_read_real("savedata", "food", 15); //set the current day
+houses = ini_read_real("savedata", "houses", 10); //set the current day
+population = ini_read_real("savedata", "population", 25); //set the current day
 intel = ini_read_real("savedata", "intel", 0); //set the intelligence
-joy = ini_read_real("savedata", "joy", 0); //set the intelligence
+joy = ini_read_real("savedata", "joy", 25); //set the intelligence
 /// Fix the stuffs to old lol
 oldWater = ini_read_real("savedata", "owater", 0); //set the current day
 oldFood = ini_read_real("savedata", "ofood", 0); //set the current day
