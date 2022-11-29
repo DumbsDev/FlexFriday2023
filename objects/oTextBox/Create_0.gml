@@ -24,3 +24,7 @@ option_pos = 0;
 option_number = 0;
 
 setup = false;
+
+// effects
+scSetDefaultsForText();
+lastFreeSpace = 0;
