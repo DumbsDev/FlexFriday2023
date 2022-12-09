@@ -1,14 +1,14 @@
 #region keyboard and speed
-accept_key = keyboard_check_pressed(ord("Z")) or 
-keyboard_check_pressed(vk_enter);
-var spd_key = keyboard_check(vk_control);
+	accept_key = keyboard_check_pressed(ord("Z")) or 
+	keyboard_check_pressed(vk_enter);
+	var spd_key = keyboard_check(vk_control);
 
-if spd_key {
-text_spd = 2
-} else {
-	text_spd = 1
-}
-draw_set_font(global.font_main)
+	if spd_key {
+		text_spd = 2
+	} else {
+		text_spd = 1
+	}
+	draw_set_font(global.font_main
 #endregion
 #region alignment
 draw_set_halign(fa_left)
