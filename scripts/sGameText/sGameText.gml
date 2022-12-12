@@ -177,7 +177,7 @@ switch _text_id {
 			oWindow.oneIsOffTheHuntersLand = 2
 			break;
 		case 4:
-			sText("JKL")
+			dialogueGenerator(true)
 			break;
 #region bob
 

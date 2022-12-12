@@ -44,34 +44,28 @@ dayMulti = day/10 + 1
 	*/
 	
 	#region water cult
-		switch waterCult{ //ALL NUMBERS ARE UP FOR DEBATE
-			case waterCult >= 20 and waterCult < 40:
-				//Small benefits and no chnages to other factions. A straight upgrade.
-				waterMulti = waterCult/400 + 1
-				break
-			case waterCult >= 40 and waterCult < 60:
-				//Normal benefits and changes other factions. The begaining of deeper stratagies.
-				waterMulti = waterCult/300 + 1
-				resistance -= 1*(waterCult/50) + 1
-				break
-			case waterCult >= 60:
-				//Big benefit, changes other factions, and reduces other supplies. Just another teir of the previous.
-				waterMulti = waterCult/300 + 2
-				foodMulti = 1 - waterCult/400
-				resistance -= 1*(waterCult/50) + 1
-				break
-			case waterCult >= 80:
-				//Big gameplay changes which affect all aspects of the game. Deffine endgame.
-				waterCultMax = true
-				break
-			case Default:
-				if waterCult >= 20{
-					print("Default on line 66 oGameLogic Step")
-				}
-				break
-			}
+		//ALL NUMBERS ARE UP FOR DEBATE
+		if waterCult >= 80{
+			//Big gameplay changes which affect all aspects of the game. Deffine endgame.
+			waterCultMax = true
+			waterMulti = waterCult/300 + 2
+			foodMulti = 1 - waterCult/400
+			resistance -= 1*(waterCult/50) + 1
+		} else if waterCult >= 60{
+			//Big benefit, changes other factions, and reduces other supplies. Just another teir of the previous.
+			waterMulti = waterCult/300 + 2
+			foodMulti = 1 - waterCult/400
+			resistance -= 1*(waterCult/50) + 1
+		} else if waterCult >= 40{
+			//Normal benefits and changes other factions. The begaining of deeper stratagies.
+			waterMulti = waterCult/300 + 1
+			resistance -= 1*(waterCult/50) + 1
+		} else if waterCult >= 20{
+			//Small benefits and no chnages to other factions. A straight upgrade.
+			waterMulti = waterCult/400 + 1
+		}
 	#endregion
-	
+	/*
 	#region resistence
 		switch resistance{
 			case resistance >= 20 and waterCult < 40:
@@ -79,4 +73,5 @@ dayMulti = day/10 + 1
 				foodMulti  = resistance/400 + 1
 		}
 	#endregion
+	*/
 #endregion

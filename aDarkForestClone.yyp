@@ -18,6 +18,7 @@
     {"id":{"name":"fnt_large","path":"fonts/fnt_large/fnt_large.yy",},"order":0,},
     {"id":{"name":"sClothedbasiccharacter1","path":"sprites/sClothedbasiccharacter1/sClothedbasiccharacter1.yy",},"order":0,},
     {"id":{"name":"sBlueShirt","path":"sprites/sBlueShirt/sBlueShirt.yy",},"order":0,},
+    {"id":{"name":"scDialogue","path":"scripts/scDialogue/scDialogue.yy",},"order":3,},
     {"id":{"name":"sLightBrownJacket","path":"sprites/sLightBrownJacket/sLightBrownJacket.yy",},"order":2,},
     {"id":{"name":"sPointer","path":"sprites/sPointer/sPointer.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
