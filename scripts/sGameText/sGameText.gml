@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function sGameText(_text_id){
+	dayMulti = global.day / 10 + 1
 /*
 @ = water
 ~ = food
@@ -21,7 +22,7 @@ switch _text_id {
 		break;
 	
 		case "cal":
-		sText("It's been " + string(oPlayer.day) + " days since your reign begun.")
+		sText("It's been " + string(global.day) + " days since your reign begun.")
 		break;
 	
 	case "door":
@@ -60,7 +61,7 @@ switch _text_id {
 			sText("> obtaining power each dictator has supressed")
 			sText("> all free speech excerpt from their own.")
 			sText("You close the book.")
-				oPlayer.intel += 1
+				global.intel += 1
 			sText("You feel a bit more wise.")
 	//		sText("a weird sense of someone watching washes over you")
 			oBookshelf.text_id = "bookshelf - read"
@@ -137,13 +138,13 @@ switch _text_id {
 		case "c1 - yes":
 			sText("Understood, your majesty.")	
 			sText("We will inform the farmers of your decision.")
-			oPlayer.water -= 5 * dayMulti
-			oPlayer.food += 5
+			global.water -= 5 * dayMulti
+			global.food += 5
 		break;
 		case 2:
 		sText("It rained last night,")
 		sText("meaning our water reserves are filled! (+10@)")
-		oPlayer.water += 10
+		global.water += 10
 		break;
 		case 3:
 		if oWindow.huntingInOurTerritory == false {
@@ -161,24 +162,33 @@ switch _text_id {
 			sText("We went hunting on the hunters land again.")
 			sText("We got some food...")
 			sText("But not before they killed some of our hunters.")
-			oPlayer.population -= irandom_range(1,3) * dayMulti;
-			oPlayer.food += 5;
+			global.population -= irandom_range(1,3);
+			global.food += 5;
 		}
 		break;
+		
 		case "huntingInOurTerritory - yes":
 			sText("Oh really?\nThank you deeply!")
 			sText("I know its not crazy important, but still")
 			sText("We thank you.")
 			oWindow.oneIsOffTheHuntersLand = 1
 			break;
+			
 		case "huntingInOurTerritory - no":
 			sText("Really?\nYou go on our land...")
 			sText("We'll fight back!")
 			oWindow.oneIsOffTheHuntersLand = 2
 			break;
+			
 		case 4:
 			dialogueGenerator(true)
 			break;
+			
+		case 5:
+			// faction stuff lol lmao
+			break;
+			
+			
 #region bob
 
 #endregion

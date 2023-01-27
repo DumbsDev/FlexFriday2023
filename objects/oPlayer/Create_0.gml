@@ -7,13 +7,13 @@ moveSpeed = 2 //player speed
 #region debug and save data
 leaving = 0 // Set close game variable to 0
 ini_open("savedata.ini"); //Set the save data
-day = ini_read_real("savedata", "day", 0); //set the current day
-water = ini_read_real("savedata", "water", 15); //set the current day
-food = ini_read_real("savedata", "food", 15); //set the current day
-houses = ini_read_real("savedata", "houses", 10); //set the current day
-population = ini_read_real("savedata", "population", 25); //set the current day
-intel = ini_read_real("savedata", "intel", 0); //set the intelligence
-joy = ini_read_real("savedata", "joy", 25); //set the intelligence
+global.day = ini_read_real("savedata", "day", 0); //set the current day
+global.water = ini_read_real("savedata", "water", 15); //set the current day
+global.food = ini_read_real("savedata", "food", 15); //set the current day
+global.houses = ini_read_real("savedata", "houses", 10); //set the current day
+global.population = ini_read_real("savedata", "population", 25); //set the current day
+global.intel = ini_read_real("savedata", "intel", 0); //set the intelligence
+global.joy = ini_read_real("savedata", "joy", 25); //set the intelligence
 /// Fix the stuffs to old lol
 oldWater = ini_read_real("savedata", "owater", 0); //set the current day
 oldFood = ini_read_real("savedata", "ofood", 0); //set the current day
@@ -40,4 +40,18 @@ xsc = 1
 #endregion appearance
 #region sleep and data stuff like that
 sleep = false
+#endregion
+//Factions and stuff
+#region HARD HAT ZONE
+	global.waterCult = 0
+	global.resistance = 0
+	global.roundEarthers = 0
+
+	global.waterMulti = 0
+	global.foodMulti = 0
+	global.joyMulti = 0
+
+	//waterCultMax = false
+	//resistanceMax = false
+	//roundEarthersMax = false
 #endregion

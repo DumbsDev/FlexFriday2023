@@ -59,7 +59,6 @@ if draw_char < text_length[page]
 	//increment the index of the character that's being typed
 	draw_char++;
 }
-print(draw_char);
 //flip through pages
 if accept_key
 {

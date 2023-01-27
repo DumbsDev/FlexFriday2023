@@ -1,3 +1,6 @@
+factionLogic()
+dailyPopChange()
+
 ini_open("savedata.ini")
 day = ini_read_real("savedata", "day", 0); //set the current day
 water = ini_read_real("savedata", "water", 0); //set the current day

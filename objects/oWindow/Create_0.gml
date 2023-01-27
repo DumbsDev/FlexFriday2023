@@ -1,5 +1,6 @@
+day = global.day
 #region tutorial and daily management
-if oPlayer.day = 0 {
+if day = 0 {
 dailyQuestions = 0;
 querycodemax = -1
 querycode = -5

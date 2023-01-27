@@ -8,7 +8,7 @@
 	} else {
 		text_spd = 1
 	}
-	draw_set_font(global.font_main
+	draw_set_font(global.font_main)
 #endregion
 #region alignment
 draw_set_halign(fa_left)

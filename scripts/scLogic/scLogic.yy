@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scDoLogicTick",
+  "name": "scLogic",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

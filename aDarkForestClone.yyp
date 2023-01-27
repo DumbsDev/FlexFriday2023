@@ -15,7 +15,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},"order":4,},
     {"id":{"name":"oTable","path":"objects/oTable/oTable.yy",},"order":0,},
-    {"id":{"name":"scDoLogicTick","path":"scripts/scDoLogicTick/scDoLogicTick.yy",},"order":4,},
+    {"id":{"name":"scLogic","path":"scripts/scLogic/scLogic.yy",},"order":4,},
     {"id":{"name":"fnt_large","path":"fonts/fnt_large/fnt_large.yy",},"order":0,},
     {"id":{"name":"sClothedbasiccharacter1","path":"sprites/sClothedbasiccharacter1/sClothedbasiccharacter1.yy",},"order":0,},
     {"id":{"name":"sBlueShirt","path":"sprites/sBlueShirt/sBlueShirt.yy",},"order":0,},

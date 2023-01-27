@@ -69,15 +69,15 @@ depth = -bbox_bottom;
 #endregion
 #region sleep
 if sleep = true {
-	day += 1
+	global.day += 1
 ini_open("savedata.ini"); //Set the save data
-ini_write_real("savedata", "day", day); //set the current day
-ini_write_real("savedata", "water", water); //set the current day
-ini_write_real("savedata", "food", food); //set the current day
-ini_write_real("savedata", "houses", houses); //set the current day
-ini_read_real("savedata", "population", population); //set the current day
-ini_write_real("savedata", "intel", intel); //set the intelligence
-ini_write_real("savedata", "joy", joy); //set the intelligence
+ini_write_real("savedata", "day", global.day); //set the current day
+ini_write_real("savedata", "water", global.water); //set the current day
+ini_write_real("savedata", "food", global.food); //set the current day
+ini_write_real("savedata", "houses", global.houses); //set the current day
+ini_read_real("savedata", "population", global.population); //set the current day
+ini_write_real("savedata", "intel", global.intel); //set the intelligence
+ini_write_real("savedata", "joy", global.joy); //set the intelligence
 ini_close(); //close the ini file to prevent a memory leak
 room_goto(rm_endday)
 }
