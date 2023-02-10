@@ -78,6 +78,8 @@ ini_write_real("savedata", "houses", global.houses); //set the current day
 ini_read_real("savedata", "population", global.population); //set the current day
 ini_write_real("savedata", "intel", global.intel); //set the intelligence
 ini_write_real("savedata", "joy", global.joy); //set the intelligence
+ini_write_real("savedata", "gold", global.gold); //set the gold
+ini_write_real("savedata", "taxrate", global.taxrate); //set the taxrate
 ini_close(); //close the ini file to prevent a memory leak
 room_goto(rm_endday)
 }

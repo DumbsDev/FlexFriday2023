@@ -46,11 +46,6 @@ switch _text_id {
 			sOptions("Leave", "bookshelf - no")
 		break;
 	
-		case "bookshelf - read":
-			sText("It's a bookshelf.")
-			sText("You don't really feel like reading right now.")
-		break;
-	
 		case "bookshelf - no":
 			instance_destroy();
 		break;
@@ -66,6 +61,12 @@ switch _text_id {
 	//		sText("a weird sense of someone watching washes over you")
 			oBookshelf.text_id = "bookshelf - read"
 		break;
+		
+				case "bookshelf - read":
+			sText("It's a bookshelf.")
+			sText("You don't really feel like reading right now.")
+		break;
+		
 		#endregion
 		#region bed
 			case "bed":
@@ -186,7 +187,40 @@ switch _text_id {
 			
 		case 5:
 			// faction stuff lol lmao
+			sText("The locals have started a new endurance test to see how long they can hold their breaths!")
+			sText("Should we let them?")
+			sOptions("Yes!", "5-1")
+			sOptions("What is wrong with you, no!", "5-2")
 			break;
+		
+		case "5-1":
+			sText("We will tell them that the no breath challenge is fully endorsed by the ruler!")
+			global.population = round(global.population * 0.975);
+			break;
+		
+		case "5-2":
+			sText("that is surely a good idea leader!")
+			break;
+			
+		case 6:
+			sText("People aren't paying their taxes what should we do about it?")
+			sOptions("Punish them!", "6-Commie")
+			sOptions("Lower the taxes", "6-Lower")
+			sOptions("Let it be", "6-Nothing")
+			
+		case "6-Commie":
+			sText("I will have them whipped right away!")
+			break;
+		
+		case "6-Lower":
+			sText("I will have them do that right away!")
+			global.gold = global.gold * 0.9
+			break;
+		
+		case "6-Nothing":
+			sText("Uh-Okay?")
+			global.gold = global.gold * 0.8
+
 			
 			
 #region bob

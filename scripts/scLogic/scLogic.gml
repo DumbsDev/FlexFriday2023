@@ -121,6 +121,9 @@ function dailyPopChange(){
 		global.population += 5
 		print("Post-change Population: " + string(global.population))
 	}
+	
+	print("Taxes happen")
+	
 }
 
 function factionLogic(){
