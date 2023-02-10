@@ -181,7 +181,7 @@ switch _text_id {
 			break;
 			
 		case 4:
-			dialogueGenerator(true)
+			dialogueGenerator("", "", true)
 			break;
 			
 		case 5:

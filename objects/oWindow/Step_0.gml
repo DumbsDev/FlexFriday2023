@@ -13,7 +13,6 @@ if ((distance_to_object(instance_nearest(x,y,oPlayer))< 18 )&& _interact && !ins
 		}
 	text_id = querycode;
 	dailyQuestions += 1;
-	print(dailyQuestions);
 }
 
 if dailyQuestions  >= dailyQuestionsMax {
