@@ -21,7 +21,7 @@ switch _text_id {
 		sText("It's made of oak wood.")
 		break;
 	
-		case "cal":
+	case "cal":
 		sText("It's been " + string(global.day) + " days since your reign begun.")
 		break;
 	
@@ -34,58 +34,58 @@ switch _text_id {
 		sText("It's a potted plant.")
 		break;
 	
-		case "plantpot2":
+	case "plantpot2":
 		sText("It's a plant in a pot.")
 		break;
 
-		#region bookshelf
-		case "bookshelf":
+#region bookshelf
+	case "bookshelf":
 		sText("It's a bookshelf.")
 		sText("Would you like to read a book?")
-			sOptions("Read a book", "bookshelf - yes")
-			sOptions("Leave", "bookshelf - no")
+		sOptions("Read a book", "bookshelf - yes")
+		sOptions("Leave", "bookshelf - no")
 		break;
 	
-		case "bookshelf - no":
-			instance_destroy();
+	case "bookshelf - no":
+		instance_destroy();
 		break;
 		
-			case "bookshelf - yes":
+		case "bookshelf - yes":
 			sText("> It is a paradox that every leader has climbed to power")
 			sText("> through the ladder of free speech. Immedietly")
 			sText("> obtaining power each dictator has supressed")
 			sText("> all free speech excerpt from their own.")
 			sText("You close the book.")
-				global.intel += 1
+			global.intel += 1
 			sText("You feel a bit more wise.")
 	//		sText("a weird sense of someone watching washes over you")
 			oBookshelf.text_id = "bookshelf - read"
-		break;
+			break;
 		
-				case "bookshelf - read":
+		case "bookshelf - read":
 			sText("It's a bookshelf.")
 			sText("You don't really feel like reading right now.")
-		break;
+			break;
 		
 		#endregion
 		#region bed
-			case "bed":
-		sText("It's your bed.")
-		sText("Would you like to end your day?")
+		case "bed":
+			sText("It's your bed.")
+			sText("Would you like to end your day?")
 			sOptions("Go to bed.", "bed - yes")
 			sOptions("Not yet.", "bed - no")
-		break;
+			break;
 	
 		case "bed - no":
 			instance_destroy();
-		break;
+			break;
 		
-			case "bed - yes":
+		case "bed - yes":
 			sText("You head to bed...")
-				ini_open("savedata.ini")
-					oPlayer.sleep = true;
-				ini_close();
-		break;
+			ini_open("savedata.ini")
+			oPlayer.sleep = true;
+			ini_close();
+			break;
 	#endregion
 #endregion
 #region lore and tutorial
@@ -100,6 +100,7 @@ switch _text_id {
 			sOptions("I see!", "tut1 - Confirm")
 			sOptions("I dont understand.", "tut1 - Deny")
 			break;
+		
 		case "tut1 - Confirm":
 			sText("Awesome, you can view all of your stats in the main room");
 			sText("(that room is to your left!)");
@@ -107,66 +108,71 @@ switch _text_id {
 			sText("to see your colony!");
 			sText("thats all for now");
 			sText("come back to this window to get your questions!");
-		break;
+			break;
+		
 		case "tut1 - Deny":
 			sText("Well, basically you are the boss here")
 			sText("and you control a city!")
 			sText("By answering questions and managing resources.")
 			sOptions("I see!", "tut1 - Confirm");
 			sOptions("Wait, restart! Huh?", -5);
-		break;
+			break;
 #endregion
 #region questions and npcs
 
 		case "finalqoftheday":
 			sText("You have no more questions today.")
-		break;
+			break;
 	
 		case 0:
-			sText("0th statement lol") //This text will be a rare test, only visible if the
-		//player gets the first statement twice in a row, as well as a coinflip.
-		break;
+			dialogueGenerator(randomizeInput=true)
+			break;
+		
 		case 1:
 			sText("Hello, thyne majesty.");
 			sText("Would you like to water more crops?\n(+5~) (-5@)")
 			sOptions("Yes", "c1 - yes")
 			sOptions("No", "c1 - no")
-		break;
+			break;
+		
 		case "c1 - no":
 			sText("Understood, your majesty.")	
 			sText("We will leave the well as it is.")
-		break;
+			break;
+		
 		case "c1 - yes":
 			sText("Understood, your majesty.")	
 			sText("We will inform the farmers of your decision.")
 			global.water -= 5 * dayMulti
 			global.food += 5
-		break;
+			break;
+		
 		case 2:
-		sText("It rained last night,")
-		sText("meaning our water reserves are filled! (+10@)")
-		global.water += 10
-		break;
+			sText("It rained last night,")
+			sText("meaning our water reserves are filled! (+10@)")
+			global.water += 10
+			break;
+		
 		case 3:
-		if oWindow.huntingInOurTerritory == false {
-			sText("Hey, you're hunters have been hunting on our land.")
-			sText("And as a group of hunting monsters,")
-			sText("We ain't too big fans.")
-			sText("Could you condense your hunting to your land?")
-			oWindow.huntingInOurTerritory = true
-			sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
-			sOptions("You snooze, you lose.","huntingInOurTerritory - no")
-	}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
-			sText("Our hunters found a hidden place on our land");
-			sText("and its ridden with berries! (+10~)");
-	}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 2) {
-			sText("We went hunting on the hunters land again.")
-			sText("We got some food...")
-			sText("But not before they killed some of our hunters.")
-			global.population -= irandom_range(1,3);
-			global.food += 5;
-		}
-		break;
+			if oWindow.huntingInOurTerritory == false {
+				sText("Hey, you're hunters have been hunting on our land.")
+				sText("And as a group of hunting monsters,")
+				sText("We ain't too big fans.")
+				sText("Could you condense your hunting to your land?")
+				oWindow.huntingInOurTerritory = true
+				sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
+				sOptions("You snooze, you lose.","huntingInOurTerritory - no")
+			}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
+				sText("Our hunters found a hidden place on our land");
+				sText("and its ridden with berries! (+10~)");
+			}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 2) {
+				sText("We went hunting on the hunters land again.")
+				sText("We got some food...")
+				sText("But not before they killed some of our hunters.")
+				global.population -= irandom_range(1,3);
+				global.food += 5;
+			}
+			break;
 		
 		case "huntingInOurTerritory - yes":
 			sText("Oh really?\nThank you deeply!")
@@ -186,7 +192,6 @@ switch _text_id {
 			break;
 			
 		case 5:
-			// faction stuff lol lmao
 			sText("The locals have started a new endurance test to see how long they can hold their breaths!")
 			sText("Should we let them?")
 			sOptions("Yes!", "5-1")
@@ -220,20 +225,5 @@ switch _text_id {
 		case "6-Nothing":
 			sText("Uh-Okay?")
 			global.gold = global.gold * 0.8
-
-			
-			
-#region bob
-
-#endregion
-#endregion
-#region misc.
-#endregion
-#region other
-
-#endregion
-#region extra thing
-
-#endregion
 	}
 }

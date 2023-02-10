@@ -1,4 +1,4 @@
-function dialogueGenerator(improvedStat="", reducedStat="", randomizeInput=false){
+function dialogueGenerator(improvedStat, reducedStat, randomizeInput=false){
 	var dialogue = ""
 	
 	if randomizeInput{
@@ -55,47 +55,49 @@ function dialogueGenerator(improvedStat="", reducedStat="", randomizeInput=false
 	
 	switch (reducedStat){
 		case "food":
+			randomNum = irandom_range(0, 1)
 			if (improvedStat == "money"){
-				randomNum = irandom_range(0, 1)
 				if randomNum == 0{
 					dialogue += "selling our crops to a neighboring kingdom?"
 				} else {
 					dialogue += "increasing taxes on crops?"
 				}
 			} else {
-				if randomNum == 1{
+				if randomNum == 0{
 					dialogue += "increasing rations?"
 				} else {
 					dialogue += "hold a feast for the commonwealth?"
 				}
 			}
 			break
+
 		case "money":
-			if (improvedStat == "food"){
-				randomNum = irandom_range(0, 1)
+			randomNum = irandom_range(0, 1)
+			if (improvedStat == "food"){	
 				if randomNum == 0{
 					dialogue += "purchasing food from our neighboring kingdom?"
 				} else {
 					dialogue += "reducing taxes on crops?"
 				}
 			} else {
-				if randomNum == 1{
+				if randomNum == 0{
 					dialogue += "advertising for a carnival to come to the kingdom?"
 				} else {
 					dialogue += "build a theater in the town square?"
 				}
 			}
 			break
+
 		case "happiness":
+			randomNum = irandom_range(0, 1)
 			if (improvedStat == "food"){
-				randomNum = irandom_range(0, 1)
 				if randomNum == 0{
 					dialogue += "reducing rations?"
 				} else {
 					dialogue += "demanding more food from farmers?"
 				}
 			} else {
-				if randomNum == 1{
+				if randomNum == 0{
 					dialogue += "invading a nearby kingdom for it's resources?"
 				} else {
 					dialogue += "stoping maintaining public works?"

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oCalender",
   "spriteId": {
-    "name": "sCalendar",
-    "path": "sprites/sCalendar/sCalendar.yy",
+    "name": "sPlaceHolderPlayer",
+    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
   },
   "solid": true,
   "visible": true,
@@ -29,8 +29,8 @@
   "physicsShapePoints": [
     {"x":0.0,"y":0.0,},
     {"x":24.0,"y":0.0,},
-    {"x":24.0,"y":72.0,},
-    {"x":0.0,"y":72.0,},
+    {"x":24.0,"y":16.0,},
+    {"x":0.0,"y":16.0,},
   ],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
