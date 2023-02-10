@@ -182,7 +182,7 @@ switch _text_id {
 			break;
 			
 		case 4:
-			dialogueGenerator(true)
+			dialogueGenerator(true);
 			break;
 			
 		case 5:
@@ -195,7 +195,7 @@ switch _text_id {
 		
 		case "5-1":
 			sText("We will tell them that the no breath challenge is fully endorsed by the ruler!")
-			global.population = global.population * 0.95
+			global.population = round(global.population * 0.975);
 			break;
 		
 		case "5-2":
