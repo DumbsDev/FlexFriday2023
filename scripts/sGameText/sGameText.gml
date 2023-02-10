@@ -190,7 +190,7 @@ switch _text_id {
 		case 4:
 			dialogueGenerator("", "", true)
 			break;
-			
+		
 		case 5:
 			sText("The locals have started a new endurance test to see how long they can hold their breaths!")
 			sText("Should we let them?")
@@ -225,5 +225,59 @@ switch _text_id {
 		case "6-Nothing":
 			sText("Uh-Okay?")
 			global.gold = global.gold * 0.8
+		
+		case 7:
+			dialogueReturnArray = dialogueGenerator("","", true)
+			dialogue = dialogueReturnArray[0]
+			improvedStat = dialogueReturnArray[1]
+			reducedStat = dialogueReturnArray[2]
+			magnitude = dialogueReturnArray[3]
+			sOptions("Yes", "7-yes")
+			sOptions("No", "7-no")
+			break
+
+		case "7-yes":
+			sText("Great, Sire, I'll go right ahead with that!")
+			break
+
+		case "7-no":
+			sText("Okay, Sire, I understand.")
+			break
+		
+		case 8:
+			dialogueReturnArray = dialogueGenerator("","", true)
+			dialogue = dialogueReturnArray[0]
+			improvedStat = dialogueReturnArray[1]
+			reducedStat = dialogueReturnArray[2]
+			magnitude = dialogueReturnArray[3]
+			sOptions("Yes", "8-yes")
+			sOptions("No", "8-no")
+			break
+
+		case "8-yes":
+			sText("Great, Sire, I'll go right ahead with that!")
+			break
+
+		case "8-no":
+			sText("Okay, Sire, I understand.")
+			break
+		
+		case 9:
+			dialogueReturnArray = dialogueGenerator("","", true)
+			dialogue = dialogueReturnArray[0]
+			improvedStat = dialogueReturnArray[1]
+			reducedStat = dialogueReturnArray[2]
+			magnitude = dialogueReturnArray[3]
+			sOptions("Yes", "9-yes")
+			sOptions("No", "9-no")
+			break
+
+		case "9-yes":
+			sText("Great, Sire, I'll go right ahead with that!")
+			break
+
+		case "9-no":
+			sText("Okay, Sire, I understand.")
+			break
 	}
 }
