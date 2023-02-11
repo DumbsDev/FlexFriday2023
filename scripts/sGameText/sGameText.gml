@@ -213,17 +213,17 @@ switch _text_id {
 			reducedStat = dialogueReturnArray[2]
 			magnitude = dialogueReturnArray[3]
 			sText(dialogue)
-			sOptions("Yes", "4-yes")
-			sOptions("No", "4-no")
+			sOptions("Yes", "c4 - yes")
+			sOptions("No", "c4 - no")
 			break;
 
-		case "4-yes":
+		case "c4 - yes":
 			sText("Great, Sire, I'll go right ahead with that!")
 			improveStat(improvedStat, magnitude)
 			reduceStat(reducedStat, magnitude)
 			break;
 
-		case "4-no":
+		case "c4 - no":
 			sText("Okay, Sire, I understand.")
 			break;
 		
@@ -231,7 +231,7 @@ switch _text_id {
 			sText("The locals have started a new endurance test to see how long they can hold their breaths!")
 			sText("Should we let them?")
 			sOptions("Yes", "c5 - yes")
-			sOptions("What is wrong with you, no!", "5-2")
+			sOptions("What is wrong with you, no!", "c5 - no")
 			break;
 		
 		case "c5 - yes":
@@ -240,28 +240,28 @@ switch _text_id {
 			global.population = round(global.population * 0.975);
 			break;
 		
-		case "5-2":
+		case "c5 - no":
 			sText("that is surely a good idea leader!")
 			break;
 			
 		case 6:
 			sText("People aren't paying their taxes what should we do about it?")
-			sOptions("Punish them!", "6-Commie")
-			sOptions("Lower the taxes", "6-Lower")
-			sOptions("Let it be", "6-Nothing")
+			sOptions("Punish them!", "c6 - Commie")
+			sOptions("Lower the taxes", "c6 - Lower")
+			sOptions("Let it be", "c6 - Nothing")
 			break
 			
-		case "6-Commie":
+		case "c6 - Commie":
 			show_message("you said yes and it worked kinda")
 			sText("I will have them whipped right away!")
 			break;
 		
-		case "6-Lower":
+		case "c6 - Lower":
 			sText("I will have them do that right away!")
 			global.gold = global.gold * 0.9
 			break;
 		
-		case "6-Nothing":
+		case "c6 - Nothing":
 			sText("Uh-Okay?")
 			global.gold = global.gold * 0.8
 			break;
@@ -273,18 +273,18 @@ switch _text_id {
 			reducedStat = dialogueReturnArray[2]
 			magnitude = dialogueReturnArray[3]
 			sText(dialogue)
-			sOptions("Yes", "7-yes")
-			sOptions("No", "7-no")
+			sOptions("Yes", "c7 - yes")
+			sOptions("No", "c7 - no")
 			break
 
-		case "7-yes":
+		case "c7 - yes":
 			show_message("you said yes and it worked kinda")
 			sText("Great, Sire, I'll go right ahead with that!")
 			improveStat(improvedStat, magnitude)
 			reduceStat(reducedStat, magnitude)
 			break
 
-		case "7-no":
+		case "c7 - no":
 			sText("Okay, Sire, I understand.")
 			break
 	}
