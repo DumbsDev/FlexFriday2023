@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
 /// @description Command handling
 /*
-=======
-/* @description Command handling
-
->>>>>>> Stashed changes
 if(enable = false) {exit;}
 
 //console

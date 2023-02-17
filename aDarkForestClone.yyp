@@ -39,7 +39,7 @@
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},"order":4,},
     {"id":{"name":"oInteractable","path":"objects/oInteractable/oInteractable.yy",},"order":0,},
     {"id":{"name":"oBookshelf","path":"objects/oBookshelf/oBookshelf.yy",},"order":4,},
-    {"id":{"name":"spOptions","path":"sprites/spOptions/spOptions.yy",},"order":3,},
+    {"id":{"name":"sOptions","path":"sprites/sOptions/sOptions.yy",},"order":3,},
     {"id":{"name":"sFont","path":"sprites/sFont/sFont.yy",},"order":4,},
     {"id":{"name":"oButtonOptions","path":"objects/oButtonOptions/oButtonOptions.yy",},"order":2,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":1,},
@@ -74,11 +74,6 @@
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":3,},
   ],
   "Options": [
-<<<<<<< Updated upstream
-=======
-    {"name":"Linux","path":"options/linux/options_linux.yy",},
-    {"name":"macOS","path":"options/mac/options_mac.yy",},
->>>>>>> Stashed changes
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},

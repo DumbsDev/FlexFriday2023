@@ -1,8 +1,5 @@
 /// @description main or somthing idk
-<<<<<<< Updated upstream
 // You can write your code in this editor
-=======
->>>>>>> Stashed changes
 /*
 enable = true
 enable_key = vk_f1
@@ -17,4 +14,3 @@ erase = -1;
 cursor = "|";
 cursor_delay = 15;
 alarm[1] = cursor_delay;
-*/

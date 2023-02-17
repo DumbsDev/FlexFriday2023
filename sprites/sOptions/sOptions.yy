@@ -1,11 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-<<<<<<< Updated upstream:sprites/sOptions/sOptions.yy
   "name": "sOptions",
-=======
-  "name": "spOptions",
->>>>>>> Stashed changes:sprites/spOptions/spOptions.yy
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -36,11 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-<<<<<<< Updated upstream:sprites/sOptions/sOptions.yy
     "name": "sOptions",
-=======
-    "name": "spOptions",
->>>>>>> Stashed changes:sprites/spOptions/spOptions.yy
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 60.0,
@@ -52,11 +44,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-<<<<<<< Updated upstream:sprites/sOptions/sOptions.yy
             {"id":"73906c7f-d89d-4ed5-aac6-ffb0441b3958","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b711063-e03d-4231-806a-d1a3c5a15ede","path":"sprites/sOptions/sOptions.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-=======
-            {"id":"73906c7f-d89d-4ed5-aac6-ffb0441b3958","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b711063-e03d-4231-806a-d1a3c5a15ede","path":"sprites/spOptions/spOptions.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
->>>>>>> Stashed changes:sprites/spOptions/spOptions.yy
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

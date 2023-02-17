@@ -2,11 +2,7 @@
   "resourceType": "GMMainOptions",
   "resourceVersion": "1.4",
   "name": "Main",
-<<<<<<< Updated upstream
   "option_gameguid": "dc21ad26-5c53-4274-bf59-9f9644fdca19",
-=======
-  "option_gameguid": "7eb7b4d2-e94e-4bc9-9e97-42504b910925",
->>>>>>> Stashed changes
   "option_gameid": "0",
   "option_game_speed": 60,
   "option_mips_for_3d_textures": false,
