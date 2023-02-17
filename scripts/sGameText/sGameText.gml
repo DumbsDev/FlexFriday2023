@@ -287,8 +287,11 @@ switch _text_id {
 
 		case 8:
 			faction = pickRandomFaction()
-			dialogue = pickRandomFactionDialogue(faction)
-			responses = factionDialogueResponses(faction, dialogue)
+			dialoguePackage = pickRandomFactionDialogue(faction)
+			dialogue = dialoguePackage[0]
+			dialogueIndex = dialoguePackage[1]
+			responses = factionDialogueResponses(faction, dialogueIndex)
+
 			sText(dialogue)
 
 			for (var i = 0; i < responses.length; i++) {
@@ -297,17 +300,32 @@ switch _text_id {
 			break;
 		
 		case "c8 - 0":
-			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[0])
+			interpretedPlayerResponse = interpretPlayerResponse(faction, dialogue, responses[0])
+			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
+			factionResponse = interpretedPlayerResponse[2]
+			
+			sText(factionResponse)
+
 			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
 		case "c8 - 1":
 			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[1])
+			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
+			factionResponse = interpretedPlayerResponse[2]
+			
+			sText(factionResponse)
+
 			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
 		case "c8 - 2":
 			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[2])
+			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
+			factionResponse = interpretedPlayerResponse[2]
+			
+			sText(factionResponse)
+			
 			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		

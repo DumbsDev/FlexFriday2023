@@ -249,10 +249,11 @@ function pickRandomFactionDialogue(faction){
 			show_debug_message("Invalid faction parameter in pickRandomFactionDialogue function")
 			break
 	}
-	return [faction, dialogue]
+	dialogueIndex = randomNum
+	return [faction, dialogue, dialogueIndex]
 }
 
-function factionDialogueResponses(faction, dialogue){
+function factionDialogueResponses(faction, dialogueIndex){
 	//create variables
 	responses = []
 
@@ -260,19 +261,19 @@ function factionDialogueResponses(faction, dialogue){
 		case "water cult":
 
 			switch dialogue{
-				case "I am a representative of the water cult. We would like to sacrifice cows to the water god. We want to do it in the town square.":
+				case 0:
 					responses = ["I will allow it.", "I will not allow it to happen in the town square.", "I will not allow it to happen."]
 					break
 				
-				case "I am a representative of the water cult. We want more water to do rituals.":
+				case 1:
 					responses = ["I will give you water from our reserves for crops", "I will give you water out of our general supply.", "We cannot give you any water."]
 					break
 
-				case "I am from the water cult. We want to hold a celebration in the kingdom and would like your sponsorship.":
+				case 2:
 					responses = ["I will allow it and pay for it.", "I will allow it but I refuse to pay for it", "I will not allow it."]
 					break
 
-				case "I am from the water cult. We want to build another temple in the kingdom.":
+				case 3:
 					responses = ["I will give you gold from our treasury.", "I will tax the people and give you gold from that.", "We cannot give you any gold."]
 					break
 
@@ -289,7 +290,7 @@ function factionDialogueResponses(faction, dialogue){
 	return responses
 }
 
-function interpretPlayerResponse(faction, dialogue, response){
+function interpretPlayerResponse(faction, dialogueIndex, response){
 	//create variables
 	improvedStats = []
 	reducedStats = []
@@ -298,25 +299,28 @@ function interpretPlayerResponse(faction, dialogue, response){
 
 		case "water cult":
 
-			switch dialogue{
+			switch dialogueIndex{
 
-				case "I am a representative of the water cult. We would like to sacrifice cows to the water god. We want to do it in the town square.":
+				case 0:
 
 					switch response{
 
 						case "I will allow it.":
 							improvedStats = ["big rep"]
 							reducedStats = ["happiness", "small food"]
+							factionResponse = "Thank you, sire, we will sacrifice the cows in the town square."
 							break
 
 						case "I will not allow it to happen in the town square.":
 							improvedStats = ["small rep"]
 							reducedStats = ["small food"]
+							factionResponse = "Fine, sire, we will do it in the forest."
 							break
 
 						case "I will not allow it to happen.":
 							improvedStats = []
 							reducedStats = ["small rep"]
+							factionResponse = "Sire, this is a grave error. The gods must be appeased."
 							break
 
 						default:
@@ -325,42 +329,48 @@ function interpretPlayerResponse(faction, dialogue, response){
 					}
 					break
 				
-				case "I am a representative of the water cult. We want more water to do rituals.":
+				case 1:
 
 					switch	response{
 
 						case "I will give you water from our reserves for crops":
 							improvedStats = ["rep"]
 							reducedStats = ["food"]
+							factionResponse = "Thank you, sire, water is much needed for our rituals."
 							break
 						
 						case "I will give you water out of our general supply.":
 							improvedStats = ["rep"]
 							reducedStats = ["water"]
+							factionResponse = "Thank you, sire, water is much needed for our rituals."
 							break
 						
 						case "We cannot give you any water.":
 							improvedStats = []
 							reducedStats = ["rep"]
+							factionResponse = "When the water god's wrath comes upon us, you will be the first to suffer."
 							break
 					}
 
-				case "I am from the water cult. We want to hold a celebration in the kingdom and would like your sponsorship.":
+				case 2:
 					switch response{
 
 						case "I will allow it and pay for it.":
 							improvedStats = ["rep", "happiness"]
 							reducedStats = ["big gold"]
+							factionResponse = "Thank you for this. You will not regret it."
 							break
 
 						case "I will allow it but I refuse to pay for it":
 							improvedStats = ["happiness"]
 							reducedStats = ["rep"]
+							factionResponse = "We won't cancel the event because of this but we are disappointed by your decision."
 							break
 
 						case "I will not allow it.":
 							improvedStats = []
 							reducedStats = ["small rep"]
+							factionResponse = "You should be ashamed of yourself, depriving your people of a celebration."
 							break
 
 						default:
@@ -369,22 +379,25 @@ function interpretPlayerResponse(faction, dialogue, response){
 					}
 					break
 
-				case "I am from the water cult. We want to build another temple in the kingdom.":
+				case 3:
 					switch response{
 
 						case "I will give you gold from our treasury.":
 							improvedStats = ["rep"]
 							reducedStats = ["gold"]
+							factionResponse = "Thank you for your eternal generosity."
 							break
 
 						case "I will tax the people and give you gold from that.":
 							improvedStats = ["rep"]
 							reducedStats = ["happiness"]
+							factionResponse = "Thank you for your eternal generosity."
 							break
 
 						case "We cannot give you any gold.":
 							improvedStats = []
 							reducedStats = ["small rep"]
+							factionResponse = "You should be ashamed of yourself."
 							break
 
 						default:
@@ -403,7 +416,7 @@ function interpretPlayerResponse(faction, dialogue, response){
 			show_debug_message("Invalid faction parameter in interpretPlayerResponse function")
 			break
 	}
-	return [improvedStats, reducedStats]
+	return [improvedStats, reducedStats, factionResponse]
 }
 
 function updateFactionStats(faction, improvedStats, reducedStats){
