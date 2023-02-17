@@ -1,5 +1,5 @@
 /// @description Command handling
-
+/*
 if(enable = false) {exit;}
 
 //console

@@ -47,12 +47,13 @@ sleep = false
 //Factions and stuff
 #region HARD HAT ZONE
 	global.waterCult = 0
-	global.resistance = 0
-	global.roundEarthers = 0
+	global.farmersUnion = 0
+	global.bandits = 0
+	global.emperorsCourt = 0
 
-	global.waterMulti = 0
-	global.foodMulti = 0
-	global.joyMulti = 0
+	global.waterMulti = 1
+	global.foodMulti = 1
+	global.joyMulti = 1
 
 	//waterCultMax = false
 	//resistanceMax = false

@@ -1,6 +1,6 @@
 /// @description main or somthing idk
 // You can write your code in this editor
-
+/*
 enable = true
 enable_key = vk_f1
 text = "";

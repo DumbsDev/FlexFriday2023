@@ -1,7 +1,7 @@
 /// @description blinking
 //cursor blinking
 
-
+/*
 if (cursor == "|") {
 	cursor = " ";
 } else {

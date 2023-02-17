@@ -1,27 +1,48 @@
-function changeFactionRep(faction, operation, magnitude){
+function improveFaction(faction, magnitude){
 	switch (faction){
-		case "water":
-			if operation == "+"{
-				waterCult += magnitude
-			} else if "-" {
-				waterCult -= magnitude
-			}
+		case "water cult":
+			waterCult += magnitude
 			break
 			
-		case "resistance":
-			if operation == "+"{
-				resistance += magnitude
-			} else if "-" {
-				resistance -= magnitude
-			}
+		case "farmers union":
+			resistance += magnitude
 			break
 			
-		case "roundEarth":
-			if operation == "+"{
-				roundEarthers += magnitude
-			} else if "-" {
-				roundEarthers -= magnitude
-			}
+		case "bandits":
+			roundEarthers += magnitude
+			break
+		
+		case "emperors court":
+			roundEarthers += magnitude
+			break
+		
+		default:
+			print("Invalid Faction")
+			break
+	}
+	
+}
+
+function reduceFaction(faction, magnitude){
+	switch (faction){
+		case "water cult":
+			waterCult -= magnitude
+			break
+			
+		case "farmers union":
+			resistance -= magnitude
+			break
+			
+		case "bandits":
+			roundEarthers -= magnitude
+			break
+		
+		case "emperors court":
+			roundEarthers -= magnitude
+			break
+		
+		default:
+			print("Invalid Faction")
 			break
 	}
 	
@@ -142,6 +163,47 @@ function dailyJoyChange(){
 		global.joy += (global.water - global.population) / 3
 		print("Post-change Joy: " + string(global.joy))
 		print("")	
+	}
+}
+
+function improveStat(stat, magnitude){
+	switch stat{
+		case "food":
+			global.food += magnitude
+			break
+		
+		case "water":
+			global.water += magnitude
+			break
+		
+		case "money":
+			global.gold += magnitude
+			break
+
+		case "happiness":
+			global.joy += magnitude
+			break
+	}
+}
+
+
+function reduceStat(stat, magnitude){
+	switch stat{
+		case "food":
+			global.food -= magnitude
+			break
+		
+		case "water":
+			global.water -= magnitude
+			break
+		
+		case "money":
+			global.gold -= magnitude
+			break
+		
+		case "happiness":
+			global.joy -= magnitude
+			break
 	}
 }
 

@@ -235,7 +235,6 @@ switch _text_id {
 			break;
 		
 		case "c5 - yes":
-			show_message("you said yes and it worked kinda")
 			sText("We will tell them that the no breath challenge is fully endorsed by the ruler!")
 			global.population = round(global.population * 0.975);
 			break;
@@ -252,7 +251,6 @@ switch _text_id {
 			break
 			
 		case "c6 - Commie":
-			show_message("you said yes and it worked kinda")
 			sText("I will have them whipped right away!")
 			break;
 		
@@ -278,7 +276,6 @@ switch _text_id {
 			break
 
 		case "c7 - yes":
-			show_message("you said yes and it worked kinda")
 			sText("Great, Sire, I'll go right ahead with that!")
 			improveStat(improvedStat, magnitude)
 			reduceStat(reducedStat, magnitude)
@@ -286,6 +283,33 @@ switch _text_id {
 
 		case "c7 - no":
 			sText("Okay, Sire, I understand.")
-			break
+			break;
+
+		case 8:
+			faction = pickRandomFaction()
+			dialogue = pickRandomFactionDialogue(faction)
+			responses = factionDialogueResponses(faction, dialogue)
+			sText(dialogue)
+
+			for (var i = 0; i < responses.length; i++) {
+				sOptions(responses[i], "c8 - " + string(i))
+			}
+			break;
+		
+		case "c8 - 0":
+			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[0])
+			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			break;
+		
+		case "c8 - 1":
+			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[1])
+			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			break;
+		
+		case "c8 - 2":
+			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[2])
+			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			break;
+		
 	}
 }
