@@ -46,10 +46,60 @@ if setup == false {
 		//number in the "text_length[]" array.
 		text_length[p] = string_length(text[p]);
 		
-	//get the x position for the textbox
+//get the x position for the textbox
 		//no character (center box)	
 		text_x_offset[p] = 48;
 		
+		//setting individual chars and finding where they should break
+		for (var ch = 0; ch < text_length[p]; ch++;) {
+			var char_pos = ch+1;
+			
+			//store individual chars in "char" array.
+			char[ch,p] = string_char_at(text[p], char_pos);
+			
+			//get current width of line
+			var txt_up_to_char = string_copy(text[p], 1, char_pos);
+			var current_text_w = string_width(txt_up_to_char) - string_width(char[ch,p]);	
+			
+			//get the last free space
+			if char[ch,p] == " " {lastFreeSpace = char_pos+1};
+			
+			//get the line breaks
+			if (current_text_w  - line_break_num[p] > line_width)
+			{
+				line_break_pos[line_break_num[p], p] = lastFreeSpace;
+				line_break_num[p]++;
+				var txt_up_to_last_space = string_copy(text[p], 1, lastFreeSpace);
+				var last_free_space_string = string_char_at(text[p], lastFreeSpace);
+				line_break_offset[p] = string_width(txt_up_to_last_space) - string_width(last_free_space_string);
+			}	
+		}
+		
+		//Getting the characters coordinates
+		for (var c = 0; c < text_length[p]; c++)
+		{
+			var char_pos = c+1;
+			var txt_x = textbox_x + text_x_offset[p] + border;
+			var txt_y = textbox_y + border;
+			
+			//get width of current line
+			var txt_up_to_char = string_copy(text[p], 1, char_pos);
+			var current_text_w = string_width(txt_up_to_char) - string_width(char[ch,p]);
+			var txt_line = 0;
+			
+			//compensate for string breaks
+			for (var lb = 0; lb < line_break_num; lb++)
+			{
+				//if the current looping character is after a line break
+				if (char_pos >= line_break_pos[lb, p]) {
+					var str_copy = string_copy(text[p], line_break_pos[lb,p], char_pos-line_break_pos[lb,p]);
+					current_text_w = string_width(str_copy);
+					
+					//record the "line" this char should be on
+					txt_line = lb+1 //+1 since it starts at 0
+				}
+			}
+		}
 	}
 	
 }
