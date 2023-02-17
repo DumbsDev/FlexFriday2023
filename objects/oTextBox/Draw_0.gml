@@ -76,9 +76,9 @@ if setup == false {
 		}
 		
 		//Getting the characters coordinates
-		for (var c = 0; c < text_length[p]; c++)
+		for (var ch = 0; ch < text_length[p]; ch++)
 		{
-			var char_pos = c+1;
+			var char_pos = ch+1;
 			var txt_x = textbox_x + text_x_offset[p] + border;
 			var txt_y = textbox_y + border;
 			
@@ -88,7 +88,7 @@ if setup == false {
 			var txt_line = 0;
 			
 			//compensate for string breaks
-			for (var lb = 0; lb < line_break_num; lb++)
+			for (var lb = 0; lb < line_break_num[p]; lb++)
 			{
 				//if the current looping character is after a line break
 				if (char_pos >= line_break_pos[lb, p]) {
@@ -99,6 +99,9 @@ if setup == false {
 					txt_line = lb+1 //+1 since it starts at 0
 				}
 			}
+			
+			char_x[ch,p] = txt_x + current_text_w;
+			char_y[ch,p] = txt_y + txt_line*line_sep;
 		}
 	}
 	
@@ -190,6 +193,7 @@ if draw_char == text_length[page] && page == page_number - 1
 //draw the text
 draw_set_color(c_shadow)
 var _drawtext = string_copy(text[page], 0, draw_char)
+#region text shadow
 draw_text_ext(
 //draw the text shadow
 textbox_x+2 + text_x_offset[page] + border,
@@ -198,11 +202,6 @@ _drawtext,
 line_sep,
 line_width);
 draw_set_color(c_white)
-draw_text_ext(
-//draw the text
-textbox_x + text_x_offset[page] + border,
-textbox_y + border,
-_drawtext,
-line_sep,
-line_width);
+#endregion
+draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border,_drawtext,line_sep,line_width);
 #endregion
