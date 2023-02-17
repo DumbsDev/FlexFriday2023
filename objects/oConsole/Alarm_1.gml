@@ -1,7 +1,12 @@
 /// @description blinking
 //cursor blinking
+<<<<<<< Updated upstream
 
 /*
+=======
+/*
+
+>>>>>>> Stashed changes
 if (cursor == "|") {
 	cursor = " ";
 } else {
