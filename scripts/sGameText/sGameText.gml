@@ -126,11 +126,11 @@ switch _text_id {
 	
 		case 0:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			dialogue = dialogueReturnArray[0]
+			global.dialogue = dialogueReturnArray[0]
 			improvedStat = dialogueReturnArray[1]
 			reducedStat = dialogueReturnArray[2]
 			magnitude = dialogueReturnArray[3]
-			sText(dialogue)
+			sText(global.dialogue)
 			sOptions("Yes", "c0 - yes")
 			sOptions("No", "c0 - no")
 			break
@@ -208,11 +208,11 @@ switch _text_id {
 			
 		case 4:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			dialogue = dialogueReturnArray[0]
+			global.dialogue = dialogueReturnArray[0]
 			improvedStat = dialogueReturnArray[1]
 			reducedStat = dialogueReturnArray[2]
 			magnitude = dialogueReturnArray[3]
-			sText(dialogue)
+			sText(global.dialogue)
 			sOptions("Yes", "c4 - yes")
 			sOptions("No", "c4 - no")
 			break;
@@ -266,11 +266,11 @@ switch _text_id {
 		
 		case 7:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			dialogue = dialogueReturnArray[0]
+			global.dialogue = dialogueReturnArray[0]
 			improvedStat = dialogueReturnArray[1]
 			reducedStat = dialogueReturnArray[2]
 			magnitude = dialogueReturnArray[3]
-			sText(dialogue)
+			sText(global.dialogue)
 			sOptions("Yes", "c7 - yes")
 			sOptions("No", "c7 - no")
 			break
@@ -286,47 +286,47 @@ switch _text_id {
 			break;
 
 		case 8:
-			faction = pickRandomFaction()
-			dialoguePackage = pickRandomFactionDialogue(faction)
-			dialogue = dialoguePackage[0]
+			global.faction = pickRandomFaction()
+			dialoguePackage = pickRandomFactionDialogue(global.faction)
+			global.dialogue = dialoguePackage[0]
 			dialogueIndex = dialoguePackage[1]
-			responses = factionDialogueResponses(faction, dialogueIndex)
+			global.responses = factionDialogueResponses(global.faction, dialogueIndex)
 
-			sText(dialogue)
+			sText(global.dialogue)
 
-			for (var i = 0; i < responses.length; i++) {
-				sOptions(responses[i], "c8 - " + string(i))
+			for (var i = 0; i < global.responses.length; i++) {
+				sOptions(global.responses[i], "c8 - " + string(i))
 			}
 			break;
 		
 		case "c8 - 0":
-			interpretedPlayerResponse = interpretPlayerResponse(faction, dialogue, responses[0])
+			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogue, global.responses[0])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
 			sText(factionResponse)
 
-			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
 		case "c8 - 1":
-			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[1])
+			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogue, global.responses[1])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
 			sText(factionResponse)
 
-			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
 		case "c8 - 2":
-			improvedAndReducedStats = interpretPlayerResponse(faction, dialogue, responses[2])
+			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogue, global.responses[2])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
 			sText(factionResponse)
 			
-			updateFactionStats(faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
+			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
 	}
