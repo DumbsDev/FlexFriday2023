@@ -215,26 +215,25 @@ function pickRandomFactionDialogue(faction){
 					break
 			}
 			break
+
 		
-/*
 		case "farmers union":
 			switch randomNum{
 				case 0:
-					dialogue = "I am a representative of the farmers union. We want to build a new barn."
+					dialogue = "I am a representative of the farmers union. We don't have enough water to irrigate our crops. Could you help us?"
 					break
 				case 1:
-					dialogue = "I am a representative of the farmers union. We want to build a new well."
+					dialogue = "I am a representative of the farmers union. We would like to recruit more farmers from another kingdom. Could you get us some protection for the journey?"
 					break
 				case 2:
-					dialogue = "I am a representative of the farmers union. We want to build a new irrigation system."
+					dialogue = "I am from the farmers union. We have a massive surplus of food. What should we do with it?"
 					break
 				case 3:
-					dialogue = "I am a representative of the farmers union. We want to build a new mill."
+					dialogue = "I am from the farmers union. All the trades I have sent to other kingdoms have been intercepted and robbed. Could you help me?"
 					break
 			}
 			break
-
-		
+/*
 		case "bandits":
 			dialogue = "We are the bandits. We will give you money in exchange for your food."
 			break
@@ -258,9 +257,9 @@ function factionDialogueResponses(faction, dialogueIndex){
 	responses = []
 
 	switch faction{
-		case "water cult":
 
-			switch dialogue{
+		case "water cult":
+			switch dialogueIndex{
 				case 0:
 					responses = ["I will allow it.", "I will not allow it to happen in the town square.", "I will not allow it to happen."]
 					break
@@ -282,6 +281,22 @@ function factionDialogueResponses(faction, dialogueIndex){
 					break
 			}
 			break
+		
+		case "farmers union":
+			switch dialogueIndex{
+				case 0:
+					responses = ["I will give you water from the public supply", "I will give you some of the water held in reserve", "I can't give you any water right now."]
+					break;
+				case 1:
+					responses = ["I can't spare any of my men but I could fund a private escort", "I will give you protection for the journey.",  "I can't help you."]
+					break;
+				case 2:
+					responses = ["I believe the people should have the surplus.", "We should store the food for a later day.", "We should trade the food for more gold."]
+					break;
+				case 3:
+					responses = ["The next time this happens, tell them you are under my protection.", "I can't protect your routes but I will reimburse you for the lost resources.", "I can't help you."]
+					break;
+			}
 		
 		default:
 			show_debug_message("Invalid faction parameter in factionDialogueResponse function")
@@ -411,6 +426,82 @@ function interpretPlayerResponse(faction, dialogueIndex, response){
 					break
 			}
 			break
+
+		case "farmers union":
+
+			switch dialogueIndex{
+
+				case 0:
+
+					switch response{
+
+						case "I will give you water from the public supply":
+							improvedStats = ["rep"]
+							reducedStats = ["happiness"]
+							factionResponse = "Thank you, sire, food is much more important to the people than water."
+							break;
+
+						case "I will give you some of the water held in reserve":
+							improvedStats = ["rep"]
+							reducedStats = ["water"]
+							factionResponse = "Thank you, sire, food is much more important than water."
+							break;
+
+						case "I can't give you any water right now.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "We would have really appreciated that water."
+							break;
+					}
+					break;
+				
+				case 1:
+				
+					switch response{
+
+						case "I can't spare any of my men but I could fund a private escort":
+							improvedStats = ["rep"]
+							reducedStats = ["gold"]
+							factionResponse = "Thank you, sire, we will send off right away."
+							break;
+
+						case "I will give you protection for the journey.":
+							improvedStats = ["rep"]
+							reducedStats = ["small population", "small food"]
+							factionResponse = "Thank you, sire, we will send off right away."
+							break;
+
+						case "I can't help you.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "We would have really appreciated some protection."
+							break;
+					}
+					break;
+				
+				case 2:
+
+					switch response{
+
+						case "I believe the people should have the surplus.":
+							improvedStats = ["happiness"]
+							reducedStats = []
+							factionResponse = "Thank you, sire, we will make sure the people get their fair share."
+							break;
+
+						case "We should store the food for a later day.":
+							improvedStats = ["food"]
+							reducedStats = []
+							factionResponse = "Good idea, sire, very important to stockpile resources."
+							break;
+						
+						case "We should trade the food for more gold.":
+							improvedStats = ["gold"]
+							reducedStats = []
+							factionResponse = "Good idea, sire, gold makes the world go round."
+							break;
+					}
+			}
 	
 		default:
 			show_debug_message("Invalid faction parameter in interpretPlayerResponse function")
