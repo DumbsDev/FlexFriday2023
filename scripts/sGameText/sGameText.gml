@@ -126,11 +126,11 @@ switch _text_id {
 	
 		case 0:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			global.dialogue = dialogueReturnArray[0]
-			improvedStat = dialogueReturnArray[1]
-			reducedStat = dialogueReturnArray[2]
-			magnitude = dialogueReturnArray[3]
-			sText(global.dialogue)
+			dialogue = dialogueReturnArray[0]
+			global.improvedStat = dialogueReturnArray[1]
+			global.reducedStat = dialogueReturnArray[2]
+			global.magnitude = dialogueReturnArray[3]
+			sText(dialogue)
 			sOptions("Yes", "c0 - yes")
 			sOptions("No", "c0 - no")
 			break
@@ -138,8 +138,8 @@ switch _text_id {
 		case "c0 - yes":
 			show_message("you said yes and it worked kinda")
 			sText("Great, Sire, I'll go right ahead with that!")
-			improveStat(improvedStat, magnitude)
-			reduceStat(reducedStat, magnitude)
+			improveStat(global.improvedStat, global.magnitude)
+			reduceStat(global.reducedStat, global.magnitude)
 			break
 
 		case "c0-no":
@@ -208,19 +208,19 @@ switch _text_id {
 			
 		case 4:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			global.dialogue = dialogueReturnArray[0]
-			improvedStat = dialogueReturnArray[1]
-			reducedStat = dialogueReturnArray[2]
-			magnitude = dialogueReturnArray[3]
-			sText(global.dialogue)
+			dialogue = dialogueReturnArray[0]
+			global.improvedStat = dialogueReturnArray[1]
+			global.reducedStat = dialogueReturnArray[2]
+			global.magnitude = dialogueReturnArray[3]
+			sText(dialogue)
 			sOptions("Yes", "c4 - yes")
 			sOptions("No", "c4 - no")
 			break;
 
 		case "c4 - yes":
 			sText("Great, Sire, I'll go right ahead with that!")
-			improveStat(improvedStat, magnitude)
-			reduceStat(reducedStat, magnitude)
+			improveStat(global.improvedStat, global.magnitude)
+			reduceStat(global.reducedStat, global.magnitude)
 			break;
 
 		case "c4 - no":
@@ -266,19 +266,19 @@ switch _text_id {
 		
 		case 7:
 			dialogueReturnArray = dialogueGenerator("","", true)
-			global.dialogue = dialogueReturnArray[0]
-			improvedStat = dialogueReturnArray[1]
-			reducedStat = dialogueReturnArray[2]
-			magnitude = dialogueReturnArray[3]
-			sText(global.dialogue)
+			dialogue = dialogueReturnArray[0]
+			global.improvedStat = dialogueReturnArray[1]
+			global.reducedStat = dialogueReturnArray[2]
+			global.magnitude = dialogueReturnArray[3]
+			sText(dialogue)
 			sOptions("Yes", "c7 - yes")
 			sOptions("No", "c7 - no")
 			break
 
 		case "c7 - yes":
 			sText("Great, Sire, I'll go right ahead with that!")
-			improveStat(improvedStat, magnitude)
-			reduceStat(reducedStat, magnitude)
+			improveStat(global.improvedStat, global.magnitude)
+			reduceStat(global.reducedStat, global.magnitude)
 			break
 
 		case "c7 - no":
@@ -288,19 +288,19 @@ switch _text_id {
 		case 8:
 			global.faction = pickRandomFaction()
 			dialoguePackage = pickRandomFactionDialogue(global.faction)
-			global.dialogue = dialoguePackage[0]
-			dialogueIndex = dialoguePackage[1]
-			global.responses = factionDialogueResponses(global.faction, dialogueIndex)
+			dialogue = dialoguePackage[0]
+			global.dialogueIndex = dialoguePackage[1]
+			global.responses = dialoguePackage[2]
 
-			sText(global.dialogue)
+			sText(dialogue)
 
-			for (var i = 0; i < global.responses.length; i++) {
+			for (var i = 0; i < array_length(global.responses); i++) {
 				sOptions(global.responses[i], "c8 - " + string(i))
 			}
 			break;
 		
 		case "c8 - 0":
-			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogue, global.responses[0])
+			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[0])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
@@ -310,7 +310,7 @@ switch _text_id {
 			break;
 		
 		case "c8 - 1":
-			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogue, global.responses[1])
+			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[1])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
@@ -320,7 +320,7 @@ switch _text_id {
 			break;
 		
 		case "c8 - 2":
-			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogue, global.responses[2])
+			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[2])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			

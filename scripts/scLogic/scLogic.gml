@@ -1,23 +1,23 @@
 function improveFaction(faction, magnitude){
 	switch (faction){
 		case "water cult":
-			waterCult += magnitude
+			global.waterCult += magnitude
 			break
 			
 		case "farmers union":
-			resistance += magnitude
+			global.farmersUnion += magnitude
 			break
 			
 		case "bandits":
-			roundEarthers += magnitude
+			global.bandits += magnitude
 			break
 		
 		case "emperors court":
-			roundEarthers += magnitude
+			global.emperorsCourt += magnitude
 			break
 		
 		default:
-			print("Invalid Faction")
+			print("Invalid faction in improveFaction")
 			break
 	}
 	
@@ -42,7 +42,7 @@ function reduceFaction(faction, magnitude){
 			break
 		
 		default:
-			print("Invalid Faction")
+			print("Invalid faction in reduceFaction")
 			break
 	}
 	
@@ -166,7 +166,7 @@ function dailyJoyChange(){
 	}
 }
 
-function improveStat(stat, magnitude){
+function improveStat(stat, magnitude=15){
 	switch stat{
 		case "food":
 			global.food += magnitude
@@ -187,7 +187,7 @@ function improveStat(stat, magnitude){
 }
 
 
-function reduceStat(stat, magnitude){
+function reduceStat(stat, magnitude=15){
 	switch stat{
 		case "food":
 			global.food -= magnitude
