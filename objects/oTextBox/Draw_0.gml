@@ -192,16 +192,12 @@ if draw_char == text_length[page] && page == page_number - 1
 #region draw ze text
 //draw the text
 draw_set_color(c_shadow)
-var _drawtext = string_copy(text[page], 0, draw_char)
-#region text shadow
-draw_text_ext(
-//draw the text shadow
-textbox_x+2 + text_x_offset[page] + border,
-textbox_y+2 + border,
-_drawtext,
-line_sep,
-line_width);
-draw_set_color(c_white)
-#endregion
-draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border,_drawtext,line_sep,line_width);
+
+draw_set_color(c_white);
+
+for (var m = 0; m < draw_char; m++)
+{
+	//the text
+	draw_text(char_x[m,page], char_y[m,page],char[m,page]);
+}
 #endregion

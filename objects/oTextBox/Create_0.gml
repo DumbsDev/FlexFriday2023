@@ -2,8 +2,8 @@ depth = -9999
 #region Textbox parameters (constant)
 textbox_width = 360
 textbox_height = 80
-border = 12
-line_sep = 18
+border = 6
+line_sep = 4
 line_width = textbox_width - border*2
 txtb_spr = sBackground
 txtb_img = 0
