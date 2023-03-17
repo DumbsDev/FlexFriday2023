@@ -44,18 +44,15 @@ xsc = 1
 #region sleep and data stuff like that
 sleep = false
 #endregion
-//Factions and stuff
-#region HARD HAT ZONE
-	global.waterCult = 0
-	global.farmersUnion = 0
-	global.bandits = 0
-	global.emperorsCourt = 0
 
-	global.waterMulti = 1
-	global.foodMulti = 1
-	global.joyMulti = 1
+global.waterCult = 0
+global.farmersUnion = 0
+global.emperorsCourt = 0
 
-	//waterCultMax = false
-	//resistanceMax = false
-	//roundEarthersMax = false
-#endregion
+global.waterMulti = 1
+global.foodMulti = 1
+global.joyMulti = 1
+
+global.waterCultMax = false
+global.farmersUnionMax = false
+global.emperorsCourtMax = false

@@ -166,7 +166,7 @@ return returnArray
 }
 
 function pickRandomFaction(){
-	randomNum = choose(0, 1)
+	randomNum = choose(0, 1, 2)
 	switch randomNum{
 		case 0:
 			faction = "water cult"
@@ -175,9 +175,6 @@ function pickRandomFaction(){
 			faction = "farmers union"
 			break;
 		case 2:
-			faction = "bandits"
-			break;
-		case 3:
 			faction = "emperors court"
 			break;
 		default:
@@ -245,17 +242,29 @@ function pickRandomFactionDialogue(faction){
 					break;
 			}
 			break;
-/*
-		case "bandits":
-			dialogue = "We are the bandits. We will give you money in exchange for your food."
-			break
 
-		
 		case "emperors court":
-			dialogue = "We are the emperors court. We will give you happiness in exchange for your money."
+			switch randomNum{
+				case 0:
+					dialogue = "I am a representative of the emperors court. We would like to hold a fair in your kingdom. Can you approve?"
+					responses = ["I approve. I can also supply food for the fair.", "I approve.", "I can't approve that right now."]
+					break;
+				case 1:
+					dialogue = "I am a representative of the emperors court. The emporor wants to promote more arts in the land. Could you help?"
+					responses = ["I will finance more artists in the kingdom.", "I will charter artists from other kingdoms.", "We can't do this right now."]
+					break;
+				case 2:
+					dialogue = "I am a representative of the emperors court. A nearby kingdom is in need of aid after a disaster. Could you help them?"
+					responses = ["I will send everything I can.", "I can send gold from the treasury.", "We don't have the means to help."]
+					break;
+				case 3:
+					dialogue = "I am a representative of the emperors court. The emperor is asking for a tribute from every kingdom."
+					responses = ["I will send as much gold as I can muster.", "I'll send some of the gold from the treasury.", "I can't send any gold right now."]
+					break;
+			}
 			break
 
-*/		
+
 		default:
 			show_debug_message("Invalid faction parameter in pickRandomFactionDialogue function")
 			break
@@ -492,7 +501,100 @@ function interpretPlayerResponse(faction, dialogueIndex, response){
 					break
 			}
 			break;
-	
+
+		case "emperors court":
+			switch dialogueIndex{
+				case 0:
+					switch response{
+						case "I approve. I can also supply food for the fair.":
+							improvedStats = ["rep", "happiness"]
+							reducedStats = ["food", "gold"]
+							factionResponse = "Thank you, we will make preparations right away."
+							break;
+						
+						case "I approve.":
+							improvedStats = ["rep"]
+							reducedStats = ["gold"]
+							factionResponse = "Thank you, we will make preparations right away."
+							break;
+						
+						case "I can't approve that right now.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "The emperor will understand."
+							break;
+					}
+					break;
+				
+				case 1:
+					switch response{
+						case "I will finance more artists in the kingdom.":
+							improvedStats = ["rep", "happiness"]
+							reducedStats = ["big gold"]
+							factionResponse = "Thank you, you also understand the beauty of art."
+							break;
+						
+						case "I will charter artists from other kingdoms.":
+							improvedStats = ["small rep", "small happiness"]
+							reducedStats = ["gold"]
+							factionResponse = "Thank you, you also understand the beauty of art."
+							break;
+						
+						case "We can't do this right now.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "The emperor will understand."
+							break;
+					}
+					break;
+				
+				case 2:
+					switch response{
+						case "I will send everything I can.":
+							improvedStats = ["big rep"]
+							reducedStats = ["gold", "food", "water"]
+							factionResponse = "Thank you, I will tell the emperor immediately."
+							break;
+						
+						case "I can send gold from the treasury.":
+							improvedStats = ["rep"]
+							reducedStats = ["gold"]
+							factionResponse = "Thank you, I will inform the emperor."
+							break;
+
+						case "We don't have the means to help.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "The emperor will understand."
+							break;
+					}
+					break;
+				
+				case 3:
+					switch response{
+						case "I will send as much gold as I can muster.":
+							improvedStats = ["big rep"]
+							reducedStats = ["big gold"]
+							factionResponse = "Thank you, I will inform the emperor."
+							break;
+						
+						case "I'll send some of the gold from the treasury.":
+							improvedStats = ["rep"]
+							reducedStats = ["gold"]
+							factionResponse = "Thank you, I will inform the emperor."
+							break;
+						
+						case "I can't send any gold right now.":
+							improvedStats = []
+							reducedStats = ["rep"]
+							factionResponse = "The emperor will understand."
+							break;
+					}
+					break;
+			}
+			break;
+
+
 		default:
 			show_debug_message("Invalid faction parameter in interpretPlayerResponse function")
 			break
@@ -501,21 +603,17 @@ function interpretPlayerResponse(faction, dialogueIndex, response){
 }
 
 function updateFactionStats(faction, improvedStats, reducedStats){
-	//create variables
-	factionChangeAmount = .05
-	statChangeAmount = 15
-
 	//update stats
 	for (var i = 0; i < array_length(improvedStats); i++){
-		factionChangeAmount = .05
+		factionChangeAmount = 10
 		statChangeAmount = 15
 
 		if string_count(improvedStats[i], "small") == 1{
-			factionChangeAmount = .02
+			factionChangeAmount = 5
 			statChangeAmount = 7
 			improvedStats[i] = string_delete(improvedStats[i], 1, 5)
 		} else if string_count(improvedStats[i], "big") == 1{
-			factionChangeAmount = .1
+			factionChangeAmount = 20
 			statChangeAmount = 30
 			improvedStats[i] = string_delete(improvedStats[i], 1, 3)
 		}
@@ -528,15 +626,15 @@ function updateFactionStats(faction, improvedStats, reducedStats){
 	}
 
 	for (var i = 0; i < array_length(reducedStats); i++){
-		factionChangeAmount = .05
+		factionChangeAmount = 10
 		statChangeAmount = 15
 
 		if string_count(reducedStats[i], "small") == 1{
-			factionChangeAmount = .02
+			factionChangeAmount = 5
 			statChangeAmount = 7
 			reducedStats[i] = string_delete(reducedStats[i], 1, 5)
 		} else if string_count(reducedStats[i], "big") == 1{
-			factionChangeAmount = .1
+			factionChangeAmount = 20
 			statChangeAmount = 30
 			reducedStats[i] = string_delete(reducedStats[i], 1, 3)
 		}
