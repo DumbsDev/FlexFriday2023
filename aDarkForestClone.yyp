@@ -111,6 +111,7 @@
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},
     {"id":{"name":"achievementBANNER","path":"sprites/achievementBANNER/achievementBANNER.yy",},},
     {"id":{"name":"sFlooring","path":"tilesets/sFlooring/sFlooring.yy",},},
+    {"id":{"name":"oFullscreen","path":"objects/oFullscreen/oFullscreen.yy",},},
     {"id":{"name":"Random Gameplay Instances","path":"notes/Random Gameplay Instances/Random Gameplay Instances.yy",},},
     {"id":{"name":"sDarkGreenShirt","path":"sprites/sDarkGreenShirt/sDarkGreenShirt.yy",},},
     {"id":{"name":"sLightestBlueJeans","path":"sprites/sLightestBlueJeans/sLightestBlueJeans.yy",},},

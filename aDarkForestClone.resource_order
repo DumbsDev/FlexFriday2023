@@ -74,6 +74,7 @@
     {"name":"sSplash","order":5,"path":"sprites/sSplash/sSplash.yy",},
     {"name":"fnt_dialogue","order":2,"path":"fonts/fnt_dialogue/fnt_dialogue.yy",},
     {"name":"achievementBANNER","order":2,"path":"sprites/achievementBANNER/achievementBANNER.yy",},
+    {"name":"oFullscreen","order":2,"path":"objects/oFullscreen/oFullscreen.yy",},
     {"name":"sDarkGreenShirt","order":1,"path":"sprites/sDarkGreenShirt/sDarkGreenShirt.yy",},
     {"name":"sLightestBlueJeans","order":1,"path":"sprites/sLightestBlueJeans/sLightestBlueJeans.yy",},
     {"name":"oManagementEndDay","order":1,"path":"objects/oManagementEndDay/oManagementEndDay.yy",},
