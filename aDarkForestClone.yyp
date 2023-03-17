@@ -107,7 +107,6 @@
     {"id":{"name":"sTableBase","path":"sprites/sTableBase/sTableBase.yy",},},
     {"id":{"name":"sPurpleShirt","path":"sprites/sPurpleShirt/sPurpleShirt.yy",},},
     {"id":{"name":"oCover","path":"objects/oCover/oCover.yy",},},
-    {"id":{"name":"oResolution","path":"objects/oResolution/oResolution.yy",},},
     {"id":{"name":"sSplash","path":"sprites/sSplash/sSplash.yy",},},
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},
     {"id":{"name":"achievementBANNER","path":"sprites/achievementBANNER/achievementBANNER.yy",},},
