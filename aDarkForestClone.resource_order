@@ -71,6 +71,7 @@
     {"name":"oButtonPlay","order":3,"path":"objects/oButtonPlay/oButtonPlay.yy",},
     {"name":"sPurpleShirt","order":3,"path":"sprites/sPurpleShirt/sPurpleShirt.yy",},
     {"name":"oCover","order":10,"path":"objects/oCover/oCover.yy",},
+    {"name":"oResolution","order":2,"path":"objects/oResolution/oResolution.yy",},
     {"name":"sSplash","order":5,"path":"sprites/sSplash/sSplash.yy",},
     {"name":"fnt_dialogue","order":2,"path":"fonts/fnt_dialogue/fnt_dialogue.yy",},
     {"name":"achievementBANNER","order":2,"path":"sprites/achievementBANNER/achievementBANNER.yy",},

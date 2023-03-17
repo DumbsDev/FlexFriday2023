@@ -266,4 +266,7 @@ function factionLogic(){
 		#endregion
 		
 	#endregion
+	if global.emperorsCourtMax{
+		print("You Win!")
+	}
 }
