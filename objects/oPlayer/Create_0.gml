@@ -16,6 +16,10 @@ global.intel = ini_read_real("savedata", "intel", 0); //set the intelligence
 global.joy = ini_read_real("savedata", "joy", 25); //set the intelligence
 global.gold = ini_read_real("savedata", "gold", 25); //set the money
 global.taxrate = ini_read_real("savedata", "taxrate", 1.20); //set the money
+
+global.waterCult = ini_read_real("savedata", "waterCultRep", 0); //set waterCult rep
+global.farmersUnion = ini_read_real("savedata", "farmersUnionRep", 0); //set farmersUnion rep
+global.emperorsCourt = ini_read_real("savedata", "emperorsCourtRep", 0); //set emperorsCourt rep
 /// Fix the stuffs to old lol
 oldWater = ini_read_real("savedata", "owater", 0); //set the current day
 oldFood = ini_read_real("savedata", "ofood", 0); //set the current day
@@ -45,9 +49,7 @@ xsc = 1
 sleep = false
 #endregion
 
-global.waterCult = 0
-global.farmersUnion = 0
-global.emperorsCourt = 0
+
 
 global.waterMulti = 1
 global.foodMulti = 1

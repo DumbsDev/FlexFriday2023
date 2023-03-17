@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function sGameText(_text_id){
 	dayMulti = global.day / 10 + 1
 /*
@@ -265,27 +263,6 @@ switch _text_id {
 			break;
 		
 		case 7:
-			dialogueReturnArray = dialogueGenerator("","", true)
-			dialogue = dialogueReturnArray[0]
-			global.improvedStat = dialogueReturnArray[1]
-			global.reducedStat = dialogueReturnArray[2]
-			global.magnitude = dialogueReturnArray[3]
-			sText(dialogue)
-			sOptions("Yes", "c7 - yes")
-			sOptions("No", "c7 - no")
-			break
-
-		case "c7 - yes":
-			sText("Great, Sire, I'll go right ahead with that!")
-			improveStat(global.improvedStat, global.magnitude)
-			reduceStat(global.reducedStat, global.magnitude)
-			break
-
-		case "c7 - no":
-			sText("Okay, Sire, I understand.")
-			break;
-
-		case 8:
 			global.faction = pickRandomFaction()
 			dialoguePackage = pickRandomFactionDialogue(global.faction)
 			dialogue = dialoguePackage[0]
@@ -295,11 +272,11 @@ switch _text_id {
 			sText(dialogue)
 
 			for (var i = 0; i < array_length(global.responses); i++) {
-				sOptions(global.responses[i], "c8 - " + string(i))
+				sOptions(global.responses[i], "c7 - " + string(i))
 			}
 			break;
 		
-		case "c8 - 0":
+		case "c7 - 0":
 			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[0])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
@@ -309,7 +286,7 @@ switch _text_id {
 			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
-		case "c8 - 1":
+		case "c7 - 1":
 			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[1])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
@@ -319,7 +296,7 @@ switch _text_id {
 			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
 		
-		case "c8 - 2":
+		case "c7 - 2":
 			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[2])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
