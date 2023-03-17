@@ -18,12 +18,12 @@ draw_set_valign(fa_top)
 	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 
 		if (oPlayer.y <= room_height/2) {
-			textbox_x = (oCamera.x)-(textbox_width/2)
-			textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+	textbox_x = (oCamera.x)-(textbox_width/2)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 		} else if (oPlayer.y > room_height/2){
-			textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-			textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
-		}
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
+}
 #endregion
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
@@ -89,7 +89,7 @@ if setup == false {
 			
 			//compensate for string breaks
 			for (var lb = 0; lb < line_break_num[p]; lb++)
-				{
+			{
 				//if the current looping character is after a line break
 				if (char_pos >= line_break_pos[lb, p]) {
 					var str_copy = string_copy(text[p], line_break_pos[lb,p], char_pos-line_break_pos[lb,p]);
@@ -102,26 +102,16 @@ if setup == false {
 			
 			char_x[ch,p] = txt_x + current_text_w;
 			char_y[ch,p] = txt_y + txt_line*line_sep;
-			print(char_y[ch,p])
 		}
 	}
 	
 }
 //typing the text
-//if text_pause_timer <= 0
-//{
-	if draw_char < text_length[page]
-	{
-		//increment the index of the character that's being typed
-		draw_char += text_spd;
-//		draw_char = clamp(draw_char,0,text_length[page])
-//		var _check_car = string_char_at(text[page], draw_char);
-//		if _check_car == "."
-//		{
-//			text_pause_timer = text_pause_time;	
-//		}
-		
-	}
+if draw_char < text_length[page]
+{
+	//increment the index of the character that's being typed
+	draw_char++;
+}
 //flip through pages
 if accept_key
 {
