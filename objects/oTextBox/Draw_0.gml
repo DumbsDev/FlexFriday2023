@@ -62,7 +62,7 @@ if setup == false {
 			if char[ch,p] == " " {lastFreeSpace = char_pos+1};
 			
 			//get the line breaks
-			if (current_text_w  - line_break_num[p] > line_width)
+			if (current_text_w  - line_break_offset[p] > line_width)
 			{
 				line_break_pos[line_break_num[p], p] = lastFreeSpace;
 				line_break_num[p]++;

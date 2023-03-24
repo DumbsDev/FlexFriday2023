@@ -29,17 +29,17 @@
   "physicsShapePoints": [
     {"x":0.0,"y":0.0,},
     {"x":24.0,"y":0.0,},
-    {"x":24.0,"y":16.0,},
-    {"x":0.0,"y":16.0,},
+    {"x":24.0,"y":72.0,},
+    {"x":0.0,"y":72.0,},
   ],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
-  "solid": true,
-  "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+  "overriddenProperties": [],
+  "parent": {
+    "name": "pemanent",
+    "path": "folders/Objects/household objects/pemanent.yy",
   },
 }
