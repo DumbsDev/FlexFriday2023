@@ -45,8 +45,13 @@ switch _text_id {
 			sOptions("Read a book", "bookshelf - yes")
 			sOptions("Leave", "bookshelf - no")
 		break;
-	
-		case "bookshelf - no":
+		case "bookshelf - no"
+			sText("are you pretty sure")
+			sOptions("I-I-dk","bookshelf - no/no")
+			sOptions("
+		break;
+		
+		case "bookshelf - no/no":
 			instance_destroy();
 		break;
 		
