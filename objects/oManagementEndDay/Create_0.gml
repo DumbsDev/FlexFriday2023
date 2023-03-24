@@ -1,8 +1,5 @@
-dailyFoodChange()
-dailyWaterChange()
+factionLogic()
 dailyPopChange()
-dailyJoyChange()
-dailyGoldChange()
 
 ini_open("savedata.ini")
 day = ini_read_real("savedata", "day", 0); //set the current day
