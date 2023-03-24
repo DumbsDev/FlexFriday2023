@@ -3,6 +3,7 @@
   "resourceVersion": "1.0",
   "name": "operagx",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "option_operagx_display_cursor": true,
   "option_operagx_editUrl": "",
   "option_operagx_game_name": "aDarkForestClone",
@@ -15,6 +16,8 @@
   "option_operagx_team_id": "",
   "option_operagx_team_name": "",
   "option_operagx_texture_page": "2048x2048",
+=======
+>>>>>>> parent of 7a010ce (pushing to hopefully solve Waits's problem)
 =======
 >>>>>>> parent of 7a010ce (pushing to hopefully solve Waits's problem)
   "option_operagx_version": "1.0.0.0",
