@@ -275,7 +275,7 @@ switch _text_id {
 				sOptions(global.responses[i], "c7 - " + string(i))
 			}
 			break;
-		
+		#endregion
 		case "c7 - 0":
 			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[0])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
