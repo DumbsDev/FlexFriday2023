@@ -1,2 +1,2 @@
 [VERSION]
-version = "0.4.25.50"
+verstion = "0.0.0.1"

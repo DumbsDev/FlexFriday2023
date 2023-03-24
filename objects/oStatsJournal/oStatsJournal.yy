@@ -34,8 +34,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+    "name": "New_Piskel__2__copy_4",
+    "path": "sprites/New_Piskel__2__copy_4/New_Piskel__2__copy_4.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -18,12 +18,12 @@ draw_set_valign(fa_top)
 	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 
 		if (oPlayer.y <= room_height/2) {
-			textbox_x = (oCamera.x)-(textbox_width/2)
-			textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
+	textbox_x = (oCamera.x)-(textbox_width/2)
+	textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 		} else if (oPlayer.y > room_height/2){
-			textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-			textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
-		}
+	textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
+	textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
+}
 #endregion
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
@@ -46,82 +46,19 @@ if setup == false {
 		//number in the "text_length[]" array.
 		text_length[p] = string_length(text[p]);
 		
-//get the x position for the textbox
+	//get the x position for the textbox
 		//no character (center box)	
 		text_x_offset[p] = 48;
 		
-		//setting individual chars and finding where they should break
-		for (var ch = 0; ch < text_length[p]; ch++;) {
-			var char_pos = ch+1;
-			
-			//store individual chars in "char" array.
-			char[ch,p] = string_char_at(text[p], char_pos);
-			
-			//get current width of line
-			var txt_up_to_char = string_copy(text[p], 1, char_pos);
-			var current_text_w = string_width(txt_up_to_char) - string_width(char[ch,p]);	
-			
-			//get the last free space
-			if char[ch,p] == " " {lastFreeSpace = char_pos+1};
-			
-			//get the line breaks
-			if (current_text_w  - line_break_num[p] > line_width)
-			{
-				line_break_pos[line_break_num[p], p] = lastFreeSpace;
-				line_break_num[p]++;
-				var txt_up_to_last_space = string_copy(text[p], 1, lastFreeSpace);
-				var last_free_space_string = string_char_at(text[p], lastFreeSpace);
-				line_break_offset[p] = string_width(txt_up_to_last_space) - string_width(last_free_space_string);
-			}	
-		}
-		
-		//Getting the characters coordinates
-		for (var ch = 0; ch < text_length[p]; ch++)
-		{
-			var char_pos = ch+1;
-			var txt_x = textbox_x + text_x_offset[p] + border;
-			var txt_y = textbox_y + border;
-			
-			//get width of current line
-			var txt_up_to_char = string_copy(text[p], 1, char_pos);
-			var current_text_w = string_width(txt_up_to_char) - string_width(char[ch,p]);
-			var txt_line = 0;
-			
-			//compensate for string breaks
-			for (var lb = 0; lb < line_break_num[p]; lb++)
-				{
-				//if the current looping character is after a line break
-				if (char_pos >= line_break_pos[lb, p]) {
-					var str_copy = string_copy(text[p], line_break_pos[lb,p], char_pos-line_break_pos[lb,p]);
-					current_text_w = string_width(str_copy);
-					
-					//record the "line" this char should be on
-					txt_line = lb+1 //+1 since it starts at 0
-				}
-			}
-			
-			char_x[ch,p] = txt_x + current_text_w;
-			char_y[ch,p] = txt_y + txt_line*line_sep;
-			print(char_y[ch,p])
-		}
 	}
 	
 }
 //typing the text
-//if text_pause_timer <= 0
-//{
-	if draw_char < text_length[page]
-	{
-		//increment the index of the character that's being typed
-		draw_char += text_spd;
-//		draw_char = clamp(draw_char,0,text_length[page])
-//		var _check_car = string_char_at(text[page], draw_char);
-//		if _check_car == "."
-//		{
-//			text_pause_timer = text_pause_time;	
-//		}
-		
-	}
+if draw_char < text_length[page]
+{
+	//increment the index of the character that's being typed
+	draw_char++;
+}
 //flip through pages
 if accept_key
 {
@@ -202,12 +139,20 @@ if draw_char == text_length[page] && page == page_number - 1
 #region draw ze text
 //draw the text
 draw_set_color(c_shadow)
-
-draw_set_color(c_white);
-
-for (var m = 0; m < draw_char; m++)
-{
-	//the text
-	draw_text(char_x[m,page], char_y[m,page],char[m,page]);
-}
+var _drawtext = string_copy(text[page], 0, draw_char)
+draw_text_ext(
+//draw the text shadow
+textbox_x+2 + text_x_offset[page] + border,
+textbox_y+2 + border,
+_drawtext,
+line_sep,
+line_width);
+draw_set_color(c_white)
+draw_text_ext(
+//draw the text
+textbox_x + text_x_offset[page] + border,
+textbox_y + border,
+_drawtext,
+line_sep,
+line_width);
 #endregion

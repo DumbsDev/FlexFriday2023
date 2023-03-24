@@ -80,10 +80,6 @@ ini_write_real("savedata", "intel", global.intel); //set the intelligence
 ini_write_real("savedata", "joy", global.joy); //set the intelligence
 ini_write_real("savedata", "gold", global.gold); //set the gold
 ini_write_real("savedata", "taxrate", global.taxrate); //set the taxrate
-
-ini_write_real("savedata", "waterCultRep", global.waterCult); //set the waterCult rep
-ini_write_real("savedata", "farmersUnionRep", global.farmersUnion); //set the farmersUnion rep
-ini_write_real("savedata", "emperorsCourtRep", global.emperorsCourt); //set the emperorsCourt rep
 ini_close(); //close the ini file to prevent a memory leak
 room_goto(rm_endday)
 }
