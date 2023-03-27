@@ -1,21 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oCalender",
+  "name": "oFullscreen",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "pemanent",
-    "path": "folders/Objects/household objects/pemanent.yy",
+    "name": "Controller",
+    "path": "folders/Objects/Controller.yy",
   },
-  "parentObjectId": {
-    "name": "oInteractable",
-    "path": "objects/oInteractable/oInteractable.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -27,19 +23,11 @@
   "physicsRestitution": 0.1,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsShapePoints": [
-    {"x":0.0,"y":0.0,},
-    {"x":24.0,"y":0.0,},
-    {"x":24.0,"y":16.0,},
-    {"x":0.0,"y":16.0,},
-  ],
+  "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
-  "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
-  },
+  "solid": false,
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
