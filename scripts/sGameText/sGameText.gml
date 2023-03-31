@@ -8,8 +8,8 @@ function sGameText(_text_id){
 $  = gold coin
 | = population
 */
-
-
+hntr = "hunter";
+frm = "farmer"
 switch _text_id {
 
 #region Object Interaction
@@ -103,14 +103,13 @@ switch _text_id {
 			sText("Awesome, you can view all of your stats in the main room");
 			sText("(that room is to your left!)");
 			sText("you can also go to the room on your right");
-			sText("to see your colony!");
 			sText("thats all for now");
-			sText("come back to this window to get your questions!");
+			sText("come back to this window to get your questions");
 			break;
 		
 		case "tut1 - Deny":
 			sText("Well, basically you are the boss here")
-			sText("and you control a city!")
+			sText("and you control a city")
 			sText("By answering questions and managing resources.")
 			sOptions("I see!", "tut1 - Confirm");
 			sOptions("Wait, restart! Huh?", -5);
@@ -172,13 +171,13 @@ switch _text_id {
 		
 		case 3:
 			if oWindow.huntingInOurTerritory == false {
-				sText("Hey, you're hunters have been hunting on our land.")
-				sText("And as a group of hunting monsters,")
-				sText("We ain't too big fans.")
-				sText("Could you condense your hunting to your land?")
+				sText("Hey, you're hunters have been hunting on our land.", hntr)
+				sText("And as a group of hunting monsters,", hntr)
+				sText("We ain't too big fans.", hntr)
+				sText("Could you condense your hunting to your land?", hntr)
 				oWindow.huntingInOurTerritory = true
-				sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
-				sOptions("You snooze, you lose.","huntingInOurTerritory - no")
+				sOptions("Sure, we'll move!","huntingInOurTerritory - yes,", hntr)
+				sOptions("You snooze, you lose.","huntingInOurTerritory - no", hntr)
 			}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
 				sText("Our hunters found a hidden place on our land");
 				sText("and its ridden with berries! (+10~)");
@@ -305,6 +304,6 @@ switch _text_id {
 			
 			updateFactionStats(global.faction, improvedAndReducedStats[0], improvedAndReducedStats[1])
 			break;
-		
+		#endregion
 	}
 }

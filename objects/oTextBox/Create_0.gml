@@ -5,9 +5,9 @@ textbox_height = 80
 border = 6
 line_sep = 16
 line_width = textbox_width - border*2
-txtb_spr = sBackground
+txtb_spr[0] = sBackgroundAdvisor
 txtb_img = 0
-txtb_img_spd = 1
+txtb_img_spd = 0.2;
 #endregion
 
 //The text!
@@ -15,6 +15,9 @@ page = 0;
 page_number = 0;
 text[0] = "error: no sText()"
 text_length[0] = string_length(text[0]); // Get how many characters on a string.
+
+//portait!!
+portrait_x_offset[0] = 4;
 
 char[0,0] = "" //Cycle through characters on page
 char_x[0,0] = 0;
@@ -32,3 +35,5 @@ setup = false;
 // effects
 scSetDefaultsForText();
 lastFreeSpace = 0;
+
+scaleOfSpeaker = 1.875; // This is the scale of the speaker, as it doesnt fit in perfectly.

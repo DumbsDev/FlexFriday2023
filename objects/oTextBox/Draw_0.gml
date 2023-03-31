@@ -27,6 +27,8 @@ draw_set_valign(fa_top)
 #endregion
 ////debug size
 //draw_line(textbox_x-1000,textbox_y-1,textbox_x+1000,textbox_y-1);
+
+
 #region setup
 //setup
 if setup == false {
@@ -46,9 +48,18 @@ if setup == false {
 		//number in the "text_length[]" array.
 		text_length[p] = string_length(text[p]);
 		
-//get the x position for the textbox
-		//no character (center box)	
-		text_x_offset[p] = 48;
+		//get the x position for the textbox
+		if (speaker_sprite[p] == noone)
+		{
+			//no character (center box)	
+			text_x_offset[p] = 12;
+		} else {
+			//character (two boxes, one to each side)
+			text_x_offset[p] = 56
+			portrait_x_offset[p] = 4;
+			print(string(speaker_sprite))
+		}
+		print("OFFSET: " + string(text_x_offset[p]))
 		
 		//setting individual chars and finding where they should break
 		for (var ch = 0; ch < text_length[p]; ch++;) {
@@ -102,7 +113,6 @@ if setup == false {
 			
 			char_x[ch,p] = txt_x + current_text_w;
 			char_y[ch,p] = txt_y + txt_line*line_sep;
-			print(char_y[ch,p])
 		}
 	}
 	
@@ -150,20 +160,35 @@ if accept_key
 	}
 	}
 #endregion
-#region draw textbox
+#region draw the textbox
 
 txtb_img += txtb_img_spd
 var _txtb_x = textbox_x + text_x_offset[page];
 var _txtb_y = textbox_y;
 
-txtb_spr_w = sprite_get_width(txtb_spr)
-txtb_spr_h = sprite_get_height(txtb_spr)
+txtb_spr_w = sprite_get_width(txtb_spr[page])
+txtb_spr_h = sprite_get_height(txtb_spr[page])
+
+// Draw the speaker // draw the portrait
+if (speaker_sprite[page] != noone)
+{
+	sprite_index = speaker_sprite[page];
+	var _speaker_x = textbox_x + portrait_x_offset[page];
+	
+	// draw the box
+	draw_sprite_ext(txtb_spr[page], txtb_img, textbox_x-56, textbox_y, (sprite_width*2)/txtb_spr_w, (sprite_height*2)/txtb_spr_h, 0, c_white, 1)
+	// draw the goober
+	draw_sprite_ext(sprite_index, image_index, _speaker_x-56,textbox_y+3, scaleOfSpeaker, scaleOfSpeaker,0,c_white,1)
+}
 
 //back of the textbox
-draw_sprite_ext(txtb_spr,txtb_img,_txtb_x,
+draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x,
 _txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 0,c_white,1);
 #endregion
+
+
+
 #region options
 if draw_char == text_length[page] && page == page_number - 1 
 {
@@ -183,7 +208,7 @@ if draw_char == text_length[page] && page == page_number - 1
 }
 	//the option box
 	var _o_w = string_width(option[_op]) +_op_board*2;
-	draw_sprite_ext(txtb_spr,txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
+	draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
 	
 	//the arrow
 	if option_pos == _op

@@ -2,22 +2,62 @@ function scSetDefaultsForText(){
 	line_break_pos[0,page_number] = 999;
 	line_break_num[page_number] = 0;
 	line_break_offset[page_number] = 0;
+	
+	txtb_spr[page_number] = sBackground;
+	speaker_sprite[page_number] = noone; // Portrait
 }
 
-// @param text
+
+
+
+
+
+/// @param text
+/// @param [chararacter - optional]
 function sText(_text){
 	scSetDefaultsForText()
+	
 	text[page_number] = _text;
+	
+	// get char info
+	if (argument_count > 1)
+	{
+		switch(argument[1])
+		{
+			//case "adv":
+				//speaker_sprite[page_number] = sAdvisor;
+				//txtb_spr[page_number] = sBackgroundAdvisor;
+				break;
+			//case "farmer":
+				//speaker_sprite
+			case "hunter":
+			speaker_sprite[page_number] = sHunter;
+			txtb_spr[page_number] = sBackgroundHunter;
+			default:
+			speaker_sprite[page_number] = noone;
+			txtb_spr[page_number] = sBackground;
+		}
+	}
+	
 	page_number++;
 }
 //@param options
 //@param link_id
+
+
+
+
+
 function sOptions(_option,_link_id) {
 	option[option_number] = _option;
 	option_link_id[option_number] = _link_id;
 	
 	option_number++;
 }
+
+
+
+
 
 //@param text_id
 function create_textbox(_text_id) {
