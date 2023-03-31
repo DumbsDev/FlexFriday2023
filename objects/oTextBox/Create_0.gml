@@ -5,7 +5,7 @@ textbox_height = 80
 border = 6
 line_sep = 16
 line_width = textbox_width - border*2
-txtb_spr[0] = sBackgroundAdvisor
+txtb_spr[0] = sBackground;
 txtb_img = 0
 txtb_img_spd = 0.2;
 #endregion

@@ -27,15 +27,25 @@ function sText(_text){
 			//case "adv":
 				//speaker_sprite[page_number] = sAdvisor;
 				//txtb_spr[page_number] = sBackgroundAdvisor;
-				break;
+				//break;
 			//case "farmer":
 				//speaker_sprite
+			case "FishNormal":
+				speaker_sprite[page_number] = sFish;
+				txtb_spr[page_number] = sBackgroundFish;
+				break;
+			case "FishSad":
+				speaker_sprite[page_number] = sFishSad;
+				txtb_spr[page_number] = sBackgroundFish;
+				break;
 			case "hunter":
-			speaker_sprite[page_number] = sHunter;
-			txtb_spr[page_number] = sBackgroundHunter;
+				speaker_sprite[page_number] = sHunter;
+				txtb_spr[page_number] = sBackgroundHunter;
+				break;
 			default:
-			speaker_sprite[page_number] = noone;
-			txtb_spr[page_number] = sBackground;
+				speaker_sprite[page_number] = noone;
+				txtb_spr[page_number] = sBackground;
+				break;
 		}
 	}
 	

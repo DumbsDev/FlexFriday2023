@@ -10,6 +10,8 @@ $  = gold coin
 */
 hntr = "hunter";
 frm = "farmer"
+fsh = "FishNormal"
+fshs = "FishSad"
 switch _text_id {
 
 #region Object Interaction
@@ -176,8 +178,8 @@ switch _text_id {
 				sText("We ain't too big fans.", hntr)
 				sText("Could you condense your hunting to your land?", hntr)
 				oWindow.huntingInOurTerritory = true
-				sOptions("Sure, we'll move!","huntingInOurTerritory - yes,", hntr)
-				sOptions("You snooze, you lose.","huntingInOurTerritory - no", hntr)
+				sOptions("Sure, we'll move!","huntingInOurTerritory - yes")
+				sOptions("You snooze, you lose.","huntingInOurTerritory - no")
 			}	else if (oWindow.huntingInOurTerritory == true && oWindow.oneIsOffTheHuntersLand = 1) {
 				sText("Our hunters found a hidden place on our land");
 				sText("and its ridden with berries! (+10~)");
@@ -191,15 +193,15 @@ switch _text_id {
 			break;
 		
 		case "huntingInOurTerritory - yes":
-			sText("Oh really?\nThank you deeply!")
-			sText("I know its not crazy important, but still")
-			sText("We thank you.")
+			sText("Oh really?\nThank you deeply!", hntr)
+			sText("I know its not crazy important, but still", hntr)
+			sText("We thank you.", hntr)
 			oWindow.oneIsOffTheHuntersLand = 1
 			break;
 			
 		case "huntingInOurTerritory - no":
-			sText("Really?\nYou go on our land...")
-			sText("We'll fight back!")
+			sText("Really?\nYou go on our land...", hntr)
+			sText("We'll fight back!", hntr)
 			oWindow.oneIsOffTheHuntersLand = 2
 			break;
 			
@@ -225,19 +227,19 @@ switch _text_id {
 			break;
 		
 		case 5:
-			sText("The locals have started a new endurance test to see how long they can hold their breaths!")
-			sText("Should we let them?")
+			sText("We wanna start a new endurance test to see how long we can hold our breaths!", fsh)
+			sText("Can we?", fsh)
 			sOptions("Yes", "c5 - yes")
-			sOptions("What is wrong with you, no!", "c5 - no")
+			sOptions("What is wrong\nwith you, no!", "c5 - no")
 			break;
 		
 		case "c5 - yes":
-			sText("We will tell them that the no breath challenge is fully endorsed by the ruler!")
+			sText("I'll will tell them that the no breath challenge is fully endorsed by the ruler!", fsh)
 			global.population = round(global.population * 0.975);
 			break;
 		
 		case "c5 - no":
-			sText("that is surely a good idea leader!")
+			sText("Aw, womp womp.", fshs)
 			break;
 			
 		case 6:
