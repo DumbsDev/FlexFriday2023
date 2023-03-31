@@ -141,6 +141,7 @@ if accept_key
 	//next page
 	if page < page_number-1
 	{
+		speakAmount = 0;
 		page++;
 		draw_char = 0;
 	}
@@ -149,7 +150,7 @@ if accept_key
 	{
 		//link text for options
 		if option_number > 0 {
-		create_textbox(option_link_id[option_pos])	
+			create_textbox(option_link_id[option_pos])	
 		}
 	instance_destroy();	
 	}
@@ -173,6 +174,10 @@ txtb_spr_h = sprite_get_height(txtb_spr[page])
 if (speaker_sprite[page] != noone)
 {
 	sprite_index = speaker_sprite[page];
+	speakAmount += 0.5
+	print(speakAmount);
+	if (speakAmount >= text_length[page]) {image_speed = 0; image_index = 0} else {image_speed = 1};
+	speakAmount = clamp(speakAmount, 0, text_length[page]);
 	var _speaker_x = textbox_x + portrait_x_offset[page];
 	
 	// draw the box
