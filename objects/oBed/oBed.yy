@@ -37,8 +37,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+    "name": "sBed",
+    "path": "sprites/sBed/sBed.yy",
   },
   "spriteMaskId": null,
   "visible": true,

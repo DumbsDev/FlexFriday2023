@@ -37,8 +37,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "sPlaceHolderPlayer",
-    "path": "sprites/sPlaceHolderPlayer/sPlaceHolderPlayer.yy",
+    "name": "sCalendar",
+    "path": "sprites/sCalendar/sCalendar.yy",
   },
   "spriteMaskId": null,
   "visible": true,

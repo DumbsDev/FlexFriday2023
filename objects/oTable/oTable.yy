@@ -36,10 +36,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": true,
-  "spriteId": {
-    "name": "sTableBase",
-    "path": "sprites/sTableBase/sTableBase.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
