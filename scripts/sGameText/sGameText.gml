@@ -12,6 +12,8 @@ hntr = "hunter";
 frm = "farmer"
 fsh = "FishNormal"
 fshs = "FishSad"
+wc = "WaterCultist"
+
 switch _text_id {
 
 #region Object Interaction
@@ -147,20 +149,20 @@ switch _text_id {
 			
 		
 		case 1:
-			sText("Hello, thyne majesty.");
-			sText("Would you like to water more crops?\n(+5~) (-5@)")
+			sText("Hello, thyne majesty.", wc);
+			sText("Would you like to trade water for food?\n(+5~) (-5@)", wc)
 			sOptions("Yes", "c1 - yes")
 			sOptions("No", "c1 - no")
 			break;
 		
 		case "c1 - no":
-			sText("Understood, your majesty.")	
-			sText("We will leave the well as it is.")
+			sText("Understood, your majesty.", wc)	
+			sText("We will leave the well as it is.", wc)
 			break;
 		
 		case "c1 - yes":
-			sText("Understood, your majesty.")	
-			sText("We will inform the farmers of your decision.")
+			sText("Understood, your majesty.", wc)	
+			sText("We will inform the occult of your decision.", wc)
 			global.water -= 5 * dayMulti
 			global.food += 5
 			break;

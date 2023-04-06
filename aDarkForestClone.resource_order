@@ -20,6 +20,7 @@
     {"name":"Sounds","order":2,"path":"folders/Sounds.yy",},
     {"name":"dialogue","order":1,"path":"folders/Sprites/dialogue.yy",},
     {"name":"gui","order":1,"path":"folders/Sprites/dialogue/gui.yy",},
+    {"name":"Portraits","order":2,"path":"folders/Sprites/dialogue/Portraits.yy",},
     {"name":"house hold objects","order":4,"path":"folders/Sprites/house hold objects.yy",},
     {"name":"immovable","order":1,"path":"folders/Sprites/house hold objects/immovable.yy",},
     {"name":"other","order":2,"path":"folders/Sprites/other.yy",},
@@ -29,7 +30,6 @@
     {"name":"shirts","order":3,"path":"folders/Sprites/player/shirts.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Portraits","order":2,"path":"folders/Sprites/dialogue/Portraits.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sGameText","order":1,"path":"scripts/sGameText/sGameText.yy",},
@@ -60,6 +60,7 @@
     {"name":"sPlay","order":4,"path":"sprites/sPlay/sPlay.yy",},
     {"name":"rm_endday","order":7,"path":"rooms/rm_endday/rm_endday.yy",},
     {"name":"oConsole","order":11,"path":"objects/oConsole/oConsole.yy",},
+    {"name":"sWaterCultist","order":3,"path":"sprites/sWaterCultist/sWaterCultist.yy",},
     {"name":"sBookshelfPH","order":3,"path":"sprites/sBookshelfPH/sBookshelfPH.yy",},
     {"name":"oDebug","order":4,"path":"objects/oDebug/oDebug.yy",},
     {"name":"oBookshelf","order":4,"path":"objects/oBookshelf/oBookshelf.yy",},

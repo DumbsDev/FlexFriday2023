@@ -38,10 +38,17 @@ function sText(_text){
 				speaker_sprite[page_number] = sFishSad;
 				txtb_spr[page_number] = sBackgroundFish;
 				break;
+			// Hunter Monster used as second argument (the portrait)
 			case "hunter":
 				speaker_sprite[page_number] = sHunter;
 				txtb_spr[page_number] = sBackgroundHunter;
 				break;
+			case "WaterCultist":
+				speaker_sprite[page_number] = sWaterCultist;
+				txtb_spr[page_number] = sBackground;
+				break;
+				
+			// Fall back incase there is no character chosen
 			default:
 				speaker_sprite[page_number] = noone;
 				txtb_spr[page_number] = sBackground;

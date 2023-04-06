@@ -174,9 +174,16 @@ txtb_spr_h = sprite_get_height(txtb_spr[page])
 if (speaker_sprite[page] != noone)
 {
 	sprite_index = speaker_sprite[page];
-	speakAmount += 0.5
-	print(speakAmount);
-	if (speakAmount >= text_length[page]) {image_speed = 0; image_index = 0} else {image_speed = 1};
+	speakAmount += room_speed/100
+	//print(speakAmount);
+	if (speakAmount >= text_length[page]) {
+		if image_index = 0
+		{
+			image_speed = 0;
+		}
+		//else if (image_index != 1)
+		//{
+	} else {image_speed = 1};
 	speakAmount = clamp(speakAmount, 0, text_length[page]);
 	var _speaker_x = textbox_x + portrait_x_offset[page];
 	
