@@ -218,21 +218,32 @@ if draw_char == text_length[page] && page == page_number - 1
 		} else if (oPlayer.y > room_height/2){
 	_txtb_y = (((oCamera.y)+room_height/2+room_height*0.35)-(room_height/3)*3)+48;
 }
+	font_height = sprite_get_height(sFont);
+	if (string_height(option[_op]) >= font_height*2)
+	{
+		doubleOptionScale = 1.8
+		print("BIG OPTION!!");
+	}
+	else
+	{
+		doubleOptionScale = 1
+		print("smol option");
+	}
 	//the option box
 	var _o_w = string_width(option[_op]) +_op_board*2;
-	draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op,_o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h,0,c_white,1);
+	draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x + 24, _txtb_y - _op_space*option_number+_op_space*_op-font_height,_o_w/txtb_spr_w, ((_op_space-1)/txtb_spr_h)*doubleOptionScale,0,c_white,1);
 	
 	//the arrow
 	if option_pos == _op
 	{
-		draw_sprite(sPointer, 0, _txtb_x, _txtb_y - _op_space*option_number+_op_space*_op);
+		draw_sprite(sPointer, 0, _txtb_x, _txtb_y - _op_space*option_number+_op_space*_op-font_height);
 	}
 	
 	//the option text
 	draw_set_color(c_shadow)
-	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+5,option[_op])
+	draw_text(_txtb_x+16+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+5,option[_op]-font_height)
 	draw_set_color(c_white)
-	draw_text(_txtb_x+14+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+3,option[_op])
+	draw_text(_txtb_x+14+_op_board,_txtb_y-_op_space*option_number+_op_space*_op+3,option[_op]-font_height)
 	}
 }
 #endregion options

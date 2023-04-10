@@ -9,10 +9,10 @@ $  = gold coin
 | = population
 */
 hntr = "hunter";
-frm = "farmer"
-fsh = "FishNormal"
-fshs = "FishSad"
-wc = "WaterCultist"
+frm = "farmer";
+fsh = "FishNormal";
+fshs = "FishSad";
+wc = "WaterCultist";
 
 switch _text_id {
 

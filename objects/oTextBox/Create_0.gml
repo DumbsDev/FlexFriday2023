@@ -32,6 +32,7 @@ option_number = 0;
 
 speakAmount = 0;
 
+font_size = 0; 
 setup = false;
 
 // effects

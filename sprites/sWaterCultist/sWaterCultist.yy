@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "sWaterCultist",
   "bbox_bottom": 47,
-  "bbox_left": 4,
-  "bbox_right": 45,
+  "bbox_left": 3,
+  "bbox_right": 46,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -22,6 +22,7 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4e722e6f-d79e-47a9-a7f3-8ad820629b09","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"502e0bf1-b119-466c-ac48-ccbd17a497be","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
