@@ -44,7 +44,9 @@ switch _text_id {
 	case "bookshelf":
 		sText("It's a bookshelf.")
 		sText("Would you like to read a book?")
+		print("sText loads...")
 		sOptions("Read a book", "bookshelf - yes")
+		print("sOptions Loads...")
 		sOptions("Leave", "bookshelf - no")
 		break;
 	
@@ -202,7 +204,7 @@ switch _text_id {
 			break;
 			
 		case "huntingInOurTerritory - no":
-			sText("Really?\nYou go on our land...", hntr)
+			sText("Really? \ You go on our land...", hntr)
 			sText("We'll fight back!", hntr)
 			oWindow.oneIsOffTheHuntersLand = 2
 			break;

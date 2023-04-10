@@ -7,11 +7,6 @@ function scSetDefaultsForText(){
 	speaker_sprite[page_number] = noone; // Portrait
 }
 
-
-
-
-
-
 /// @param text
 /// @param [chararacter - optional]
 function sText(_text){
@@ -66,8 +61,11 @@ function sText(_text){
 
 
 function sOptions(_option,_link_id) {
+	print("function loads...")
 	option[option_number] = _option;
+	print("option[option_number] loads...")
 	option_link_id[option_number] = _link_id;
+	print("option_link_id[option_number] loads...");
 	
 	option_number++;
 }
