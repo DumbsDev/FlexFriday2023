@@ -116,19 +116,24 @@ if setup == false {
 	
 }
 //typing the text
-//if text_pause_timer <= 0
-//{
+if text_pause_timer <= 0
+{
 	if draw_char < text_length[page]
 	{
 		//increment the index of the character that's being typed
 		draw_char += text_spd;
-//		draw_char = clamp(draw_char,0,text_length[page])
-//		var _check_car = string_char_at(text[page], draw_char);
-//		if _check_car == "."
-//		{
-//			text_pause_timer = text_pause_time;	
-//		}
+		draw_char = clamp(draw_char,0,text_length[page])
+		var _check_car = string_char_at(text[page], draw_char);
+		if _check_car == "." || _check_car == "," || _check_car == "?" || _check_car == "!"
+		{
+			text_pause_timer = text_pause_time;	
+		}
 		
+	}
+}
+	else
+	{
+		text_pause_timer--;	
 	}
 //flip through pages
 if accept_key

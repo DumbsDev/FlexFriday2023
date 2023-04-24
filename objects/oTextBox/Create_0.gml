@@ -42,4 +42,4 @@ lastFreeSpace = 0;
 
 scaleOfSpeaker = 1.875; // This is the scale of the speaker, as it doesnt fit in perfectly.
 text_pause_timer = 0;
-text_pause_time = 0;
+text_pause_time = 16;
