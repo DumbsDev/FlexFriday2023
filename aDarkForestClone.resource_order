@@ -56,7 +56,7 @@
     {"name":"sBackgroundFish","order":4,"path":"sprites/sBackgroundFish/sBackgroundFish.yy",},
     {"name":"sCalendar","order":6,"path":"sprites/sCalendar/sCalendar.yy",},
     {"name":"sExit","order":2,"path":"sprites/sExit/sExit.yy",},
-    {"name":"AdvisorSound2","order":1,"path":"sounds/AdvisorSound2/AdvisorSound2.yy",},
+    {"name":"sndVoiceSoundLow","order":1,"path":"sounds/sndVoiceSoundLow/sndVoiceSoundLow.yy",},
     {"name":"oButtonExit","order":1,"path":"objects/oButtonExit/oButtonExit.yy",},
     {"name":"sFish","order":1,"path":"sprites/sFish/sFish.yy",},
     {"name":"rm_type_testing","order":8,"path":"rooms/rm_type_testing/rm_type_testing.yy",},
