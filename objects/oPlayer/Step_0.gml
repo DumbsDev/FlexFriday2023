@@ -9,16 +9,21 @@ _reset = keyboard_check_pressed(ord("R"));
 #region Movement
 if _up {
 	yy -= moveSpeed
+	movement = true;
+	
 }
 if _down {
 	yy += moveSpeed
+	movement = true;
 }
 if _left {
 	xx -= moveSpeed
+	movement = true;
 	xsc = -1
 }
 if _right {
 	xx += moveSpeed
+	movement = true;
 	xsc = 1
 }
 

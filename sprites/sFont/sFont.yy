@@ -104,8 +104,8 @@
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46114f2a-d9b2-44d0-b53e-4af34cb839bd",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e8854db-7132-4cd5-b802-1a5a09c11d3f",},
   ],
-  "gridX": 16,
-  "gridY": 5,
+  "gridX": 4,
+  "gridY": 4,
   "height": 16,
   "HTile": false,
   "layers": [
