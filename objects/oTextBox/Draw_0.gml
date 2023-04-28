@@ -197,6 +197,7 @@ if (speaker_sprite[page] != noone)
 }
 
 //back of the textbox
+
 draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x,
 _txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,
 0,c_white,1);
