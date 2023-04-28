@@ -96,6 +96,7 @@
     {"id":{"name":"oConsole","path":"objects/oConsole/oConsole.yy",},},
     {"id":{"name":"oButtonParent","path":"objects/oButtonParent/oButtonParent.yy",},},
     {"id":{"name":"sWaterCultist","path":"sprites/sWaterCultist/sWaterCultist.yy",},},
+    {"id":{"name":"sDesk","path":"sprites/sDesk/sDesk.yy",},},
     {"id":{"name":"sBookshelfPH","path":"sprites/sBookshelfPH/sBookshelfPH.yy",},},
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},},
     {"id":{"name":"oInteractable","path":"objects/oInteractable/oInteractable.yy",},},

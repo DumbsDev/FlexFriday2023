@@ -1,5 +1,6 @@
 function sGameText(_text_id){
 	dayMulti = global.day / 10 + 1
+	print(string(_text_id))
 /*
 @ = water
 ~ = food

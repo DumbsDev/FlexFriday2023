@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSplash",
-    "path": "sprites/sSplash/sSplash.yy",
+    "name": "sDesk",
+    "path": "sprites/sDesk/sDesk.yy",
   },
   "spriteMaskId": null,
   "visible": true,
