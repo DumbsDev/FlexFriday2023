@@ -61,6 +61,7 @@
     {"name":"rm_endday","order":7,"path":"rooms/rm_endday/rm_endday.yy",},
     {"name":"oConsole","order":11,"path":"objects/oConsole/oConsole.yy",},
     {"name":"sWaterCultist","order":3,"path":"sprites/sWaterCultist/sWaterCultist.yy",},
+    {"name":"sDesk","order":8,"path":"sprites/sDesk/sDesk.yy",},
     {"name":"sBookshelfPH","order":3,"path":"sprites/sBookshelfPH/sBookshelfPH.yy",},
     {"name":"oDebug","order":4,"path":"objects/oDebug/oDebug.yy",},
     {"name":"oBookshelf","order":4,"path":"objects/oBookshelf/oBookshelf.yy",},
