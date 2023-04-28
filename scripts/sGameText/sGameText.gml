@@ -43,7 +43,7 @@ switch _text_id {
 
 #region bookshelf
 	case "bookshelf":
-		sText("It's a bookshelf.")
+		sText("It's a bookshelf... this is the effect, does it work? at all!")
 		sText("Would you like to read a book?")
 		print("sText loads...")
 		sOptions("Read a book", "bookshelf - yes")

@@ -5,6 +5,7 @@ function scSetDefaultsForText(){
 	
 	txtb_spr[page_number] = sBackground;
 	speaker_sprite[page_number] = noone; // Portrait
+	snd[page_number] = sndVoiceSoundHigh;
 }
 
 /// @param text
@@ -28,19 +29,23 @@ function sText(_text){
 			case "FishNormal":
 				speaker_sprite[page_number] = sFish;
 				txtb_spr[page_number] = sBackgroundFish;
+				snd[page_number] = sndVoiceSoundLow
 				break;
 			case "FishSad":
 				speaker_sprite[page_number] = sFishSad;
 				txtb_spr[page_number] = sBackgroundFish;
+				snd[page_number] = sndVoiceSoundLow
 				break;
 			// Hunter Monster used as second argument (the portrait)
 			case "hunter":
 				speaker_sprite[page_number] = sHunter;
 				txtb_spr[page_number] = sBackgroundHunter;
+				snd[page_number] = sndVoiceSoundHigh
 				break;
 			case "WaterCultist":
 				speaker_sprite[page_number] = sWaterCultist;
 				txtb_spr[page_number] = sBackground;
+				snd[page_number] = sndVoiceSoundHigh
 				break;
 				
 			// Fall back incase there is no character chosen
