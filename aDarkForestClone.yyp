@@ -108,6 +108,7 @@
     {"id":{"name":"oCalender","path":"objects/oCalender/oCalender.yy",},},
     {"id":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},},
     {"id":{"name":"sBackgroundHunter","path":"sprites/sBackgroundHunter/sBackgroundHunter.yy",},},
+    {"id":{"name":"sPlayerStill","path":"sprites/sPlayerStill/sPlayerStill.yy",},},
     {"id":{"name":"oSettings","path":"objects/oSettings/oSettings.yy",},},
     {"id":{"name":"sPlanks","path":"sprites/sPlanks/sPlanks.yy",},},
     {"id":{"name":"oCover","path":"objects/oCover/oCover.yy",},},

@@ -2,8 +2,7 @@
 xx = x; //Set xx future pos 
 yy = y; //Set yy future pos
 la = 0.25 //Amount to lerp movement
-moveSpeed = 2 //player speed
-movement = false;
+moveSpeed = 8 //player speed
 #endregion
 #region debug and save data
 leaving = 0 // Set close game variable to 0

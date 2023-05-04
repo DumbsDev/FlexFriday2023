@@ -73,6 +73,7 @@
     {"name":"oPlantPot","order":2,"path":"objects/oPlantPot/oPlantPot.yy",},
     {"name":"oCalender","order":6,"path":"objects/oCalender/oCalender.yy",},
     {"name":"oButtonPlay","order":3,"path":"objects/oButtonPlay/oButtonPlay.yy",},
+    {"name":"sPlayerStill","order":1,"path":"sprites/sPlayerStill/sPlayerStill.yy",},
     {"name":"oCover","order":10,"path":"objects/oCover/oCover.yy",},
     {"name":"sSplash","order":3,"path":"sprites/sSplash/sSplash.yy",},
     {"name":"fnt_dialogue","order":2,"path":"fonts/fnt_dialogue/fnt_dialogue.yy",},
