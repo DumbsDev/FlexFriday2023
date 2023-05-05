@@ -26,8 +26,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "sPlaceHolder",
-    "path": "sprites/sPlaceHolder/sPlaceHolder.yy",
+    "name": "sWall",
+    "path": "sprites/sWall/sWall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

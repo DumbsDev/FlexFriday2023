@@ -77,6 +77,7 @@
     {"id":{"name":"oTextBox_tutorial","path":"objects/oTextBox_tutorial/oTextBox_tutorial.yy",},},
     {"id":{"name":"morality","path":"notes/morality/morality.yy",},},
     {"id":{"name":"sBackgroundFish","path":"sprites/sBackgroundFish/sBackgroundFish.yy",},},
+    {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"sndVoiceSoundHigh","path":"sounds/sndVoiceSoundHigh/sndVoiceSoundHigh.yy",},},
     {"id":{"name":"sCalendar","path":"sprites/sCalendar/sCalendar.yy",},},
     {"id":{"name":"sExit","path":"sprites/sExit/sExit.yy",},},
