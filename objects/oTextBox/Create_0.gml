@@ -1,7 +1,7 @@
 depth = -9999
 #region Textbox parameters (constant)
 textbox_width = 360
-textbox_height = 80
+textbox_height = 100
 border = 6
 line_sep = 16
 line_width = textbox_width - border*2

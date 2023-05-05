@@ -8,42 +8,24 @@ _reset = keyboard_check_pressed(ord("R"));
 #endregion
 #region Movement
 if _up {
-	yy -= moveSpeed
+	yy -= moveSpeed*1.25
 	
 }
 if _down {
-	yy += moveSpeed;
+	yy += moveSpeed*1.25
 }
 if _left {
-	xx -= moveSpeed
+	xx -= moveSpeed*1.25
 	xsc = -1
 }
 if _right {
-	xx += moveSpeed
+	xx += moveSpeed*1.25
 	xsc = 1
 }
 
 y = lerp(y,yy,la);
 x = lerp(x,xx,la);
-#endregion Movement
-#region Saving & Exiting
-if _esc {
-leaving += 0.02;
-} else {
-leaving = 0;	
-}
-
-if leaving >= 2 {
-game_end();	
-}
-
-if _reset {
-ini_open("savedata.ini");
-ini_section_delete("savedata")
-ini_close();
-day = 0
-}
-#endregion
+#endregion Movemen
 #region interact
 //if ((distance_to_object(instance_nearest(x,y,oInteractable))< 18 )&& _interact && !instance_exists(oTextBox)) {
 //	var _s = oInteractable._s

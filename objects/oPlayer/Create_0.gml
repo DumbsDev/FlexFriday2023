@@ -2,7 +2,7 @@
 xx = x; //Set xx future pos 
 yy = y; //Set yy future pos
 la = 0.25 //Amount to lerp movement
-moveSpeed = 8 //player speed
+moveSpeed = 1600; //player speed
 #endregion
 #region debug and save data
 leaving = 0 // Set close game variable to 0
@@ -35,16 +35,7 @@ j = camera_get_view_border_x(view_camera[0])
 randomize();
 text_id = ""
 #endregion
-#region appearance
-hair = 0
-shirt = 0
-eyes = 0
-lips = 0
-pants = 0
-shoes = 0
-accesory = 0
 xsc = 1
-#endregion appearance
 #region sleep and data stuff like that
 sleep = false
 #endregion

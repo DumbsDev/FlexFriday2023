@@ -22,7 +22,7 @@ draw_set_valign(fa_top)
 			textbox_y = (oCamera.y)+room_height/2-room_height*0.35;
 		} else if (oPlayer.y > room_height/2){
 			textbox_x = (oCamera.x - camera_get_view_border_x(view_camera[0])/3)
-			textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+32;
+			textbox_y = (((oCamera.y)+room_height/2-room_height*0.35)-(room_height/3)*2)+48;
 		}
 #endregion
 ////debug size
@@ -252,20 +252,20 @@ if draw_char == text_length[page] && page == page_number - 1
 	
 	//the option box
 	var _o_w = string_width(option[_op]) +_op_board*2;
-	draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x, _txtb_y - _op_space*option_number+_op_space*_op-font_height,_o_w/txtb_spr_w, ((_op_space-1)/txtb_spr_h)*doubleOptionScale,0,c_white,1);
+	draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x, _txtb_y - _op_space*option_number+_op_space*_op-font_height +12,_o_w/txtb_spr_w, ((_op_space-1)/txtb_spr_h)*doubleOptionScale,0,c_white,1);
 	
 	//the arrow
 	if option_pos == _op
 	{
-		draw_sprite(sPointer, 0, _txtb_x, _txtb_y - _op_space*option_number+_op_space*_op-font_height-1);
+		draw_sprite(sPointer, 0, _txtb_x, _txtb_y - _op_space*option_number+_op_space*_op-font_height-1+13);
 	}
 	
 	//the option text
 	draw_set_color(c_shadow)
 	//print(option[_op])
-	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+7)-font_height*doubleOptionScale,option[_op])
+	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+7)-font_height*doubleOptionScale+13,option[_op])
 	draw_set_color(c_color)
-	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+5)-font_height*doubleOptionScale,option[_op])
+	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+5)-font_height*doubleOptionScale+13,option[_op])
 	}
 }
 #endregion options

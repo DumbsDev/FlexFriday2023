@@ -16,8 +16,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "sPlanks",
-    "path": "sprites/sPlanks/sPlanks.yy",
+    "name": "sWalnutWood",
+    "path": "sprites/sWalnutWood/sWalnutWood.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

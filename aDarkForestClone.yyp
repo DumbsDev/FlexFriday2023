@@ -64,6 +64,7 @@
     {"id":{"name":"sHunter","path":"sprites/sHunter/sHunter.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
+    {"id":{"name":"sWalnutWood","path":"sprites/sWalnutWood/sWalnutWood.yy",},},
     {"id":{"name":"oTable","path":"objects/oTable/oTable.yy",},},
     {"id":{"name":"scLogic","path":"scripts/scLogic/scLogic.yy",},},
     {"id":{"name":"sPlaceHolderUp","path":"sprites/sPlaceHolderUp/sPlaceHolderUp.yy",},},
