@@ -43,7 +43,7 @@ switch _text_id {
 
 #region bookshelf
 	case "bookshelf":
-		sText("It's a bookshelf... this is the effect, does it work? at all!")
+		sText("It's a bookshelf.")
 		sText("Would you like to read a book?")
 		print("sText loads...")
 		sOptions("Read a book", "bookshelf - yes")
@@ -98,7 +98,7 @@ switch _text_id {
 			sText("Hey, welcome, you are the new monarch of this land!")
 			sText("I am your royal advisor!")
 			sText("People are going to come and ask questions for you,")
-			sText("sometimes you will be able to answer,\nsometimes you wont.")
+			sText("sometimes you will be able to answer, sometimes you wont.")
 			sText("When you can respond to someone")
 			sText("something will show up when they are done talking.")
 			sText("Kind of like this!")
@@ -108,10 +108,10 @@ switch _text_id {
 		
 		case "tut1 - Confirm":
 			sText("Awesome, you can view all of your stats in the main room");
-			sText("(that room is to your left!)");
+			sText("(that room is to your right, there should be a journal!)");
 			sText("you can also go to the room on your right");
 			sText("thats all for now");
-			sText("come back to this window to get your questions");
+			sText("come back to this table to get your questions and letters.");
 			break;
 		
 		case "tut1 - Deny":
@@ -153,7 +153,7 @@ switch _text_id {
 		
 		case 1:
 			sText("Hello, thyne majesty.", wc);
-			sText("Would you like to trade water for food?\n(+5~) (-5@)", wc)
+			sText("Would you like to trade water for food? (+5~) (-5@)", wc)
 			sOptions("Yes", "c1 - yes")
 			sOptions("No", "c1 - no")
 			break;
@@ -173,7 +173,7 @@ switch _text_id {
 		case 2:
 			sText("It rained last night,")
 			sText("meaning our water reserves are filled! (+10@)")
-			global.water += 10
+			global.water += 10;
 			break;
 		
 		case 3:
@@ -198,7 +198,7 @@ switch _text_id {
 			break;
 		
 		case "huntingInOurTerritory - yes":
-			sText("Oh really?\nThank you deeply!", hntr)
+			sText("Oh really? We thank you deeply!", hntr)
 			sText("I know its not crazy important, but still", hntr)
 			sText("We thank you.", hntr)
 			oWindow.oneIsOffTheHuntersLand = 1
@@ -235,7 +235,7 @@ switch _text_id {
 			sText("We wanna start a new endurance test to see how long we can hold our breaths!", fsh)
 			sText("Can we?", fsh)
 			sOptions("Yes", "c5 - yes")
-			sOptions("What is wrong\nwith you, no!", "c5 - no")
+			sOptions("Hell no!", "c5 - no")
 			break;
 		
 		case "c5 - yes":
@@ -293,7 +293,7 @@ switch _text_id {
 			break;
 		
 		case "c7 - 1":
-			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[1])
+			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[1])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			
@@ -303,7 +303,7 @@ switch _text_id {
 			break;
 		
 		case "c7 - 2":
-			improvedAndReducedStats = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[2])
+			interpretedPlayerResponse = interpretPlayerResponse(global.faction, global.dialogueIndex, global.responses[2])
 			improvedAndReducedStats = [interpretedPlayerResponse[0], interpretedPlayerResponse[1]]
 			factionResponse = interpretedPlayerResponse[2]
 			

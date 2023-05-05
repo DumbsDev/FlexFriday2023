@@ -135,6 +135,24 @@ if text_pause_timer <= 0
 	{
 		text_pause_timer--;	
 	}
+	
+// Color changing
+
+if (c_color == c_white)
+{
+	draw_char +=  text_spd
+	draw_char = clamp(draw_char,0,text_length[page])
+	var _check_car = string_char_at(text[page], draw_char);
+	if _check_car == "`"
+	{
+		c_color = c_red;
+	}
+	else
+	{
+		c_color = c_white;	
+	}
+} 
+	
 //flip through pages
 if accept_key
 {
@@ -246,7 +264,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	draw_set_color(c_shadow)
 	//print(option[_op])
 	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+7)-font_height*doubleOptionScale,option[_op])
-	draw_set_color(c_white)
+	draw_set_color(c_color)
 	draw_text(_txtb_x+_op_board,(_txtb_y-_op_space*option_number+_op_space*_op+5)-font_height*doubleOptionScale,option[_op])
 	}
 }
