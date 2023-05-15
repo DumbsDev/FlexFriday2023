@@ -53,7 +53,9 @@
   "resources": [
     {"id":{"name":"sGameText","path":"scripts/sGameText/sGameText.yy",},},
     {"id":{"name":"oPlantPot2","path":"objects/oPlantPot2/oPlantPot2.yy",},},
+    {"id":{"name":"poster","path":"sprites/poster/poster.yy",},},
     {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},},
+    {"id":{"name":"sAdvisor","path":"sprites/sAdvisor/sAdvisor.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlaceHolder","path":"sprites/sPlaceHolder/sPlaceHolder.yy",},},
     {"id":{"name":"sFontAbdul","path":"sprites/sFontAbdul/sFontAbdul.yy",},},

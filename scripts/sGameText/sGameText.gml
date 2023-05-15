@@ -14,6 +14,7 @@ frm = "farmer";
 fsh = "FishNormal";
 fshs = "FishSad";
 wc = "WaterCultist";
+adv = "adv"
 
 switch _text_id {
 
@@ -95,29 +96,29 @@ switch _text_id {
 #endregion
 #region lore and tutorial
 		case -5:
-			sText("Hey, welcome, you are the new monarch of this land!")
-			sText("I am your royal advisor!")
-			sText("People are going to come and ask questions for you,")
-			sText("sometimes you will be able to answer, sometimes you wont.")
-			sText("When you can respond to someone")
-			sText("something will show up when they are done talking.")
-			sText("Kind of like this!")
-			sOptions("I see!", "tut1 - Confirm")
-			sOptions("I dont understand.", "tut1 - Deny")
+			sText("Hey, welcome, you are the new monarch of this land!",adv)
+			sText("I am your royal advisor!",adv)
+			sText("People are going to come and ask questions for you,",adv)
+			sText("sometimes you will be able to answer, sometimes you wont.",adv)
+			sText("When you can respond to someone",adv)
+			sText("something will show up when they are done talking.",adv)
+			sText("Kind of like this!",adv)
+			sOptions("I see!", "tut1 - Confirm",adv)
+			sOptions("I dont understand.", "tut1 - Deny",adv)
 			break;
 		
 		case "tut1 - Confirm":
-			sText("Awesome, you can view all of your stats in the main room");
-			sText("(that room is to your right, there should be a journal!)");
-			sText("you can also go to the room on your right");
-			sText("thats all for now");
-			sText("come back to this table to get your questions and letters.");
+			sText("Awesome, you can view all of your stats in the main room",adv);
+			sText("(that room is to your right, there should be a journal!)",adv);
+			sText("you can also go to the room on your right",adv);
+			sText("thats all for now",adv);
+			sText("come back to this table to get your questions and letters.",adv);
 			break;
 		
 		case "tut1 - Deny":
-			sText("Well, basically you are the boss here")
-			sText("and you control a city")
-			sText("By answering questions and managing resources.")
+			sText("Well, basically you are the boss here",adv)
+			sText("and you control a city",adv)
+			sText("By answering questions and managing resources.",adv)
 			sOptions("I see!", "tut1 - Confirm");
 			sOptions("Wait, restart! Huh?", -5);
 			break;
@@ -134,20 +135,20 @@ switch _text_id {
 			global.improvedStat = dialogueReturnArray[1]
 			global.reducedStat = dialogueReturnArray[2]
 			global.magnitude = dialogueReturnArray[3]
-			sText(dialogue)
+			sText(dialogue,adv)
 			sOptions("Yes", "c0 - yes")
 			sOptions("No", "c0 - no")
 			break
 
 		case "c0 - yes":
 			show_message("you said yes and it worked kinda")
-			sText("Great, Sire, I'll go right ahead with that!")
+			sText("Great, Sire, I'll go right ahead with that!",adv)
 			improveStat(global.improvedStat, global.magnitude)
 			reduceStat(global.reducedStat, global.magnitude)
 			break
 
 		case "c0-no":
-			sText("Okay, Sire, I understand.")
+			sText("Okay, Sire, I understand.",adv)
 			break
 			
 		
@@ -171,8 +172,8 @@ switch _text_id {
 			break;
 		
 		case 2:
-			sText("It rained last night,")
-			sText("meaning our water reserves are filled! (+10@)")
+			sText("It rained last night,",,adv)
+			sText("meaning our water reserves are filled! (+10@)",,adv)
 			global.water += 10;
 			break;
 		
@@ -216,19 +217,19 @@ switch _text_id {
 			global.improvedStat = dialogueReturnArray[1]
 			global.reducedStat = dialogueReturnArray[2]
 			global.magnitude = dialogueReturnArray[3]
-			sText(dialogue)
+			sText(dialogue,,adv)
 			sOptions("Yes", "c4 - yes")
 			sOptions("No", "c4 - no")
 			break;
 
 		case "c4 - yes":
-			sText("Great, Sire, I'll go right ahead with that!")
+			sText("Great, Sire, I'll go right ahead with that!",adv)
 			improveStat(global.improvedStat, global.magnitude)
 			reduceStat(global.reducedStat, global.magnitude)
 			break;
 
 		case "c4 - no":
-			sText("Okay, Sire, I understand.")
+			sText("Okay, Sire, I understand.",adv)
 			break;
 		
 		case 5:
@@ -248,23 +249,23 @@ switch _text_id {
 			break;
 			
 		case 6:
-			sText("People aren't paying their taxes what should we do about it?")
+			sText("People aren't paying their taxes what should we do about it?",adv)
 			sOptions("Punish them!", "c6 - Commie")
 			sOptions("Lower the taxes", "c6 - Lower")
 			sOptions("Let it be", "c6 - Nothing")
 			break
 			
 		case "c6 - Commie":
-			sText("I will have them whipped right away!")
+			sText("I will have them whipped right away!",adv)
 			break;
 		
 		case "c6 - Lower":
-			sText("I will have them do that right away!")
+			sText("I will have them do that right away!",adv)
 			global.gold = global.gold * 0.9
 			break;
 		
 		case "c6 - Nothing":
-			sText("Uh-Okay?")
+			sText("oh-Okay?",adv)
 			global.gold = global.gold * 0.8
 			break;
 		

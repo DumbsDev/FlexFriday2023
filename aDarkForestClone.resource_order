@@ -33,6 +33,8 @@
   "ResourceOrderSettings": [
     {"name":"sGameText","order":1,"path":"scripts/sGameText/sGameText.yy",},
     {"name":"oPlantPot2","order":3,"path":"objects/oPlantPot2/oPlantPot2.yy",},
+    {"name":"poster","order":15,"path":"sprites/poster/poster.yy",},
+    {"name":"sAdvisor","order":4,"path":"sprites/sAdvisor/sAdvisor.yy",},
     {"name":"sFontAbdul","order":9,"path":"sprites/sFontAbdul/sFontAbdul.yy",},
     {"name":"rm_tutorial","order":6,"path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"scDebugToPrint","order":2,"path":"scripts/scDebugToPrint/scDebugToPrint.yy",},

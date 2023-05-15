@@ -20,10 +20,10 @@ function sText(_text){
 	{
 		switch(argument[1])
 		{
-			//case "adv":
-				//speaker_sprite[page_number] = sAdvisor;
-				//txtb_spr[page_number] = sBackgroundAdvisor;
-				//break;
+			case "adv":
+				speaker_sprite[page_number] = sAdvisor;
+				txtb_spr[page_number] = sBackground;
+				break;
 			//case "farmer":
 				//speaker_sprite
 			case "FishNormal":
@@ -50,7 +50,7 @@ function sText(_text){
 				
 			// Fall back incase there is no character chosen
 			default:
-				speaker_sprite[page_number] = noone;
+				speaker_sprite[page_number] = sAdvisor;
 				txtb_spr[page_number] = sBackground;
 				break;
 		}
