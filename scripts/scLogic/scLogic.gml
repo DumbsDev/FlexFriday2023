@@ -99,6 +99,11 @@ function dailyPopChange(){
 		}
 		print("Post-change Population: " + string(global.population))
 	}
+	
+	//lose condition
+	if not global.population > 0 {
+		room_goto(rm_lose)
+	}
 }
 
 function dailyGoldChange(){
